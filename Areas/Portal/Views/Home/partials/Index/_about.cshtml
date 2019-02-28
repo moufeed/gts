@@ -1,0 +1,48 @@
+﻿
+@using TamTechSDK.Common.Services.ContentService.Pages.Models
+<if include-if="ViewBag.aboutSummary != null">
+    @{ 
+        PageSummary pageSummary = (PageSummary)ViewBag.aboutSummary;
+    }
+
+    <section class="about-area pb-60 pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 mb-40">
+                    <div class="section-title">
+                        <h2>@pageSummary.Title</h2>
+                    </div>
+                    <div class="about-content">
+                        <p>
+                            @Html.Raw(pageSummary.Summary)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 mb-20 md-margin">
+                    <div class="row">
+                        
+                        <div class="col-xl-6 col-md-6 mb-20 d-none d-md-inline">
+                            <div class="about-img">
+                                @if (string.IsNullOrEmpty(pageSummary.MainImage))
+                                {
+                                    <img src="~/Portal/img/about/about1.jpg" class="img-fluid" alt="">
+                                }
+                                else
+                                {
+                                    <img src="@pageSummary.MainImage" class="img-fluid" alt="">
+                                }
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 mb-20 d-none d-md-inline">
+                            <div class="about-img">
+                                <img src="~/Portal/img/about/about2.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</if>

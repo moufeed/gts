@@ -1,0 +1,48 @@
+﻿
+
+
+    <if include-if="ViewBag.galleries != null">
+        @{ 
+            List<GalleryLiteDto> gelleries = (List<GalleryLiteDto>)ViewBag.galleries;
+        }
+        <section class="portfoilo-area grey-bg pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 text-center pb-40 ">
+                        <div class="section-title service-title">
+                            <h2>@Localizer["selected_products"]</h2>
+                            <p>@Localizer["selected_products_txt"]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    @foreach(GalleryLiteDto item in gelleries)
+                    {
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30 grid-item">
+                        <div class="portfolio-wrapper">
+                            <a asp-action="v" asp-controller="galleries" asp-route-slug="@item.Slug">@Localizer["more"]</a>
+                            <div class="portfolio-thumb">
+                                @if (string.IsNullOrEmpty(item.MainImage))
+                                {
+                                    <img src="~/Portal/img/empty.jpg" class="img-fluid" alt="@item.Title">
+                                }
+                                else
+                                {
+                                    <img src="@item.MainImage" class="img-fluid" alt="@item.Title">
+                                }
+                            </div>
+                            <div class="portfolio-content">
+                                <h5>
+                                    @item.Title
+                                </h5>
+                                <span>@item.Section</span>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+    </if>

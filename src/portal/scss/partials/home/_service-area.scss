@@ -1,0 +1,40 @@
+
+.features-wrap {
+	border: 1px solid #e6e6e6;
+	padding: 50px 30px;
+	h4 {
+		font-weight: 600;
+		color: #1e2331;
+		margin-bottom: 17px;
+		font-size: 18px;
+	}
+	p{
+		@include ellipse(14px ,1.4,3);
+	}
+	a {
+		font-size: 14px;
+		font-weight: 600;
+		color: $red;
+	}
+	.features-icon {
+		span {
+			font-size: 40px;
+			color: lighten($red,15%);
+			margin-bottom: 20px;
+			display: inline-block;
+		}
+	}
+	&:hover {
+		//background-image: url(../img/about/5.jpg);
+		background-size: cover;
+		background-position: center center;
+		background-attachment: local;
+		transition: all .5s;
+		border-color: $red;
+		box-shadow: 0 0 0 1px $red;
+
+		h4, p{
+			color: darken($red,25%);
+		} 
+	} 
+}

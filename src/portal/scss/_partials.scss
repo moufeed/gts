@@ -1,0 +1,43 @@
+@import 
+'lib/fonts',
+'lib/spacing'
+;
+
+//template 
+/* @import 
+'template/style.css'; */
+
+// plugins
+
+@import
+"plugins/meanmenu",
+"plugins/animate",
+"plugins/slick"
+;
+
+
+
+//shared
+@import 
+'partials/shared/default' ,
+'partials/shared/header' ,
+'partials/shared/footer' 
+;
+
+
+//home
+@import 
+'partials/home/cta-area' ,
+'partials/home/about-area' ,
+'partials/home/slider' ,
+'partials/home/counter-area' ,
+'partials/home/service-area' ,
+'partials/home/testimonial' ,
+'partials/home/products' 
+;
+
+
+
+
+@import 
+'template/responsive.css'; 

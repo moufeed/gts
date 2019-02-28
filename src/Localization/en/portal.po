@@ -1,0 +1,66 @@
+ 
+msgid "site_title"
+msgstr "Gts"
+ 
+msgid "request_quotation"
+msgstr "request quotation"
+
+msgid "about_us"
+msgstr "About Company"
+
+msgid "h_our_services"
+msgstr "our services"
+
+msgid "h_our_services_txt"
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure "
+  
+msgid "more"
+msgstr "more"
+  
+msgid "clients"
+msgstr "clients"
+  
+msgid "transaction"
+msgstr "transaction"
+  
+msgid "cooperating_companies"
+msgstr "cooperating companies"
+  
+msgid "products"
+msgstr "products"
+  
+msgid "selected_products"
+msgstr "Selected products"
+  
+msgid "selected_products_txt"
+msgstr "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"
+
+
+#: --- settings --- 
+msgid "br_address"
+msgstr "istanbul avcılar"
+ 
+msgid "br_email_adress"
+msgstr "info@gtservices.com.tr"
+ 
+msgid "br_phone_number"
+msgstr "(021)314-326-2990"
+
+ 
+
+
+ 
+msgid ""
+msgstr ""
+ 
+msgid ""
+msgstr ""
+ 
+msgid ""
+msgstr ""
+ 
+msgid ""
+msgstr ""
+ 
+msgid ""
+msgstr ""

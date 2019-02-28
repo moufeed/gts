@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = Localizer["site_title"];
+    Layout = "_Layout";
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+}
+
+
+
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_Slider.cshtml" />
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_about.cshtml" />
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_services.cshtml" />
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_counters.cshtml" />
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_products.cshtml" />
+
+
+@section SEO {
+    <script type="application/ld+json">
+        {
+        "@@context": "http://schema.org",
+        "@@type": "Organization",
+        "url":  "@ViewBag.Host",
+        "logo": "@ViewBag.Host/portal/img/seoLogo.jpg",
+        "name": "tam tech",
+        "telephone": "00905354152865",
+        description :"tam tech"
+        }
+    </script>
+}
+
+@section style{
+
+
+}
+@section footer{
+
+    <script src="~/Portal/js/slider.min.js"></script>
+    <script src="~/Portal/js/counters.min.js"></script>
+}

@@ -1,0 +1,42 @@
+﻿@using TamTechSDK.Common.Services.ContentService.Services.Models
+    <if include-if="ViewBag.services != null">
+        @{ 
+            List<ServiceDto> listservices = (List<ServiceDto>)ViewBag.services;
+        }
+            <section class="service-area grey-bg pb-70 pt-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 text-center mb-40">
+                            <div class="section-title service-title">
+                                <h2>@Localizer["h_our_services"]</h2>
+                                <p>
+                                    @Localizer["h_our_services_txt"]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        @foreach (ServiceDto item in listservices)
+                        {
+                            <div class="col-lg-4 col-md-6 text-center mb-30">
+                                <div class="features-wrap">
+                                    <div class="features-icon">
+                                        <span class="fa @item.Icon"></span>
+                                    </div>
+                                    <h4>
+                                        <a asp-action="v" asp-controller="services" asp-route-slug="@item.Slug">
+                                            @item.Title
+                                        </a>
+                                    </h4>
+                                    <p>@item.Summary</p>
+                                    <a asp-action="v" asp-controller="services" asp-route-slug="@item.Slug" class="read_more">
+                                        @Localizer["more"]
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                         
+                    </div>
+                </div>
+            </section>
+    </if>

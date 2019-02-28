@@ -1,0 +1,109 @@
+﻿@model TamTechSDK.Common.Services.ContentService.Testimonials.Models.CreateTestimonialDto
+
+@{
+    ViewData["Title"] = Localizer["new_testimonial"];
+    Layout = "_Layout";
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/qute.jpeg");
+    ViewData["pageTitle"] = Localizer["new_testimonial"];
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+}
+
+@await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml", @ViewData)
+
+ 
+
+
+
+<section class="pt-5">
+   
+    <div class="container">
+        <if include-if="@TempData["Success"] != null">
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">Thank you for your testimonial letter</h4>
+
+                <p>
+                    We appreciate your taking the time to submit your testimonial letter
+                </p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </if>
+
+        <form asp-action="testimonial" class="row" enctype="multipart/form-data">
+            <input asp-for="Lang" type="hidden" class="form-control" value="@lang" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group col-md-6 col-xs-12">
+                <label asp-for="AuthorName" class="control-label">@Localizer["AuthorName"]</label>
+                <input asp-for="AuthorName" class="form-control" />
+                <span asp-validation-for="AuthorName" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group col-md-6 col-xs-12">
+                <label asp-for="Email" class="control-label">@Localizer["Email"]</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group col-md-6 col-xs-12">
+                <label asp-for="Company" class="control-label">@Localizer["Company"]</label>
+                <input asp-for="Company" class="form-control" />
+                <span asp-validation-for="Company" class="text-danger"></span>
+            </div>
+
+
+
+
+            <div class="form-group col-md-6 col-xs-12">
+                <label asp-for="Postion" class="control-label">@Localizer["job_position"]</label>
+                <input asp-for="Postion" class="form-control" />
+                <span asp-validation-for="Postion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6 col-xs-12">
+                <label asp-for="MainImage" class="control-label">@Localizer["avatar"]</label>
+                <input asp-for="MainImage" class="form-control" type="file" accept="image/*" />
+                <span asp-validation-for="MainImage" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group col-md-6 col-xs-12">
+                <label asp-for="Rating" class="control-label">@Localizer["rating"]</label>
+                <div>
+                    <fieldset class="star_rating">
+                        <input type="radio" id="star5" asp-for="Rating" value="5" /><label for="star5"></label>
+                        <input type="radio" id="star4" asp-for="Rating" value="4" /><label for="star4"></label>
+                        <input type="radio" id="star3" asp-for="Rating" value="3" /><label for="star3"></label>
+                        <input type="radio" id="star2" asp-for="Rating" value="2" /><label for="star2"></label>
+                        <input type="radio" id="star1" asp-for="Rating" value="1" /><label for="star1"></label>
+                    </fieldset>
+                </div>
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12  col-xs-12">
+                <label asp-for="Title" class="control-label">@Localizer["title"]</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12 col-xs-12">
+                <label asp-for="Summary" class="control-label">@Localizer["Message"]</label>
+
+                <textarea asp-for="Summary" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Summary" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-12 col-xs-12">
+                <button type="submit" class="btn btn-send btn-lg btn-info">@Localizer["Send_it"]</button>
+            </div>
+        </form>
+    </div>
+</section>
+ 
+
+
+ 

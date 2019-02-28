@@ -1,0 +1,35 @@
+﻿@using TamTechSDK.Common.Services.ContentService.Sliders.Models;
+@{
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+}
+@if (ViewBag.MainSlider != null)
+{
+
+    SliderDto slider = (SliderDto)ViewBag.MainSlider;
+
+    <section class="slider-area" dir="@(lang == "ar" ? "rtl" :"ltr")">
+        <div class="slider-active" data-rtl="@(lang == "ar" ? "true" :"false")">
+            @foreach (SliderItemDto item in slider.Items)
+            { 
+                <div class="single-slider slider-bg d-flex align-items-center" style="background-image:url(@item.MainImage)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="slider-content">
+                                    <h1 data-animation="fadeInDown" data-delay=".2s">
+                                        
+                                        @Html.Raw(item.Title)
+                                    </h1>
+                                    <p data-animation="@(lang =="ar" ?"fadeInLeft" :"fadeInRight")" data-delay=".4s">
+                                        @Html.Raw(item.Summary)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </section>
+}
