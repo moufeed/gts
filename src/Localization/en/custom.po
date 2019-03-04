@@ -1,0 +1,8 @@
+msgid "section_Papers"
+msgstr "Papers"
+
+msgid "section_oils"
+msgstr "Oils"
+
+msgid "section_Cartons"
+msgstr "Cartons"

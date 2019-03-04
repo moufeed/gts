@@ -1,0 +1,25 @@
+@using TamTechSDK.Common.Services.ContentService.Models;
+<if include-if="ViewBag.testimonials != null ">
+    @{
+        List<TestimonialDto> TestimonialsList = (List<TestimonialDto>)ViewBag.testimonials;
+    }
+        <section class="testimonial-area pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="testimonial-active owl-carousel" dir="ltr">
+                            @foreach(var item in TestimonialsList){
+                            <div class="single-item testimonial-items text-center">
+                                <div class="client-text">
+                                    @Html.Raw(item.Summary)
+                                </div>
+                                <h4>@item.AuthorName</h4>
+                                <span>@item.Company</span>
+                            </div>
+                             }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</if>

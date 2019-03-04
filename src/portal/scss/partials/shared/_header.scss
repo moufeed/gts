@@ -13,34 +13,46 @@
 	padding-#{$right}: 10px;
 	color: $red;
 }
-.top-social-links span {
-	font-size: 13px;
-	color: #fff;
+ 
+.top-social-links {
+	span {
+		font-size: 13px;
+		color: #fff;
+	}
+	i {
+		display: inline-block;
+		padding: 13px 0;
+		transition: .3s;
+	}
+	>a ,li a {
+		color: #fff;
+		font-size: 13px;
+		padding-left: 10px;
+		&:hover i{
+			color: $red;
+		}
+	}
 }
-.top-social-links a {
-	color: #fff;
-	font-size: 13px;
-	padding-left: 10px;
-}
-.top-social-links a:hover i{
-	color: $red;
-}
-.top-social-links i {
+ 
+ 
+ 
+
+
+.lanugages-list{
 	display: inline-block;
-	padding: 13px 0;
-	transition: .3s;
-}
-.top-btn {
-	display: inline-block;
-}
-.top-btn a {
-    text-transform: capitalize;
-    background: $red;
-    padding: 10px 15px;
-    margin-left: 15px;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
+	.btn-lang{
+		background: transparent;
+		border: 0;
+		color: #fff;
+		padding: 2px 15px;
+	}
+	.dropdown-item{
+		text-align: $left;
+		&:hover{
+			background: $red;
+			color: #fff;
+		}
+	}
 }
 /* cta */
 .header-single-cta {
@@ -87,7 +99,7 @@
 .main-menu ul li {
 	display: inline-block;
 	position: relative;
-	margin-left: 30px;
+	margin-#{$left}: 20px;
 }
 .main-menu ul li a {
 	color: #020d26;
@@ -272,4 +284,38 @@
         background: $red ;
         color:#fff !important;
     }
+}
+
+
+
+
+
+
+
+@include media-breakpoint-down(sm){
+	.sticky{
+		position: static;
+	}
+	.logo{
+		margin: 15px 0;
+	}
+	.header-top-cta{
+		display: none;
+	} 
+
+	.top-social-links{
+		text-align: $left;
+	}
+
+	.btn-consulting{
+	 
+		padding: 14px 12px;
+	}
+}
+
+@include media-breakpoint-only(md){
+	.btn-consulting{
+		margin-top: 8px;
+	}
+	
 }

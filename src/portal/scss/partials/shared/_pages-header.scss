@@ -1,0 +1,31 @@
+/* .pages-header-area{
+    
+} */
+
+.p-title{
+    margin: 0;
+	text-transform: uppercase;
+	font-weight: 600;
+ 
+    span{
+        display: inline-block;
+        padding:rem(10px) rem(20px) ;
+        background: $red;
+        color: #fff;
+        box-shadow:  10px 10px 0 rgba($red,0.5) ;
+    }
+}
+/* 
+
+<header class=" pb-70 pt-100 grey-bg" style="background-image:url(@ViewData["ImageURl"])">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-md-6 mb-30">
+                <div class="p-title">
+                    <h2><span>@ViewData["pageTitle"]</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+*/

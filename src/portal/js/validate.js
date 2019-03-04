@@ -1,41 +1,52 @@
 
+if(window.language == 'ar'){
+    $.extend( $.validator.messages, {
+        required: "هذا الحقل إلزامي",
+        remote: "يرجى تصحيح هذا الحقل للمتابعة",
+        email: "رجاء إدخال عنوان بريد إلكتروني صحيح",
+        url: "رجاء إدخال عنوان موقع إلكتروني صحيح",
+        date: "رجاء إدخال تاريخ صحيح",
+        dateISO: "رجاء إدخال تاريخ صحيح (ISO)",
+        number: "رجاء إدخال عدد بطريقة صحيحة",
+        digits: "رجاء إدخال أرقام فقط",
+        creditcard: "رجاء إدخال رقم بطاقة ائتمان صحيح",
+        equalTo: "رجاء إدخال نفس القيمة",
+        extension: "رجاء إدخال ملف بامتداد موافق عليه",
+        maxlength: $.validator.format( "الحد الأقصى لعدد الحروف هو {0}" ),
+        minlength: $.validator.format( "الحد الأدنى لعدد الحروف هو {0}" ),
+        rangelength: $.validator.format( "عدد الحروف يجب أن يكون بين {0} و {1}" ),
+        range: $.validator.format( "رجاء إدخال عدد قيمته بين {0} و {1}" ),
+        max: $.validator.format( "رجاء إدخال عدد أقل من أو يساوي {0}" ),
+        min: $.validator.format( "رجاء إدخال عدد أكبر من أو يساوي {0}" )
+    });
+}
 
-$('#ContactForm').validate(
+
+$('#contact-form').validate(
     {
-          errorClass: "invalid_field",
-          validClass: "valid_field",
-        rules: {
-            Name: {
-                required: true,
-                minlength: 2
-            },
-            Mobile:{
-                required: function(element) {
-                    return $("#cemail").val().length == 0;  
-                },
-                number :true,
-                minlength: 10
-            },
-            Email:{
-                required:  function(element) {
-                    return $("#cphone").val().length == 0;  
-                }, 
-                email: true
-            },
-            Message: {
-                required: true, 
-                minlength: 4
-            },
+        highlight: function(element) {
+            $(element).addClass('is-invalid');
         },
-        messages: {
-            Mobile: "Enter your phone number or fill an email field",
-            Email: "Enter your email or fill a phone field",
+        unhighlight: function(element) {
+            $(element).removeClass('is-invalid');
         },
+        errorElement: 'div',
+        errorClass: 'invalid-feedback',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        
         submitHandler: function (form) {
                  
             var $form = $(form);
-                $form.find('.lds-spinner').removeClass('d-none');
-                $form.find('.btn-send').attr('disabled' ,"disabled");
+            var btn = $form.find('.send-btn');
+                btn.attr('disabled' ,"disabled");
+                btn.find(".btn-txt").addClass("d-none");
+                btn.find(".fa-refresh").removeClass("d-none");
                 $form.valid()
                 var url = $form.attr('action');
                 var message ={};
@@ -49,38 +60,25 @@ $('#ContactForm').validate(
                     url: url,
                     data: message,  
                 })
-                .done(function (data) { 
+                .done(function (data) {
+                    btn.removeAttr('disabled');
+                    btn.find(".btn-txt").removeClass("d-none");
+                    btn.find(".fa-refresh").addClass("d-none");
                         if(data.success){
                             $form[0].reset();
-                            $form.find('.lds-spinner').addClass('d-none');
-                            $form.find('.btn-send').removeAttr('disabled' );
-                            $('#ContactModel').modal('show');
-                            $('#ContactModel').on('shown.bs.modal', function (e) {
-                                var modal = $(this);
-                                    modal.find('.customer_name').text(message['Name']);
-                              })
+                            $("#alert-success").removeClass("d-none").addClass("show");
+                        }else{
+                            $("#alert-error").removeClass("d-none").addClass("show");
                         }
                 })
                 .fail(function (jqXHR, Status) {
-                        console.log(jqXHR, Status);
-                        $form.find('.lds-spinner').addClass('d-none');
-                        $form.find('.btn-send').removeAttr('disabled' );
+                    btn.removeAttr('disabled');
+                    btn.find(".btn-txt").removeClass("d-none");
+                    btn.find(".fa-refresh").addClass("d-none");
+                    $("#alert-error").removeClass("d-none").addClass("show");
                 });
 
                 return false;
         },
     }
 );
-
-    $('#phone').on('change', function(evt){
-        $('#cemail').valid();
-    })
-
-    $('#email').on('change', function(evt){
-        $('#cphone').valid();
-    })
-
-
-    
-    
-    

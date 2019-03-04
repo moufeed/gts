@@ -4,50 +4,67 @@
 .portfolio-wrapper {
 	position: relative;
 	overflow: hidden;
+	background: #fff;
+	>a{
+		@include absolute(top $left ,0);
+		@include square(100%);
+		z-index: 100;
+		opacity: 0;
+		display: block;
+	}
+	&:hover{
+		 .portfolio-thumb::before,
+		 .portfolio-thumb::after,  
+		 .view i{
+			opacity: .6;
+		}
+		.portfolio-content{
+			transform: translateY(0);
+		}
+		.portfolio-thumb img {
+			transform: rotate(3deg) scale(1.1);
+		}
+	}
 }
-.portfolio-wrapper:hover .portfolio-thumb::before,.portfolio-wrapper:hover .portfolio-thumb::after,.portfolio-wrapper:hover .view i{
-	opacity: .8;
-}
-.portfolio-wrapper:hover .portfolio-content{
-	transform: translateY(0);
-}
+ 
+ 
 .portfolio-thumb {
 	position: relative;
 	overflow: hidden;
-}
-.portfolio-thumb img {
-	transition: .3s;
-}
- .portfolio-thumb img {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	height: 350px;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: #333;
+		opacity: 0;
+		transition: .3s;
+		z-index:9
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		left: 10px;
+		right: 10px;
+		top: 10px;
+		bottom: 10px;
+		border: 2px solid #fff;
+		opacity: 0;
+		transition: .5s;
+		z-index:99;
+	}
+	img { 
+		transition: .3s;
+	}
 
 }
-.portfolio-wrapper:hover .portfolio-thumb img {
-	transform: rotate(3deg) scale(1.1);
-}
-.portfolio-thumb::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background: #000;
-	opacity: 0;
-	transition: .3s;
-	z-index:9
-}
-.portfolio-thumb::after {
-	content: "";
-	position: absolute;
-	left: 10px;
-	right: 10px;
-	top: 10px;
-	bottom: 10px;
-	border: 2px solid $red;
-	opacity: 0;
-	transition: .5s;
-	z-index:99;
-}
+  
 .view i {
 	position: absolute;
 	top: 50%;
@@ -69,15 +86,17 @@
 	z-index: 9;
 	color: #fff;
 	transform: translateY(160%);
-	z-index:999
+	z-index:999;
+	h5 {
+		color: #fff;
+		transition: .3s;
+		&:hover a{
+			color: $red;
+		}
+	}
 }
-.portfolio-content h5 {
-	color: #fff;
-	transition: .3s;
-}
-.portfolio-content h5:hover a{
-	color: $red;
-}
+
+ 
 .portfolio-menu button {
 	padding: 0 8px;
 	border: 0;

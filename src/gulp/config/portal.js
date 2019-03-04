@@ -36,6 +36,7 @@ module.exports = {
                 outputFileName: "script.js",
                 es6: true,
                 inputFiles: [
+                    `${portal_src}/js/plugins/jquery.meanmenu.min.js`, 
                     `${portal_src}/js/scripts.js`
                 ],
             },
@@ -63,7 +64,22 @@ module.exports = {
                     './node_modules/jquery-validation/dist/additional-methods.js',
                     `${portal_src}/js/validate.js`
                 ]
-            }
+            },  {
+                outputFileName: "carousel.js",
+                es6: false,
+                inputFiles: [
+                    `./node_modules/owl.carousel/dist/owl.carousel.js`,
+                    `${portal_src}/js/carousel.js`
+                ]
+            },
+            {
+                outputFileName: "input-tel.js",
+                es6: false,
+                inputFiles: [
+                    `./node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js`,
+                    `${portal_src}/js/input-tel.js`
+                ]
+            },
         ]
     },
 }

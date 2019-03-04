@@ -2,38 +2,139 @@
 @{
     ViewData["Title"] = Localizer["contact_us"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/contact.jpg");
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/contact.jpg");
     ViewData["pageTitle"] = Localizer["contact_us"];
 }
- 
 
+
+
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
+
+
+
+<section class="contact-page-area pt-75 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 mb-25">
+                <div class="contact-page-item">
+                    <div class="contact-form-title">
+                        <h2>@Localizer["our_contacts"]</h2>
+                        <p>@Localizer["our_contacts_txt"]</p>
+                    </div>
+                    <div class="row">
+                        <div class="address col-12">
+                            <h3>@Localizer["address"]</h3>
+                            <span>@Localizer["full_address"]</span>
+                        </div>
+                        <div class="phone col-md-6 col-lg-12">
+                            <h3>@Localizer["phone"]</h3>
+                            <span>@Localizer["br_phone_number"]</span>
+
+                        </div>
+                        <div class="email col-md-6 col-lg-12">
+                            <h3>@Localizer["email"]</h3>
+                            <a href="mailto:@Localizer["br_email_adress"]">@Localizer["br_email_adress"]</a>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="contact-area contact-area-2 contact-area-3">
+
+                    <div class="contact-form-title">
+                        <h2>@Localizer["contact_form"]</h2>
+
+                    </div>
+
+                    <div class="contact-form">
+                        <form method="post" class="contact-validation-active" id="contact-form" asp-action="contactus" asp-controller="home">
+                            <div class="form-row form-group">
+                                <div class="col-12 col-md-6">
+                                    <input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="@Localizer["your_name"]" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="@Localizer["your_email"]" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row form-group">
+                                <div class="col-12 col-md-6">
+                                    <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="@Localizer["your_phone"]">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <input type="text" name="Subject" id="Subject" class="form-control form-control-lg" placeholder="@Localizer["your_subject"]">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="6" name="note" id="note" placeholder="@Localizer["your_message"]" required></textarea>
+                            </div>
+                            <div class="alert alert-warning alert-dismissible fade  d-none" role="alert" id="alert-error">
+                                @Localizer["error_occurred"]
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="alert alert-success alert-dismissible fade  d-none" role="alert" id="alert-success">
+                                @Localizer["thank_you"]
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn send-btn">
+                                    <span class="btn-txt">
+                                        @Localizer["send"]
+                                    </span>
+                                    <i class="fa fa-refresh fa-spin  fa-fw d-none"></i>
+                                </button>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+@section footer{
+    <script src="~/Portal/js/validation.min.js"></script>
+}
 
 @section SEO{
 
-<script type="application/ld+json">
-    {
-    "@@context":"http://schema.org",
-    "@@type":"LocalBusiness",
-    "image":"@ViewBag.Host/portal/img/seoLogo.jpg",
-    "name":"Tamtech",
-    "address":{
-    "@@type":"PostalAddress",
-    "streetAddress":"E5 yan yol Civan Cokak",
-    "addressLocality":"Avcılar Üniversite Mh",
-    "addressRegion":"İstanbul",
-    "postalCode":"34320",
-    "addressCountry":"Turkey"
-    },
-    "geo":{
-    "@@type":"GeoCoordinates",
-    "latitude":40.991939 ,
-    "longitude":28.713351
-    },
-    "telephone":"+905354152865"
-    }
-</script>
+    <script type="application/ld+json">
+        {
+        "@@context":"http://schema.org",
+        "@@type":"LocalBusiness",
+        "image":"@ViewBag.Host/portal/img/logo.png",
+        "name":"Tamtech",
+        "address":{
+        "@@type":"PostalAddress",
+        "streetAddress":"@Localizer["streetAddress"]",
+        "addressLocality":"@Localizer["addressLocality"]",
+        "addressRegion":"@Localizer["addressRegion"]",
+        "postalCode":"34320",
+        "addressCountry":"Turkey"
+        },
+        "geo":{
+        "@@type":"GeoCoordinates",
+        "latitude":@Localizer["latitude"],
+        "longitude":@Localizer["longitude"]
+        },
+        "telephone":"@Localizer["br_phone_number"]"
+        }
+    </script>
 
 }
 
- 
- 
+
+

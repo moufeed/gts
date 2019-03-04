@@ -12,9 +12,9 @@
 }
 .client-text::before {
 	position: absolute;
-	left: 125px;
+	#{$left}: 125px;
 	content: "\f10d";
-	font-family: "Font Awesome 5 free";
+	font-family: "FontAwesome";
 	top: 0;
 	font-style: normal;
 	font-size: 27px;
@@ -23,10 +23,10 @@
 }
 .client-text::after {
 	position: absolute;
-	left: auto;
-	right: 125px;
+	#{$left}: auto;
+	#{$right}: 125px;
 	content: "\f10e";
-	font-family: "Font Awesome 5 free";
+	font-family: "FontAwesome";
 	bottom: 0;
 	font-style: normal;
 	font-size: 27px;
@@ -50,4 +50,31 @@
 .testimonial-active.owl-carousel .owl-item img {
 	display: inline-block;
 	width: initial;
+}
+
+
+
+.owl-carousel .owl-item .single-clients  img {
+	display: inline-block;
+	width: inherit;
+}
+.single-clients {
+    text-align: center;
+    min-height: 125px;
+}
+
+
+
+
+
+
+
+
+@include media-breakpoint-down(sm){
+    .client-text{
+        padding: 0;
+        &:before,&:after{
+            content: none;
+        }
+    }
 }

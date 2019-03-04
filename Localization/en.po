@@ -1744,32 +1744,115 @@ msgstr "Selected products"
 msgid "selected_products_txt"
 msgstr "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"
 
+msgid "quotation_tit"
+msgstr "We work to provide the best solutions to our customers"
+
+msgid "copyrights"
+msgstr "all copyrights reserved"
+
+msgid "copyrights"
+msgstr "All rights reserved"
+
+msgid "developed_designed"
+msgstr "design & developed by"
+
+
+msgid "visit_us"
+msgstr "Visit us"
+ 
+msgid "to_contact_us"
+msgstr "Contact us"
+ 
+msgid "message_us"
+msgstr "Write to us"
+ 
+msgid "contact_us"
+msgstr "contact us"
+
+
+
+msgid "our_contacts"
+msgstr "Our Contact"
+
+msgid "our_contacts_txt"
+msgstr "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy "
+
+msgid "address"
+msgstr "address"
+
+msgid "phone"
+msgstr "phone"
+
+msgid "email"
+msgstr "email"
+
+msgid "contact_form"
+msgstr "Get in touch"
+
+msgid "your_name"
+msgstr "your name"
+
+msgid "your_email"
+msgstr "your email"
+
+msgid "your_phone"
+msgstr "your phone"
+
+msgid "your_subject"
+msgstr "your subject"
+
+msgid "your_message"
+msgstr "your message"
+
+msgid "send"
+msgstr "send"
+
+msgid "thank_you"
+msgstr "thank you"
+
+msgid "error_occurred"
+msgstr "Error occurred while sending email. Please try again later."
+
 
 #: --- settings --- 
+
 msgid "br_address"
-msgstr "istanbul avcılar"
+msgstr "AVCILAR /ISTANBUL"
  
+msgid "full_address"
+msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+
 msgid "br_email_adress"
 msgstr "info@gtservices.com.tr"
  
 msgid "br_phone_number"
 msgstr "(021)314-326-2990"
 
- 
+msgid "seo_description"
+msgstr "sint asperiores optio iste, recusandae tempore dolore? Deserunt quam impedit ex."
 
+msgid "streetAddress"
+msgstr "E5 yan yol Civan Cokak"
 
- 
+msgid "addressLocality"
+msgstr "Avcılar Üniversite Mh"
+
+msgid "addressRegion"
+msgstr "İstanbul"
+
+msgid "latitude"
+msgstr "40.991939"
+
+msgid "longitude"
+msgstr "28.713351"
+
 msgid ""
 msgstr ""
- 
-msgid ""
-msgstr ""
- 
-msgid ""
-msgstr ""
- 
-msgid ""
-msgstr ""
- 
-msgid ""
-msgstr ""
+msgid "section_Papers"
+msgstr "Papers"
+
+msgid "section_oils"
+msgstr "Oils"
+
+msgid "section_Cartons"
+msgstr "Cartons"

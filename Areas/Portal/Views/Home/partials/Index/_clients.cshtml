@@ -1,0 +1,27 @@
+@using TamTechSDK.Common.Services.ContentService.Sliders.Models;
+
+<if include-if="ViewBag.ClientsSlider != null">
+     @{
+        var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+        SliderDto slider = (SliderDto)ViewBag.ClientsSlider;
+     }
+        <div class="clients-area pt-50 pb-50">
+            <div class="container">
+                <div class="row">
+                    <div class="clients-active owl-carousel"dir="@(lang == "ar" ? "rtl" : "ltr" )">
+                       
+                            @foreach (SliderItemDto item in slider.Items)
+                            {
+                                 <div class="col-sm-12">
+                                <div class="single-clients d-flex justify-content-center align-items-center">
+                                    <img src="@item.MainImage" alt="@item.Title">
+                                 </div> 
+                                 </div>
+                            }
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+</if>

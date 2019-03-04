@@ -33,7 +33,11 @@
 	margin-bottom: 2px;
 }
 .cta-text span {
-	color: #757575;
+	color: #bcbcbc;
+	font-size: 15px;
+}
+.cta-text a {
+	color: #fff;
 	font-size: 15px;
 }
 .footer-content {
@@ -111,7 +115,7 @@
 	color: $red;
 }
 .footer-widget ul li a {
-	color: #878787;
+	color: #bbb;
 	text-transform: capitalize;
 }
 .subscribe-form {
@@ -149,4 +153,10 @@
 }
 .copyright-text p a{
 	color: $red;
+}
+
+@include  media-breakpoint-only(md){
+	.cta-text{
+		width: 100%;
+	}
 }

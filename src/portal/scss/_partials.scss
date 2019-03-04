@@ -7,21 +7,30 @@
 /* @import 
 'template/style.css'; */
 
+
 // plugins
 
 @import
 "plugins/meanmenu",
-"plugins/animate",
-"plugins/slick"
+"plugins/slick" ,
+"plugins/animate/_base.css",
+"plugins/animate/fading_entrances/fadeInDown",
+"plugins/animate/fading_entrances/fadeInLeft",
+"plugins/animate/fading_entrances/fadeInRight"
 ;
 
+@import
+ './node_modules/owl.carousel/src/scss/owl.carousel',
+ './node_modules/owl.carousel/src/scss/owl.theme.green'
+;
 
 
 //shared
 @import 
 'partials/shared/default' ,
 'partials/shared/header' ,
-'partials/shared/footer' 
+'partials/shared/footer' ,
+'partials/shared/pages-header' 
 ;
 
 
@@ -33,11 +42,15 @@
 'partials/home/counter-area' ,
 'partials/home/service-area' ,
 'partials/home/testimonial' ,
-'partials/home/products' 
+'partials/home/products'
+;
+
+// contact us
+
+@import 
+'partials/contactus/contactus'
 ;
 
 
-
-
-@import 
-'template/responsive.css'; 
+/* @import 
+'template/responsive.css';  */

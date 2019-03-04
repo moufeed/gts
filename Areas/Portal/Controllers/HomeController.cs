@@ -71,11 +71,11 @@ namespace Gts.Areas.Portal.Controllers
         {
             try
             {
-                //var testimonial = await _TestimonialsServices.GetPublicListAsync(true);
-                //if (testimonial.Success)
-                //{
-                //    ViewBag.testimonials = testimonial.Data;
-                //}
+                var testimonial = await _TestimonialsServices.GetPublicListAsync(true);
+                if (testimonial.Success)
+                {
+                   ViewBag.testimonials = testimonial.Data;
+                }
 
                 var publicMainSlider = await _sliderService.GetPublicByKeyAsync(_appSettingsService.GetHomePageMainSliderKey());
                 if (publicMainSlider.Success)
@@ -84,7 +84,7 @@ namespace Gts.Areas.Portal.Controllers
                 }
 
                 //ViewBag.Posts = new List<PostDto>();// await _postservice.GetPublicListAsync(4);
-                ViewBag.galleries = await _GalleriesService.GetPublicListAsync(4);
+                ViewBag.galleries = await _GalleriesService.GetPublicListAsync(6);
 
 
 
@@ -102,11 +102,11 @@ namespace Gts.Areas.Portal.Controllers
                     ViewBag.services = services.Data;
                 }
 
-                var publicClientsSlider = await _sliderService.GetPublicByKeyAsync(_appSettingsService.GetHomePageCarouselSliderKey());
+                var ClientsSlider = await _sliderService.GetPublicByKeyAsync(_appSettingsService.GetHomePageCarouselSliderKey());
 
-                if (publicClientsSlider.Success)
+                if (ClientsSlider.Success)
                 {
-                    ViewBag.publicClientsSlider = publicClientsSlider.Data;
+                    ViewBag.ClientsSlider = ClientsSlider.Data;
                 }
 
 
@@ -115,9 +115,7 @@ namespace Gts.Areas.Portal.Controllers
             {
                 TrackException(ex);
             }
-
-
-
+             
             return base.View();
         }
     }

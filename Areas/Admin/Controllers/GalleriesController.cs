@@ -13,6 +13,7 @@ using TamTechSDK.Web.Models.Shared.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System;
+using Gts.Custom.Moduls;
 
 namespace Gts.Areas.Admin.Controllers
 {
@@ -33,12 +34,16 @@ namespace Gts.Areas.Admin.Controllers
         {
             #region sectionList
             List<SelectListItem> sections = new List<SelectListItem>()
-            {
-                 new SelectListItem
-                { Text = _localizer["section_projects"] , Value = "projects"  },
+            { 
                   new SelectListItem
-                { Text = _localizer["section_works"] , Value = "works"  },
+                { Text = _localizer["section_Papers"] , Value = (GetCurrentDataLang() == "ar") ?  _localizer["section_Papers"] : GallerySections.Papers.ToString()  },
+                  new SelectListItem
+                { Text = _localizer["section_oils"] , Value = (GetCurrentDataLang() == "ar") ?  _localizer["section_oils"] : GallerySections.oils.ToString() },
+                 new SelectListItem
+                { Text = _localizer["section_Cartons"] , Value = (GetCurrentDataLang() == "ar") ?  _localizer["section_Cartons"] : GallerySections.Cartons.ToString() },
             };
+
+             
             ViewBag.sectionList = sections;
             #endregion
         }

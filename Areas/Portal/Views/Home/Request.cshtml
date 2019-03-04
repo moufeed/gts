@@ -1,12 +1,12 @@
 ﻿@model  CreateRequestModel
 @{
-    ViewData["Title"] = Localizer["request_qute"];
+    ViewData["Title"] = Localizer["request_quotation"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/qute.jpeg");
-    ViewData["pageTitle"] = Localizer["request_qute"];
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/request.jpg");
+    ViewData["pageTitle"] = ViewData["Title"];
 }
 
-@await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml", @ViewData)
+    <partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
 
 
 <section class="section-qute pt-5">
@@ -51,7 +51,9 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label asp-for="Phone">@Localizer["l_phone"]</label>
-                    <input type="tel" class="form-control form-control-lg" placeholder="@Localizer["l_phone"].." asp-for="Phone" />
+                    <div>
+                        <input type="tel" class="form-control form-control-lg" placeholder="@Localizer["l_phone"].." asp-for="Phone" id="phone" />
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label asp-for="CityId">@Localizer["l_city"]</label>
@@ -103,6 +105,11 @@
     </div>
 </section>
 
-
+@section style{ 
+    <link href="~/Portal/css/plugins/intlTelInput.min.css" rel="stylesheet" />
+}
        
+@section footer{
+    <script src="~/Portal/js/input-tel.min.js"></script>
+}
  

@@ -5,25 +5,29 @@
     var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 }
 
-
+ 
 
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_Slider.cshtml" />
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_about.cshtml" />
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_services.cshtml" />
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_counters.cshtml" />
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_products.cshtml" />
-
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_testimonials.cshtml" />
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_quotation.cshtml" />
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_clients.cshtml" />
 
 @section SEO {
+     <meta name="description" content="@Localizer["seo_description"]">
+     
     <script type="application/ld+json">
         {
         "@@context": "http://schema.org",
         "@@type": "Organization",
         "url":  "@ViewBag.Host",
-        "logo": "@ViewBag.Host/portal/img/seoLogo.jpg",
-        "name": "tam tech",
-        "telephone": "00905354152865",
-        description :"tam tech"
+        "logo": "@ViewBag.Host/portal/img/logo.png",
+        "name": "@Localizer["site_title"]",
+        "telephone": "@Localizer["br_phone_number"]",
+        description :"@Localizer["seo_description"]"
         }
     </script>
 }
@@ -33,7 +37,9 @@
 
 }
 @section footer{
-
     <script src="~/Portal/js/slider.min.js"></script>
     <script src="~/Portal/js/counters.min.js"></script>
+    <script src="~/Portal/js/carousel.min.js"></script>
 }
+ 
+

@@ -266,10 +266,7 @@
 	margin: 0;
 }
 
-.owl-carousel .owl-item img {
-	display: block;
-	width: inherit;
-}
+
 
 .service-box.service-3 {
 	padding: 0;
@@ -483,15 +480,7 @@
 .maps {
 	height: 420px;
 }
-.contact-form-title h2 {
-	font-weight: 700;
-	margin-bottom: 10px;
-}
-.contact-form-title p {
-	font-style: italic;
-	width: 60%;
-	margin: 0 auto 55px;
-}
+
 .contact-form input {
 	width: 100%;
 	border: 2px solid #eee;
@@ -928,11 +917,4 @@ blockquote {
 }
 .maps-area {
 	overflow: hidden;
-}
-.single-clients {
-	text-align: center;
-}
-.owl-carousel .owl-item .single-clients  img {
-	display: inline-block;
-	width: inherit;
 }

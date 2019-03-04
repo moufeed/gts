@@ -317,3 +317,39 @@ label {
 .z-index{
 	z-index: 9;
 }
+
+
+
+.owl-carousel .owl-item img {
+	display: block; 
+	width: inherit;
+	max-width: 100%;
+	margin: auto;
+}
+
+
+@include media-breakpoint-down(md){
+	
+	.section-title {
+		&.service-title{
+			p {
+				padding: 0;
+			}
+		}
+	}
+}
+
+
+.form-control.is-invalid, 
+.was-validated .form-control:invalid{
+	background-position : center $right calc(.375em + .1875rem); 
+	padding-#{$left}:15px;
+	padding-#{$right}: calc(1.5em + .75rem);
+} 
+
+.was-validated textarea.form-control:invalid,
+ textarea.form-control.is-invalid{
+	padding-#{$left}:15px;
+	padding-#{$right}: calc(1.5em + .75rem);
+	background-position: top calc(.375em + .1875rem) $right calc(.375em + .1875rem);
+}

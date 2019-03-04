@@ -102,3 +102,20 @@
 .slider-active .slick-dots li.slick-active button{
 	background: $red;
 }
+
+
+
+@include media-breakpoint-down(sm){
+	.slider-bg{
+		height: 400px;
+	}
+	.slider-content h1{
+		font-size: rem(25px);
+	}
+}
+
+@include media-breakpoint-only(md){
+	.slider-bg{
+		height: 560px;
+	}
+}

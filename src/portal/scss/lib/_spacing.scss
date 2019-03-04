@@ -637,3 +637,15 @@
 .pr-100 {
 	padding-right: 100px;
 }
+
+
+
+
+ 
+// #region  small screens
+@include media-breakpoint-down(sm){
+	.pb-100{
+		padding-bottom: 50px;
+	}
+}
+// #endregion
