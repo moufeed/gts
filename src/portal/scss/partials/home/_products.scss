@@ -97,19 +97,7 @@
 }
 
  
-.portfolio-menu button {
-	padding: 0 8px;
-	border: 0;
-	background: none;
-	color: #000;
-	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: 600;
-	cursor: pointer;
-}
-.portfolio-menu > button:hover, .portfolio-menu > button.active{
-	color: $red;
-}
+
 .project-details-title h3 {
 	font-weight: 700;
 	margin-bottom: 25px;

@@ -24,14 +24,15 @@
                                         <span class="fa @item.Icon"></span>
                                     </div>
                                     <h4>
-                                        <a asp-action="v" asp-controller="services" asp-route-slug="@item.Slug">
+                                        @item.Title
+                                        @*<a asp-action="v" asp-controller="services" asp-route-slug="@item.Slug">
                                             @item.Title
-                                        </a>
+                                        </a>*@
                                     </h4>
                                     <p>@item.Summary</p>
-                                    <a asp-action="v" asp-controller="services" asp-route-slug="@item.Slug" class="read_more">
+                                    @*<a asp-action="v" asp-controller="services" asp-route-slug="@item.Slug" class="read_more">
                                         @Localizer["more"]
-                                    </a>
+                                    </a>*@
                                 </div>
                             </div>
                         }

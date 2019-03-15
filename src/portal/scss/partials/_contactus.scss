@@ -1,0 +1,106 @@
+.contact-form-title h2 {
+	font-weight: if-ltr(700,300);
+    margin-bottom: 35px; 
+    text-transform: capitalize;
+}
+.contact-form-title p {
+	font-style: italic;
+ 
+}
+
+
+.contact-page-item{
+    h3{
+        text-transform: capitalize;
+        font-weight: 600;
+        margin: 15px 0 if-ltr(5px ,25px);
+        font-weight: if-ltr(600,300);
+        @include  if-rtl{ 
+            font-size:  20px;  
+        }
+    }
+    a{
+        color: $red;
+        &:hover{ 
+            text-decoration:underline;
+        }
+    }
+}
+
+.contact-form{
+    .form-control{
+        border-radius: 0;
+        @include placeholder{
+            text-transform: capitalize;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm){
+    .form-control{
+       margin-bottom: 10px;
+    }
+}
+
+
+.branch-contact{
+    text-align: center;
+    position: relative;
+        .map{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 250px;
+            cursor: pointer;
+            a{
+                display: block;
+                 @include square(200px); 
+                overflow: hidden;
+                border-radius: 50%;
+                z-index: 3;
+            }
+            svg{
+                @include square(250px);
+                position: absolute;
+                circle{
+                    fill: transparent;
+                    stroke-dasharray: 170 100;
+                    stroke-dashoffset: 250;
+                    stroke-width: 2px;
+                    stroke: $gray; 
+                }
+            }
+        }
+        .link-title{
+            margin-top: 15px;
+            display: inline-block;
+            text-transform: capitalize;
+            color: #000;
+            font-weight: bold;
+        }
+        &:hover{
+            svg circle{
+                -webkit-animation: 0.3s draw linear forwards;
+                animation: 0.3s draw linear forwards;
+            }
+        }
+}
+
+@include keyframe(draw){
+    0% {
+        stroke-dasharray: 170 100;
+        stroke-dashoffset: 250;
+        stroke: $gray; 
+      }
+      100% {
+        stroke-dasharray: 170 0;
+        stroke-dashoffset: 250;
+        stroke: $red; 
+      } 
+}
+
+.contact-page-area{
+    background: url(#{$img}Worldmap_red.png) center no-repeat;
+    background-attachment: fixed; 
+}

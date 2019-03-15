@@ -73,12 +73,28 @@ module.exports = {
                 ]
             },
             {
+                outputFileName: "isotope.js",
+                es6: false,
+                inputFiles: [
+                    `${portal_src}/js/plugins/isotope.pkgd.min.js`,
+                    `${portal_src}/js/isotope.js`
+                ]
+            },
+            {
                 outputFileName: "input-tel.js",
                 es6: false,
                 inputFiles: [
                     `./node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js`,
                     `${portal_src}/js/input-tel.js`
                 ]
+            },
+            {
+                outputFileName: "magnific-popup.js",
+                es6: false,
+                inputFiles: [
+                    './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+                    `${portal_src}/js/magnific.js`
+                ],
             },
         ]
     },

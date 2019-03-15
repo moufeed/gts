@@ -1,74 +1,74 @@
-﻿@model List<ServiceDto>
+﻿@model ServiceList
 @{
-    ViewData["Title"] = Localizer["Services"];
+    ViewData["Title"] = Localizer["our_services"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/services.jpg");
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/services.jpg");
     ViewData["pageTitle"] = Localizer["our_services"];
- 
+
 }
 
-@await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml", @ViewData)
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="Model.SectionsSlugs" />
+
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
 
 
-
-
-<section class="services-section">
-
-    
-    @if (Model != null && Model.Count > 0)
-    {
-        int i = 1;
-
-        foreach (var service in Model)
-        {
-            <div class="service-feature @(((i % 2) == 0)? "even" :"") ">
-                <div class="container">
-                    
-                    <div class="row align-items-center">
-                        <div class="col-md-4 text-center @(((i % 2) == 0)? "order-last" :"")">
-                            <div class="service-icon">
-
+<section class="service-area pt-100 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 text-center pb-40 ">
+                <div class="section-title service-title">
+                    <p>@Localizer["h_our_services_txt"]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @if (Model != null && Model.Data.Count > 0)
+            {
+                foreach (var service in Model.Data)
+                {
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50 ">
+                        <div class="services-box">
+                            <div class="services-img">
                                 @if (service.IconVisibility && !string.IsNullOrEmpty(service.Icon))
                                 {
-                                        <i class="fa @service.Icon"></i>  
+                                    <i class="fa @service.Icon"></i>
                                 }
                                 else if (!string.IsNullOrEmpty(service.MainImage) && !service.IconVisibility)
                                 {
                                     <img src="@service.MainImage" class="img-fluid" alt="">
                                 }
                                 else
-                                {           
-                                        <i class="fa fa-cubes"></i>
+                                {
+                                    <i class="fa fa-cubes"></i>
                                 }
-
                             </div>
-                            </div>
-                        <div class="col-md-8  @(((i % 2) == 0)? "order-first" :"")">
-                            <div class="service-description">
-                                <h3 class="c-title"><strong>@service.Title</strong></h3>
-                                <div>
-                                    @Html.Raw(service.Summary)
+                            <div class="services-content">
+                                <div class="card-title">
+                                    <h5>@service.Title</h5>
+                                </div>
+                                <div class="card-text">
+                                    <div>
+                                        @Html.Raw(service.Summary)
+                                    </div>
                                 </div>
                                 @if (!string.IsNullOrEmpty(service.Content))
-                                { 
-                                <a  asp-controller="services" asp-action="v" asp-route-slug="@service.Slug" class="btn">@Localizer["read_more"]</a>
+                                {
+                                    <a asp-controller="services" asp-action="v" asp-route-slug="@service.Slug" class="btn">@Localizer["read_more"]</a>
                                 }
                             </div>
                         </div>
                     </div>
-                </div>
+
+
+
+                }
+            }
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <partial name="_pagination" model="Model" />
             </div>
-            i++;
-        }
-    }
-
-
-
-
-
-
-     
-
-
+        </div>
+    </div>
 </section>
-

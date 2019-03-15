@@ -40,7 +40,7 @@ namespace Gts.Areas.Admin.Controllers
                   new SelectListItem
                 { Text = _localizer["section_oils"] , Value = (GetCurrentDataLang() == "ar") ?  _localizer["section_oils"] : GallerySections.oils.ToString() },
                  new SelectListItem
-                { Text = _localizer["section_Cartons"] , Value = (GetCurrentDataLang() == "ar") ?  _localizer["section_Cartons"] : GallerySections.Cartons.ToString() },
+                { Text = _localizer["section_foodstuffs"] , Value = (GetCurrentDataLang() == "ar") ?  _localizer["section_foodstuffs"] : GallerySections.foodstuffs.ToString() },
             };
 
              

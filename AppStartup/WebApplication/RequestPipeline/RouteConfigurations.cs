@@ -30,6 +30,7 @@ namespace Gts.AppStartup.WebApplication.RequestPipeline
                      subApp.UseRequestLocalization(localizationOptions);
                      subApp.UseMvc(mvcRoutes =>
                      {
+                          
                          mvcRoutes.MapRoute(
                                              name: "default",
                                              template: "{culture}/{area}/{controller}/{action}/{*slug}",

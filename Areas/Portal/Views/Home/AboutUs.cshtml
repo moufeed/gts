@@ -1,48 +1,96 @@
 ﻿
 @{
-    ViewData["Title"] = "TamTech";
+    ViewData["Title"] = Localizer["about_us"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/about.jpg");
-    ViewData["pageTitle"] = Localizer["About_Us"];
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/about.jpg");
+    ViewData["pageTitle"] = Localizer["about_us"];
 }
 
- 
-
-
-
-@section SEO{
-
-<script type="application/ld+json">
-    {
-    "@@context":"http://schema.org",
-    "@@type":"LocalBusiness",
-    "image":"@ViewBag.Host/portal/img/seoLogo.jpg",
-    "name":"Tamtech",
-    "address":{
-    "@@type":"PostalAddress",
-    "streetAddress":"E5 yan yol Civan Cokak",
-    "addressLocality":"Avcılar Üniversite Mh",
-    "addressRegion":"İstanbul",
-    "postalCode":"34320",
-    "addressCountry":"Turkey"
-    },
-    "geo":{
-    "@@type":"GeoCoordinates",
-    "latitude":40.991939 ,
-    "longitude":28.713351
-    },
-    "telephone":"+905354152865"
-    }
-</script>
+@{
+    List<SlugModel> mod = new List<SlugModel>();
 }
-
-
-<section class="about_us_section">
- 
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="mod" />
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
 
 
 
+<section class="about-section">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-4">
+                <img src="~/Portal/img/about-logo.png" alt="@Localizer["site_title"]" class="alogo" />
+            </div>
+            <div class="col-12 col-md-8 col-lg-7">
+                <h3 class="dot-title"><span>@Localizer["about_gts"]</span></h3>
+                <p>@Localizer["about_txt"]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vision-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="about-item text-center">
+                    <img src="~/Portal/img/vision.png" alt="@Localizer["our_vision"]" />
+                    <h5><span>@Localizer["our_vision"]</span></h5>
+                    <p>@Localizer["our_vision_txt"]</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="about-item text-center">
+                    <img src="~/Portal/img/mission.png" alt="@Localizer["our_vision"]" />
+                    <h5><span>@Localizer["our_vision"]</span></h5>
+                    <p>@Localizer["our_vision_txt"]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="chairman-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h5><span>@Localizer["chairman_message"]</span></h5>
+                <p>@Localizer["chairman_message_txt"]</p>
+                <footer>
+                    <strong>@Localizer["chairman"]</strong>
+
+                </footer>
+            </div>
+        </div>
+    </div>
 </section>
 
 
- 
+
+@*@section SEO{
+
+    <script type="application/ld+json">
+        {
+        "@@context":"http://schema.org",
+        "@@type":"LocalBusiness",
+        "image":"@ViewBag.Host/portal/img/seoLogo.jpg",
+        "name":"Tamtech",
+        "address":{
+        "@@type":"PostalAddress",
+        "streetAddress":"E5 yan yol Civan Cokak",
+        "addressLocality":"Avcılar Üniversite Mh",
+        "addressRegion":"İstanbul",
+        "postalCode":"34320",
+        "addressCountry":"Turkey"
+        },
+        "geo":{
+        "@@type":"GeoCoordinates",
+        "latitude":40.991939 ,
+        "longitude":28.713351
+        },
+        "telephone":"+905354152865"
+        }
+    </script>
+    }*@
+
+
+<section class="about_us_section"></section>

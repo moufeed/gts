@@ -1,0 +1,45 @@
+
+
+#: --- settings --- 
+
+msgid "br_address"
+msgstr "AVCILAR /ISTANBUL"
+ 
+msgid "full_address"
+msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+
+msgid "br_email_adress"
+msgstr "info@gtservices.com.tr"
+ 
+msgid "br_phone_number"
+msgstr "(021)314-326-2990"
+
+msgid "seo_description"
+msgstr "sint asperiores optio iste, recusandae tempore dolore? Deserunt quam impedit ex."
+
+msgid "streetAddress"
+msgstr "E5 yan yol Civan Cokak"
+
+msgid "addressLocality"
+msgstr "Avcılar Üniversite Mh"
+
+msgid "addressRegion"
+msgstr "İstanbul"
+
+msgid "latitude"
+msgstr "40.991939"
+
+msgid "longitude"
+msgstr "28.713351"
+
+msgid "hongkong_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid "turkey_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid "china_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid ""
+msgstr ""

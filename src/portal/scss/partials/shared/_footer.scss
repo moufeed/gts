@@ -14,8 +14,18 @@
     margin-top: 8px;
     
 } 
+ @include media-breakpoint-down(sm){
+	.single-cta{
+		text-align: center;
+		i{
+			float: none;
+			display: block;
+		}
+	}
+} 
+
 @media screen and (min-width : 768px) and (max-width : 1023px) {
-    .single-cta{
+    .single-cta{ 
         text-align: center;
         i { float: none; margin-bottom: 5px;}
     }
@@ -24,7 +34,8 @@
 .cta-text {
 	padding-#{$left}: 15px;
     display: inline-block;
-    width: 90%;
+	width: 90%;
+	
 }
 .cta-text h4 {
 	color: #fff;
@@ -40,6 +51,16 @@
 	color: #fff;
 	font-size: 15px;
 }
+
+@include media-breakpoint-down(sm){
+	.cta-text {
+		width: 100%;
+		padding: 0;
+		display: block;
+	}
+}
+
+
 .footer-content {
 	position: relative;
 	z-index: 2;

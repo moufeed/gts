@@ -1706,5 +1706,282 @@ msgstr ""
 
 msgid ""
 msgstr ""
+  
+msgid "site_title"
+msgstr "Gts"
+
+msgid "about_gts"
+msgstr "حول gts"
+
+msgid "request_quotation"
+msgstr "طلب  تسعير"
+
+msgid "about_us"
+msgstr "حول الشركة"
+
+msgid "h_our_services"
+msgstr "لماذا نحن"
+
+msgid "h_our_services_txt"
+msgstr "باقة متنوعة من الخدمات التي تمكنك من جلب المنتجات التركية إلى الأسواق المحلية "
+  
+msgid "more"
+msgstr "المزيد"
+  
+msgid "clients"
+msgstr "عملاءنا"
+  
+msgid "transaction"
+msgstr "صفقات"
+  
+msgid "cooperating_companies"
+msgstr "الشركات المتعاونة"
+  
+msgid "products"
+msgstr "المنتجات"
+  
+msgid "selected_products"
+msgstr "المنتجات المحددة"
+  
+msgid "selected_products_txt"
+msgstr "لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه"
+
+msgid "quotation_tit"
+msgstr "نحن نعمل على توفير أفضل الحلول لعملائنا"
+
+msgid "copyrights"
+msgstr "جميع حقوق النشر محفوظة"
+
+ 
+
+msgid "developed_designed"
+msgstr "تصميم وتطوير"
+
+
+msgid "visit_us"
+msgstr "قم بزيارتنا"
+ 
+msgid "to_contact_us"
+msgstr "اتصل بنا"
+ 
+msgid "message_us"
+msgstr "اكتب لنا"
+ 
+msgid "contact_us"
+msgstr "اتصل بنا"
+
+
+
+msgid "our_contacts"
+msgstr "معلومات الاتصال"
+
+msgid "our_contacts_txt"
+msgstr "تواصل معنا لتتعرف على آخر المنتجات، الاستشارات والعروض  التي نقدمها"
+
+msgid "address"
+msgstr "العنوان"
+
+msgid "phone"
+msgstr "الهاتف"
+
+msgid "email"
+msgstr "البريد الالكتروني"
+
+msgid "contact_form"
+msgstr "للبقاء على تواصل"
+
+msgid "your_name"
+msgstr "الاسم الكامل"
+
+msgid "your_email"
+msgstr "البريد الالكتروني"
+
+msgid "your_phone"
+msgstr "رقم الهاتف"
+
+msgid "your_subject"
+msgstr "الموضوع"
+
+msgid "your_message"
+msgstr "الرسالة"
+
+msgid "send"
+msgstr "ارسال"
+
+msgid "thank_you"
+msgstr "شكرا لك"
+
+msgid "error_occurred"
+msgstr "حدث خطأ ما يرجى المحاولة لاحقا"
+
+
+
+msgid "request_msg"
+msgstr "لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ..."
+
+msgid "request_thanks_title"
+msgstr "شكرا لك لطلب التسعير الخاص بك"
+
+msgid "request_thanks_msg"
+msgstr "نحن نقدر وقتك في إرسال طلب عرض سعر سيتم الرد على طلبك في أقرب وقت ممكن"
+
+msgid "our_products"
+msgstr "المنتجات"
+
+msgid "language"
+msgstr "اللغة"
+
+msgid "read_more"
+msgstr "المزيد"
+
+msgid "our_services"
+msgstr "لماذا نحن "
+
+msgid "about_txt"
+msgstr "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم "
+
+msgid "our_vision"
+msgstr "رؤيتنا"
+
+msgid "our_vision_txt"
+msgstr "ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف"
+
+msgid "our_mission"
+msgstr "مهمتنا"
+
+msgid "our_mission_txt"
+msgstr "خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام 45 قبل الميلاد، مما يجعله أكثر من 2000 عام في القدم"
+
+
+msgid "chairman_message"
+msgstr "كلمة رئيس مجلس الأدارة"
+
+msgid "chairman_message_txt"
+msgstr "قام قد منتصف فكانت بتطويق. حدى ألمانيا وبريطانيا إذ, أما ان بمحاولة الموسوعة, بقعة وبحلول أن جُل. مقاطعة والفرنسي لكل ٣٠. كلا تم مايو حاملات واشتدّت. ٣٠ بحث تصرّف الأعمال الرئيسية, ان دار والكوري بريطانيا. بحث في بأيدي العاصمة إستيلاء, لكل الله وقرى انتصارهم ما, تحت وحلفاؤها اقتصادية و."
+
+msgid "chairman"
+msgstr "رئيس مجلس الإدارة"
+
+msgid "chairman_name"
+msgstr "طارق حمامي"
+
+
+msgid ""
+msgstr ""
+
+msgid "section_Papers"
+msgstr "ورقيات"
+
+msgid "section_oils"
+msgstr "زيوت"
+
+msgid "section_Cartons"
+msgstr "الكرتون"
+
+msgid "section_foodstuffs"
+msgstr "مواد غذائية"
+
+msgid "turkey"
+msgstr "تركيا"
+
+msgid "hongkong"
+msgstr "هونغ كونغ"
+
+msgid "china"
+msgstr "الصين"
+
+
+
+
+msgctxt "admin.Views.Shared._side_menu"
+msgid "Galleries"
+msgstr "المنتجات"
+
+
+msgid "Galleries"
+msgstr "المنتجات"
+
+msgid "h_gallery"
+msgstr "المنتجات"
+
+#:galleries index.cshtml
+msgid "new_gallery"
+msgstr "منتج جديد"
+
+
+
+#:FormGalleryItem.cshtml
+msgid "create_gallery_item"
+msgstr "إضافة صورة منتج"
+
+msgid "edit_gallery_item"
+msgstr "تعديل صورة المنتج"
+
+msgid "back_to_gallery"
+msgstr "العودة للمنتج"
+
+ 
+
+#:FormGallery.cshtml 
+msgid "create_gallery"
+msgstr "إنشاء منتج"
+
+msgid "update_gallery"
+msgstr "تحديث منتج"
  
  
+
+
+#: galleries Details.cshtml
+msgid "galleries_details"
+msgstr "تفاصيل المنتج "
+
+msgid "gallery_pictures"
+msgstr "صور المنتج"
+
+#:_galleryitems.cshtml
+msgid "gallery_items"
+msgstr "المنتجات"
+#: --- settings --- 
+
+msgid "br_address"
+msgstr "افجلر /اسطنبول"
+ 
+msgid "full_address"
+msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+
+msgid "br_email_adress"
+msgstr "info@gtservices.com.tr"
+ 
+msgid "br_phone_number"
+msgstr "(021)314-326-2990"
+
+msgid "seo_description"
+msgstr "لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه"
+
+msgid "streetAddress"
+msgstr "E5 yan yol Civan Cokak"
+
+msgid "addressLocality"
+msgstr "Avcılar Üniversite Mh"
+
+msgid "addressRegion"
+msgstr "İstanbul"
+
+msgid "latitude"
+msgstr "40.991939"
+
+msgid "longitude"
+msgstr "28.713351"
+
+msgid "hongkong_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid "turkey_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid "china_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid ""
+msgstr ""

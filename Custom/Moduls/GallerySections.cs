@@ -9,6 +9,6 @@ namespace Gts.Custom.Moduls
     {
         Papers = 1,
         oils = 2,
-        Cartons = 3
+        foodstuffs = 3
     }
 }

@@ -1,8 +1,8 @@
 ﻿@model ServiceDto
 @{
-    ViewData["Title"] = Localizer["Services"];
+    ViewData["Title"] = Localizer["our_services"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/services.jpg");
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/services.jpg");
 
     ViewData["pageTitle"] = Model.Title;
 
@@ -10,12 +10,10 @@
     ViewBag.Action = "edit";
 }
 
-@await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml", @ViewData)
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="Model.Slugs" />
 
-@section SEO{
-    <meta name="description" content="@Html.Raw(Model.MetaDescription)" />
-    <partial name="~/Areas/Portal/Views/Shared/partials/_SEO.cshtml" model="Model.SEOMarkup" />
-}
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
+
 
 
 <section class="section-page py-5">
@@ -28,8 +26,8 @@
             {
                 <div class="col-md-5 ">
 
-                    <div class="page-mainimage  d-flex justify-content-center align-items-center">
-                        <img src="@Model.MainImage" alt="@Model.Title" />
+                    <div class="service-mainimage  d-flex justify-content-center align-items-center">
+                        <img src="@Model.MainImage" alt="@Model.Title" class="img-fluid" />
                     </div>
                 </div>
 
@@ -40,7 +38,7 @@
             <div class="col-md-@classname">
                 <div class="page-summary">
                     <header>
-                        <h4>@Model.Title</h4>
+                        <h4 class="border-title"><span>@Model.Title</span></h4>
                     </header>
                     <div class="page-meta">
 
@@ -72,3 +70,8 @@
     </div>
 </section>
 
+
+@section SEO{
+    <meta name="description" content="@Html.Raw(Model.MetaDescription)" />
+    <partial name="~/Areas/Portal/Views/Shared/partials/_SEO.cshtml" model="Model.SEOMarkup" />
+}

@@ -1,72 +1,91 @@
 ﻿@model GalleryList;
+@using System.Linq;
 @{
-    ViewData["Title"] = Localizer["Galleries"];
+
+    ViewData["Title"] = Localizer["our_products"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/galleries.jpg");
-    ViewData["pageTitle"] = Localizer["our_galleries"];
-   
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/galleries.jpg");
+    ViewData["pageTitle"] = Localizer["our_products"];
+    var slug = ViewContext.RouteData.Values["Slug"];
 }
+@{
+    List<SlugModel> mod = new List<SlugModel>();
+    
+    if (Model.SectionsSlugs != null && Model.SectionsSlugs.Count > 0)
+    {
+        mod = Model.SectionsSlugs;
+    }
+}
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="mod" />
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
 
-@await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml")
+@{
+    List<string> Sections = Model.Data.Select(a => a.Section).Distinct().ToList();
 
-
-<section class="galleries">
-
+}
+<section class="section-galleries">
     <div class="container">
+        <if include-if="slug == null">
+            <div class="row">
 
-        <div class="row py-5 ">
-            @if (Model.Data.Count > 0)
-            {
-                foreach (GalleryLiteDto item in Model.Data)
+                <div class="col-lg-12 text-center">
+                    <div class="products-menu mt-5">
+                        <button class="active" data-filter="*">@Localizer["all"]</button>
+                        @foreach (var item in Sections)
+                        {
+                            <button class="" data-filter=".@item">@item</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </if>
+        <div class="row py-5 products-list">
+            <if include-if="Model.Data.Count > 0">
+                @foreach (GalleryLiteDto item in Model.Data)
                 {
-                    <div class="col-md-4 col-lg-3">
 
+
+                    <div class="col-lg-4 col-md-6 grid-item @item.Section">
                         <div class="gallery_item">
-                            <span class="image">
-                                 
-                                @if (string.IsNullOrEmpty(item.MainImage))
-                                {
-                                   <a asp-controller="galleries" asp-action="v" asp-route-slug="@item.Slug"><img src="~/Portal/img/no-image.svg" alt="@item.Title" /></a>
-                                }
-                                else
-                                { 
-                                   <a asp-controller="galleries" asp-action="v" asp-route-slug="@item.Slug"><img src="@item.MainImage" alt="@item.Title" /></a>
-                                }
-                            </span>
-                            <div class="Info">
-                                <span class="meta">
-                                    <small> @(String.Format("{0:d/M/yyyy }", item.CreatedDate)) </small>
-                                    <small>@(string.Format("{0:dd/MMM/yyyy}",item.CustomDate) ) </small>
-                                 
-                                </span>
-                                <h5><a href="@Url.PortalAction("v", "galleries", new { slug = item.Slug })">@item.Title</a></h5>
+                            <div class="overlay-area d-flex justify-content-center align-items-center">
+                                <img src="@(string.IsNullOrEmpty(item.MainImage) ?  Url.Content("~/Portal/img/empty.jpg") : item.MainImage )" />
 
+                                <span class="info">
+                                    <p>
 
-                                <p>
-
-                                    @{
-                                        string text = String.Empty;
-                                        if(!string.IsNullOrEmpty(item.Summary)){
-                                         text = Regex.Replace(item.Summary, "<.*?>", String.Empty);
+                                        @{
+                                            string text = String.Empty;
+                                            if (!string.IsNullOrEmpty(item.Summary))
+                                            {
+                                                text = Regex.Replace(item.Summary, "<.*?>", String.Empty);
+                                            }
                                         }
-                                    }
-                                    @Html.Raw(text)
-
-                                </p>
-
+                                        @Html.Raw(text)
+                                    </p>
+                                    <a href="@Url.PortalAction("v", "galleries", new { slug = item.Slug })" class="link">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="title-area d-flex justify-content-between align-items-center">
+                                <h5><a href="@Url.PortalAction("v", "galleries", new { slug = item.Slug })">@item.Title</a></h5>
+                                <span>
+                                    @item.Section
+                                </span>
                             </div>
                         </div>
-
                     </div>
                 }
-            }
-
+            </if>
         </div>
+        <partial name="_pagination" model="Model" />
 
-        <div class="row">
-            <div class="col-12">
-                <partial name="_pagination" model="Model" />
-            </div>
-        </div>
     </div>
 </section>
+
+<if include-if="slug == null">
+    @section footer{
+
+        <script src="~/Portal/js/isotope.min.js"></script>
+    }
+</if>

@@ -1,1 +1,73 @@
+msgid "section_Papers"
+msgstr "ورقيات"
+
+msgid "section_oils"
+msgstr "زيوت"
+
+msgid "section_Cartons"
+msgstr "الكرتون"
+
+msgid "section_foodstuffs"
+msgstr "مواد غذائية"
+
+msgid "turkey"
+msgstr "تركيا"
+
+msgid "hongkong"
+msgstr "هونغ كونغ"
+
+msgid "china"
+msgstr "الصين"
+
+
+
+
+msgctxt "admin.Views.Shared._side_menu"
+msgid "Galleries"
+msgstr "المنتجات"
+
+
+msgid "Galleries"
+msgstr "المنتجات"
+
+msgid "h_gallery"
+msgstr "المنتجات"
+
+#:galleries index.cshtml
+msgid "new_gallery"
+msgstr "منتج جديد"
+
+
+
+#:FormGalleryItem.cshtml
+msgid "create_gallery_item"
+msgstr "إضافة صورة منتج"
+
+msgid "edit_gallery_item"
+msgstr "تعديل صورة المنتج"
+
+msgid "back_to_gallery"
+msgstr "العودة للمنتج"
+
  
+
+#:FormGallery.cshtml 
+msgid "create_gallery"
+msgstr "إنشاء منتج"
+
+msgid "update_gallery"
+msgstr "تحديث منتج"
+ 
+ 
+
+
+#: galleries Details.cshtml
+msgid "galleries_details"
+msgstr "تفاصيل المنتج "
+
+msgid "gallery_pictures"
+msgstr "صور المنتج"
+
+#:_galleryitems.cshtml
+msgid "gallery_items"
+msgstr "المنتجات"

@@ -1,154 +1,216 @@
 ﻿@model GalleryDto;
 @using TamTechSDK.Common.Services.ContentService.Galleries.Enums
 @{
-    ViewData["Title"] = Localizer["Gallery"];
+    ViewData["Title"] = Localizer["product"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/galleries.jpg");
-    ViewData["pageTitle"] = (!string.IsNullOrEmpty(Model.Title)) ? Model.Title : "Gallery";
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/galleries.jpg");
+    ViewData["pageTitle"] = (!string.IsNullOrEmpty(Model.Title)) ? Model.Title : Localizer["product"].Value;
 }
 
-@await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml")
-@section SEO{
-    <meta name="description" content="@Html.Raw(Model.MetaDescription)" />
-    <partial name="~/Areas/Portal/Views/Shared/partials/_SEO.cshtml" model="Model.SEOMarkup" />
-}
-@if (Model != null && Model.Id != default(Guid))
-{
+ 
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="Model.Slugs" />
 
-    <section class="gallery-section my-5">
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
+
+
+<if include-if="Model != null && Model.Id != default(Guid)">
+    <section class="product-details py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-12  mb-4">
-                    <div class="gallery-meta mb-3">
-                        <span>
-                            <i class="fa fa-calendar"></i>
-                            @(String.Format("{0:d/M/yyyy}", Model.CreatedDate))
-                            <small>@(string.Format("{0:dd/MMM/yyyy}", Model.CustomDate)) </small>
-                        </span>
-                    </div>
-                    <div class="summary text-center">
-                        @Html.Raw(Model.Summary)
+                <div class="col-12">
+                    <header>
+
+                        <if include-if="!string.IsNullOrEmpty(Model.MainImage)">
+                            <div class="row ">
+                                <div class="col-md-4 col-lg-3">
+                                    <a href="@Model.MainImage" class="pro-item-img">
+                                        <img src="@Model.MainImage" alt="@Model.Title" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="col-md-8 col-lg-9">
+                                    <div class="meta-info">
+                                        <span>
+                                            <i class="fa fa-folder-o"></i>
+                                            <a asp-controller="galleries" asp-action="s" asp-route-slug="@Model.Section">@Model.Section</a>
+                                        </span>
+                                    </div>
+                                    <h1 class="border-title"><span>@Model.Title</span></h1>
+
+                                    <div class="header-summary">
+                                        @Html.Raw(Model.Summary)
+                                    </div>
+                                </div>
+                            </div>
+                        </if>
+                        <if include-if="string.IsNullOrEmpty(Model.MainImage)">
+                            <div class="meta-info">
+                                <span>
+                                    <i class="fa fa-folder-o"></i>
+                                    <a asp-controller="galleries" asp-action="s" asp-route-slug="@Model.Section">@Model.Section</a>
+                                </span>
+                            </div>
+                            <h1 class="border-title"><span>@Model.Title</span></h1>
+                            <div class="header-summary">
+                                @Html.Raw(Model.Summary)
+                            </div>
+                        </if>
+                    </header>
+                    <div class="product-images py-5 row">
+                        <if include-if="Model.Items != null && Model.Items.Count > 0">
+
+                            @foreach (GalleryItemDto item in Model.Items)
+                            {
+                                <div class="col-12 col-md-6">
+                                    <div class="product-item">
+                                        <figure class="item-image">
+                                            <a href="@((string.IsNullOrEmpty(item.MainImage)) ? Url.Content("~/Portal/img/empty.jpg") : item.MainImage)" class="pro-item-img">
+                                                <div class="hidden" style="display:none;">
+                                                    <article class="img-des">
+                                                        <h4><span>@item.Title</span></h4>
+                                                        <div class="txt">
+                                                            @Html.Raw(item.Summary)
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <if include-if="string.IsNullOrEmpty(item.MainImage)">
+                                                    <img src="~/Portal/img/empty.jpg" alt="@item.Title" class="img-fluid" />
+                                                </if>
+                                                <if include-if="!string.IsNullOrEmpty(item.MainImage)">
+                                                    <img src="@item.MainImage" alt="@item.Title" class="img-fluid" />
+                                                </if>
+                                            </a>
+                                        </figure>
+                                        <div class="item-info">
+                                            <if include-if="!string.IsNullOrEmpty(item.Title)">
+                                                <h3><span>@item.Title</span></h3>
+                                            </if>
+                                            <if include-if="!string.IsNullOrEmpty(item.Summary)">
+                                                <div class="summary">
+                                                    @Html.Raw(item.Summary)
+                                                </div>
+                                            </if>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+
+                        </if>
                     </div>
                 </div>
-
-                @if (Model.Items != null && Model.Items.Count > 0)
-                {
-                    foreach (GalleryItemDto item in Model.Items)
-                    {
-
-                        <div class="col-md-4 col-sm-6">
-                            <figure class="gallery-item">
-
-                                @if (item.GalleryItemType == (int)GalleryItemTypeEnum.YoutubeVideo)
-                                {
-                                    @if (string.IsNullOrEmpty(item.MainImage))
-                                    {
-                                        <img src="https://img.youtube.com/vi/@item.VideoUrl/0.jpg" alt="@item.Title" class="img-responsive">
-                                    }
-                                    else
-                                    {
-                                        <img src="@item.MainImage" alt="@item.Title">
-                                    }
-                                }
-                                else
-                                {
-                                    @if (string.IsNullOrEmpty(item.MainImage))
-                                    {
-                                        <img src="~/Portal/img/no-image.svg" alt="@item.Title">
-                                    }
-                                    else
-                                    {
-                                        <img src="@item.MainImage" alt="@item.Title">
-                                    }
-                                }
-
-                                        <figcaption>
-                                            <h5><strong>@item.Title</strong></h5>
-                                            <p><i class="fa fa-search-plus"></i></p>
-
-
-                                            @if (item.GalleryItemType == (int)GalleryItemTypeEnum.YoutubeVideo)
-                                            {
-                                                <a href="https://www.youtube.com/watch?v=@item.VideoUrl" class="gallery-item-link video-link">
-                                                    <div style="display:none">
-                                                        <strong class="title">@item.Title</strong>
-                                                        <p>@Html.Raw(item.Summary)</p>
-                                                    </div>
-                                                </a>
-                                            }
-                                            else
-                                            {
-                                                <a href="@((string.IsNullOrEmpty(item.MainImage)) ? "/Portal/img/no-image.svg" : item.MainImage)" class="gallery-item-link ">
-                                                    <div style="display:none">
-                                                        <strong class="title">@item.Title</strong>
-                                                        <p>@Html.Raw(item.Summary)</p>
-                                                    </div>
-                                                </a>
-                                            }
-
-
-                                        </figcaption>
-                            </figure>
-                        </div>
-                    }
-                }
             </div>
         </div>
     </section>
+</if>
+
+@*
+    @if ()
+    {<div class="row align-items-center justify-content-center product-item @( (indx % 2 == 0) ? "flex-row-reverse": "")">
+                                        <div class="col-12 col-md-5 col-lg-5">
+
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-7">
+
+                                        </div>
+                                    </div>
+
+        <section class="gallery-section my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12  mb-4">
+                        <div class="gallery-meta mb-3">
+                            <span>
+                                <i class="fa fa-calendar"></i>
+                                @(String.Format("{0:d/M/yyyy}", Model.CreatedDate))
+                                <small>@(string.Format("{0:dd/MMM/yyyy}", Model.CustomDate)) </small>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    @if ()
+                    {
+                        foreach (GalleryItemDto item in Model.Items)
+                        {
+
+                            <div class="col-md-4 col-sm-6">
+                                <figure class="gallery-item">
+
+                                    @if (item.GalleryItemType == (int)GalleryItemTypeEnum.YoutubeVideo)
+                                    {
+                                        @if (string.IsNullOrEmpty(item.MainImage))
+                                        {
+                                            <img src="https://img.youtube.com/vi/@item.VideoUrl/0.jpg" alt="@item.Title" class="img-responsive">
+                                        }
+                                        else
+                                        {
+                                            <img src="@item.MainImage" alt="@item.Title">
+                                        }
+                                    }
+                                    else
+                                    {
+                                        @if (string.IsNullOrEmpty(item.MainImage))
+                                        {
+                                            <img src="~/Portal/img/no-image.svg" alt="@item.Title">
+                                        }
+                                        else
+                                        {
+                                            <img src="@item.MainImage" alt="@item.Title">
+                                        }
+                                    }
+
+                                    <figcaption>
+                                        <h5><strong>@item.Title</strong></h5>
+                                        <p><i class="fa fa-search-plus"></i></p>
 
 
-}
+                                        @if (item.GalleryItemType == (int)GalleryItemTypeEnum.YoutubeVideo)
+                                        {
+                                            <a href="https://www.youtube.com/watch?v=@item.VideoUrl" class="gallery-item-link video-link">
+                                                <div style="display:none">
+                                                    <strong class="title">@item.Title</strong>
+                                                    <p>@Html.Raw(item.Summary)</p>
+                                                </div>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@((string.IsNullOrEmpty(item.MainImage)) ? "/Portal/img/no-image.svg" : item.MainImage)" class="gallery-item-link ">
+                                                <div style="display:none">
+                                                    <strong class="title">@item.Title</strong>
+                                                    <p>@Html.Raw(item.Summary)</p>
+                                                </div>
+                                            </a>
+                                        }
+
+
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+
+
+    }
 
 
 
 
+
+
+*@
 
 
 @section footer {
     <script src="~/Portal/js/magnific-popup.min.js"></script>
-    <script>
 
-        var template =
-                        '<div class="gallery-popup-container container-fluid mfp-figure">'+
-                        '<div class="row no-gutters ">'+
-                            '<div class="col-lg-8 col-sm-12">'+
-                                '<div class="mfp-img"></div>'+
-                            '</div>'+
-                            '<div class="col-lg-4 content">'+
-                                '<div class="header">'+
-                                    '<span class="mfp-counter"></span>'+
-                                    '<span class="mfp-close"></span>'+
-                                '</div>'+
-                                '<span class="mfp-title"></span>'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>';
-
-        $('.gallery-item-link').magnificPopup({
-            type: 'image',
-            mainClass: 'mfp-gallery',
-            closeMarkup : '<button title="%title%" type="button" class="mfp-close btn btn-close">&#215;</button>',
-            image: {
-                    markup: template ,
-                    titleSrc: function (item) {
-                            return item.el.children()[0].innerHTML;
-                    }
-            },
-            callbacks: {
-                elementParse: function(item) {
-                    console.log(item.el)
-                    if ($(item.el).hasClass('video-link')) {
-                        item.type = 'iframe';
-                    } else {
-                        item.type = 'image';
-                    }
-                }
-            },
-              gallery:{
-                  enabled: true,
-                  tCounter: '%curr% / %total%'
-              }
-            });
-    </script>
 }
 
+@section SEO{
+    <meta name="description" content="@Html.Raw(Model.MetaDescription)" />
+    <partial name="~/Areas/Portal/Views/Shared/partials/_SEO.cshtml" model="Model.SEOMarkup" />
+}

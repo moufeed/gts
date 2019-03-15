@@ -8,14 +8,18 @@
     var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 }
 
+@{
+    List<SlugModel> mod = new List<SlugModel>();
+}
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="mod" />
 @await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml", @ViewData)
 
- 
+
 
 
 
 <section class="pt-5">
-   
+
     <div class="container">
         <if include-if="@TempData["Success"] != null">
 
@@ -103,7 +107,7 @@
         </form>
     </div>
 </section>
- 
 
 
- 
+
+

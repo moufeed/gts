@@ -1,7 +1,10 @@
  
 msgid "site_title"
 msgstr "Gts"
- 
+
+msgid "about_gts"
+msgstr "about gts"
+
 msgid "request_quotation"
 msgstr "request quotation"
 
@@ -9,10 +12,10 @@ msgid "about_us"
 msgstr "About Company"
 
 msgid "h_our_services"
-msgstr "our services"
+msgstr "Why us"
 
 msgid "h_our_services_txt"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure "
+msgstr "A wide range of services that enable you to bring Turkish goods to your market"
   
 msgid "more"
 msgstr "more"
@@ -58,7 +61,7 @@ msgid "message_us"
 msgstr "Write to us"
  
 msgid "contact_us"
-msgstr "contact us"
+msgstr "find us"
 
 
 
@@ -66,7 +69,7 @@ msgid "our_contacts"
 msgstr "Our Contact"
 
 msgid "our_contacts_txt"
-msgstr "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy "
+msgstr "Get in touch with us to know about our latest products, consultations and rates that we offer"
 
 msgid "address"
 msgstr "address"
@@ -78,7 +81,7 @@ msgid "email"
 msgstr "email"
 
 msgid "contact_form"
-msgstr "Get in touch"
+msgstr "keep in touch"
 
 msgid "your_name"
 msgstr "your name"
@@ -104,38 +107,54 @@ msgstr "thank you"
 msgid "error_occurred"
 msgstr "Error occurred while sending email. Please try again later."
 
+msgid "request_msg"
+msgstr "Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel."
 
-#: --- settings --- 
 
-msgid "br_address"
-msgstr "AVCILAR /ISTANBUL"
- 
-msgid "full_address"
-msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+msgid "request_thanks_title"
+msgstr "Thank You for Your Quote Request"
 
-msgid "br_email_adress"
-msgstr "info@gtservices.com.tr"
- 
-msgid "br_phone_number"
-msgstr "(021)314-326-2990"
+msgid "request_thanks_msg"
+msgstr "We appreciate your taking the time to submit your quote request. You will hear from a Tam tech by phone or email within 24 business hours of receiving your quote request."
 
-msgid "seo_description"
-msgstr "sint asperiores optio iste, recusandae tempore dolore? Deserunt quam impedit ex."
+msgid "our_products"
+msgstr "Our products"
 
-msgid "streetAddress"
-msgstr "E5 yan yol Civan Cokak"
+msgid "language"
+msgstr "language"
 
-msgid "addressLocality"
-msgstr "Avcılar Üniversite Mh"
+msgid "read_more"
+msgstr "more"
 
-msgid "addressRegion"
-msgstr "İstanbul"
+msgid "our_services"
+msgstr "why us"
 
-msgid "latitude"
-msgstr "40.991939"
 
-msgid "longitude"
-msgstr "28.713351"
+msgid "about_txt"
+msgstr "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim a rem dolores natus saepe repellendus voluptatum accusantium eum nobis cum autem molestiae eligendi labore, et iusto atque sunt esse ad!"
 
-msgid ""
-msgstr ""
+msgid "our_vision"
+msgstr "Our Vision"
+
+msgid "our_vision_txt"
+msgstr "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsum fugit placeat aut quidem excepturi!"
+
+msgid "our_mission"
+msgstr "Our mission"
+
+msgid "our_mission_txt"
+msgstr "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam sed eaque inventore blanditiis doloremque nostrum illo, reiciendis architecto error laboriosam, soluta natus qui aperiam!"
+
+
+
+msgid "chairman_message"
+msgstr "Chairman’s Message"
+
+msgid "chairman_message_txt"
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate velit ligula, id pellentesque libero tristique quis. In vitae augue in diam suscipit ullamcorper. In nisl lectus, varius eu nibh ac, tincidunt volutpat odio. Nunc quis augue ut orci semper ornare. Sed ut tincidunt nulla. In mi ipsum, varius vitae interdum quis, lacinia a magna. Mauris fermentum sollicitudin arcu vel iaculis. Nam in gravida justo. Sed at interdum mauris. Etiam venenatis ac ex nec gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec lacinia, metus in sagittis pellentesque, massa mi bibendum mi, non tincidunt justo dolor non lectus. Vivamus luctus enim sit amet diam aliquam, eget laoreet nisi ullamcorper. Ut accumsan augue at eleifend dictum. Maecenas gravida turpis eget lorem suscipit, a finibus tortor blandit. Sed et molestie massa."
+
+msgid "chairman"
+msgstr "Chairman"
+
+msgid "chairman_name"
+msgstr "Tarek Hamami"

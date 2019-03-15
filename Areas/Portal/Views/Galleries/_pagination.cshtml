@@ -1,18 +1,35 @@
 ﻿
 @model GalleryList
 
+@{
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+    var slug = ViewContext.RouteData.Values["Slug"];
+}
 
-<nav class="my-4">
-    <ul class="pagination">
+
+
+<nav class="mb-4 pagination">
+    <ul>
 
         @if (Model.Pagination != null && Model.Pagination.TotalPages > 1)
         {
             @if (Model.Pagination.PreviousPage)
             {
-                <li class="page-item ">
+                <li>
                     @{ int PreviousPage = Int32.Parse(Model.Pagination.PageNumber) - 1; }
 
-                    <a class="page-link" href="@Url.Action("index", "galleries", new { PageNumber = PreviousPage.ToString() })" tabindex="-1">@Localizer["Previous"]</a>
+                    @if (slug != null)
+                    {
+                        <a href="@Url.Action("index", "galleries", new { PageNumber = PreviousPage.ToString() })" tabindex="-1">
+                            <i class="fa @(lang == "ar" ? "fa-chevron-right" :"fa-chevron-left") "></i>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("s", "galleries", new { PageNumber = PreviousPage.ToString() , slug = slug  })" tabindex="-1">
+                            <i class="fa @(lang == "ar" ? "fa-chevron-right" :"fa-chevron-left") "></i>
+                        </a>
+                    }
                 </li>
             }
 
@@ -21,16 +38,42 @@
                 int num = Int32.Parse(Model.Pagination.PageNumber);
 
                 <li class="page-item @( num == i ? "active" : "" ) ">
-                    <a class="page-link" href="@Url.Action("index", "galleries", new { PageNumber = i.ToString() })">@i</a>
+
+                    @if (slug != null)
+                    {
+                        <a href="@Url.Action("index", "galleries", new { PageNumber = i.ToString() })">@i</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("s", "galleries", new { PageNumber = i.ToString() , slug = slug })">@i</a>
+                    }
+
                 </li>
             }
 
             @if (Model.Pagination.NextPage)
             {
-                <li class="page-item ">
+                <li>
                     @{ int NextPage = Int32.Parse(Model.Pagination.PageNumber) + 1; }
 
-                    <a class="page-link" href="@Url.Action("index", "galleries", new { PageNumber = NextPage.ToString() })" tabindex="-1">@Localizer["Next"]</a>
+                    @if (slug != null)
+                    {
+                        <a href="@Url.Action("index", "galleries", new { PageNumber = NextPage.ToString() })" tabindex="-1">
+
+
+                            <i class="fa @(lang == "ar" ? "fa-chevron-left" :"fa-chevron-right") "></i>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("s", "galleries", new { PageNumber = NextPage.ToString() ,slug = slug })" tabindex="-1">
+
+
+                            <i class="fa @(lang == "ar" ? "fa-chevron-left" :"fa-chevron-right") "></i>
+                        </a>
+                    }
+
+
 
                 </li>
             }

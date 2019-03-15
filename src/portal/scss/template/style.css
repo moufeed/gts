@@ -515,15 +515,7 @@
 .blog-thumb {
 	margin-bottom: 20px;
 }
-.blog-title {
-	display: inline-block;
-	font-size: 30px;
-	font-weight: 600;
-	line-height: 1.4;
-	margin: 10px 0 15px;
-	padding: 0;
-	text-align: left;
-}
+
 .blog-content.home-blog h2 {
 	font-size: 18px;
 	margin-bottom: 10px;
@@ -778,9 +770,7 @@ blockquote {
 	font-style: italic;
 }
 /* blog details */
-.blog-title.blog-title-sm {
-	font-size: 20px;
-}
+
 .blog-content-img img {
 	width: 100%;
 }

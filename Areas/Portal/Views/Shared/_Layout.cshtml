@@ -3,6 +3,8 @@
 @{
     var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
     var styleFile = (lang == "ar") ? "style-rtl.min.css" : "style-ltr.min.css";
+    var controller = ViewContext.RouteData.Values["Controller"].ToString();
+    var action = ViewContext.RouteData.Values["Action"].ToString();
 }
 <head>
     <meta charset="utf-8">
@@ -24,7 +26,14 @@
     @RenderSection("style", required: false)
 </head>
 <body>
-    <partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" />
+    @if (string.Equals(controller, "home", StringComparison.OrdinalIgnoreCase) && string.Equals(action, "index", StringComparison.OrdinalIgnoreCase))
+    {
+        List<SlugModel> mod = new List<SlugModel>();
+
+        <partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="mod" />
+    }
+
+   
 
     <main>
         @RenderBody()

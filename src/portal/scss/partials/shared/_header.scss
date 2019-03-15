@@ -106,12 +106,12 @@
 	font-size: 15px;
 	padding: 35px 0;
 	display: block;
-	font-weight: 600;
+	font-weight: if-ltr(500,300);
 	position: relative;
 }
 .main-menu.second-menu ul li a {
 	color: #ffffff;
-	padding: 22px 0;
+	padding: 22px 0; 
 }
 .main-menu.second-menu ul li:hover a {
 	color: #ffffff;
@@ -276,17 +276,26 @@
     margin: 5px 0;
 }
 .btn-consulting{
-    color: $red !important;
-    border-radius: 25px;
-    background: transparent;
-    border: 2px solid $red;
-    &:hover{
-        background: $red ;
-        color:#fff !important;
+    //color: $red !important;
+    //border-radius: 25px;
+    background: $red;
+   // border: 2px solid $red;
+    &:hover,&:focus,&:active{
+		color: #fff;
+        background: darken($red ,15%);
+      
     }
 }
 
-
+.link-item{
+	display: inline-block;
+	padding: 5px;
+	color: #fff;
+	text-transform: capitalize;
+	&:hover{
+		color: $red;
+	}
+}
 
 
 

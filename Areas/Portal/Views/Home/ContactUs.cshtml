@@ -7,18 +7,22 @@
 }
 
 
-
+@{
+    List<SlugModel> mod = new List<SlugModel>();
+}
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="mod" />
 <partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
 
 
 
 <section class="contact-page-area pt-75 pb-75">
     <div class="container">
+
         <div class="row">
             <div class="col-lg-5 col-md-12 mb-25">
                 <div class="contact-page-item">
                     <div class="contact-form-title">
-                        <h2>@Localizer["our_contacts"]</h2>
+                        <h2 class="dot-title"><span>@Localizer["our_contacts"]</span></h2>
                         <p>@Localizer["our_contacts_txt"]</p>
                     </div>
                     <div class="row">
@@ -36,15 +40,14 @@
                             <a href="mailto:@Localizer["br_email_adress"]">@Localizer["br_email_adress"]</a>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
             <div class="col-lg-7 col-md-12">
                 <div class="contact-area contact-area-2 contact-area-3">
 
                     <div class="contact-form-title">
-                        <h2>@Localizer["contact_form"]</h2>
-
+                        <h2 class="dot-title"><span>@Localizer["contact_form"]</span></h2>
                     </div>
 
                     <div class="contact-form">
@@ -54,13 +57,13 @@
                                     <input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="@Localizer["your_name"]" required>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="@Localizer["your_email"]" required>
+                                    <input type="email" name="Email" id="email" class="form-control form-control-lg" placeholder="@Localizer["your_email"]" required>
                                 </div>
                             </div>
 
                             <div class="form-row form-group">
                                 <div class="col-12 col-md-6">
-                                    <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="@Localizer["your_phone"]">
+                                    <input type="tel" name="Mobile" id="phone" class="form-control form-control-lg" placeholder="@Localizer["your_phone"]">
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <input type="text" name="Subject" id="Subject" class="form-control form-control-lg" placeholder="@Localizer["your_subject"]">
@@ -68,7 +71,7 @@
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control" rows="6" name="note" id="note" placeholder="@Localizer["your_message"]" required></textarea>
+                                <textarea class="form-control" rows="6" name="Message" id="note" placeholder="@Localizer["your_message"]" required></textarea>
                             </div>
                             <div class="alert alert-warning alert-dismissible fade  d-none" role="alert" id="alert-error">
                                 @Localizer["error_occurred"]
@@ -98,7 +101,53 @@
                 </div>
             </div>
         </div>
-
+        <div class="row py-5">
+            <div class="col-md-4">
+                <div class="branch-contact">
+                    <div class="map">
+                        <svg>
+                            <circle cx="50%" cy="50%" r="49.5%" />
+                        </svg>
+                        <a href="@Localizer["turkey_link"]" target="_blank">
+                            <img src="~/portal/img/map.jpg" alt="">
+                        </a>
+                    </div>
+                    <a href="@Localizer["turkey_link"]" target="_blank" class="link-title">
+                        @Localizer["turkey"]
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="branch-contact">
+                    <div class="map">
+                        <svg>
+                            <circle cx="50%" cy="50%" r="49.5%" />
+                        </svg>
+                        <a href="@Localizer["hongkong_link"]" target="_blank">
+                            <img src="~/portal/img/map.jpg" alt="">
+                        </a>
+                    </div>
+                    <a href="@Localizer["hongkong_link"]" target="_blank" class="link-title">
+                        @Localizer["hongkong"]
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="branch-contact">
+                    <div class="map">
+                        <svg>
+                            <circle cx="50%" cy="50%" r="49.5%" />
+                        </svg>
+                        <a href="@Localizer["china_link"]" target="_blank">
+                            <img src="~/portal/img/map.jpg" alt="">
+                        </a>
+                    </div>
+                    <a href="@Localizer["china_link"]" target="_blank" class="link-title">
+                        @Localizer["china"]
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -135,6 +184,3 @@
     </script>
 
 }
-
-
-

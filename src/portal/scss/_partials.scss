@@ -16,7 +16,8 @@
 "plugins/animate/_base.css",
 "plugins/animate/fading_entrances/fadeInDown",
 "plugins/animate/fading_entrances/fadeInLeft",
-"plugins/animate/fading_entrances/fadeInRight"
+"plugins/animate/fading_entrances/fadeInRight",
+"plugins/magnific"
 ;
 
 @import
@@ -45,12 +46,25 @@
 'partials/home/products'
 ;
 
-// contact us
+
 
 @import 
-'partials/contactus/contactus'
+'partials/contactus' , // contact us
+'partials/request'
+;
+
+//galleries
+@import 
+'partials/galleries/galleries' ,  
+'partials/galleries/gallery',
+'partials/galleries/pagination'
 ;
 
 
+@import
+'partials/pages',
+'partials/services',
+'partials/aboutus'
+;
 /* @import 
 'template/responsive.css';  */

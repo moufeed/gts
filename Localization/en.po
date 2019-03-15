@@ -1710,7 +1710,10 @@ msgstr ""
  
 msgid "site_title"
 msgstr "Gts"
- 
+
+msgid "about_gts"
+msgstr "about gts"
+
 msgid "request_quotation"
 msgstr "request quotation"
 
@@ -1718,10 +1721,10 @@ msgid "about_us"
 msgstr "About Company"
 
 msgid "h_our_services"
-msgstr "our services"
+msgstr "Why us"
 
 msgid "h_our_services_txt"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure "
+msgstr "A wide range of services that enable you to bring Turkish goods to your market"
   
 msgid "more"
 msgstr "more"
@@ -1767,7 +1770,7 @@ msgid "message_us"
 msgstr "Write to us"
  
 msgid "contact_us"
-msgstr "contact us"
+msgstr "find us"
 
 
 
@@ -1775,7 +1778,7 @@ msgid "our_contacts"
 msgstr "Our Contact"
 
 msgid "our_contacts_txt"
-msgstr "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy "
+msgstr "Get in touch with us to know about our latest products, consultations and rates that we offer"
 
 msgid "address"
 msgstr "address"
@@ -1787,7 +1790,7 @@ msgid "email"
 msgstr "email"
 
 msgid "contact_form"
-msgstr "Get in touch"
+msgstr "keep in touch"
 
 msgid "your_name"
 msgstr "your name"
@@ -1812,6 +1815,131 @@ msgstr "thank you"
 
 msgid "error_occurred"
 msgstr "Error occurred while sending email. Please try again later."
+
+msgid "request_msg"
+msgstr "Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel."
+
+
+msgid "request_thanks_title"
+msgstr "Thank You for Your Quote Request"
+
+msgid "request_thanks_msg"
+msgstr "We appreciate your taking the time to submit your quote request. You will hear from a Tam tech by phone or email within 24 business hours of receiving your quote request."
+
+msgid "our_products"
+msgstr "Our products"
+
+msgid "language"
+msgstr "language"
+
+msgid "read_more"
+msgstr "more"
+
+msgid "our_services"
+msgstr "why us"
+
+
+msgid "about_txt"
+msgstr "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim a rem dolores natus saepe repellendus voluptatum accusantium eum nobis cum autem molestiae eligendi labore, et iusto atque sunt esse ad!"
+
+msgid "our_vision"
+msgstr "Our Vision"
+
+msgid "our_vision_txt"
+msgstr "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsum fugit placeat aut quidem excepturi!"
+
+msgid "our_mission"
+msgstr "Our mission"
+
+msgid "our_mission_txt"
+msgstr "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam sed eaque inventore blanditiis doloremque nostrum illo, reiciendis architecto error laboriosam, soluta natus qui aperiam!"
+
+
+
+msgid "chairman_message"
+msgstr "Chairman’s Message"
+
+msgid "chairman_message_txt"
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate velit ligula, id pellentesque libero tristique quis. In vitae augue in diam suscipit ullamcorper. In nisl lectus, varius eu nibh ac, tincidunt volutpat odio. Nunc quis augue ut orci semper ornare. Sed ut tincidunt nulla. In mi ipsum, varius vitae interdum quis, lacinia a magna. Mauris fermentum sollicitudin arcu vel iaculis. Nam in gravida justo. Sed at interdum mauris. Etiam venenatis ac ex nec gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec lacinia, metus in sagittis pellentesque, massa mi bibendum mi, non tincidunt justo dolor non lectus. Vivamus luctus enim sit amet diam aliquam, eget laoreet nisi ullamcorper. Ut accumsan augue at eleifend dictum. Maecenas gravida turpis eget lorem suscipit, a finibus tortor blandit. Sed et molestie massa."
+
+msgid "chairman"
+msgstr "Chairman"
+
+msgid "chairman_name"
+msgstr "Tarek Hamami"
+
+msgid "section_Papers"
+msgstr "Papers"
+
+msgid "section_oils"
+msgstr "Oils"
+
+msgid "section_Cartons"
+msgstr "Cartons"
+
+msgid "section_foodstuffs"
+msgstr "food stuffs"
+
+msgid "turkey"
+msgstr "turkey"
+
+msgid "hongkong"
+msgstr "hongkong"
+
+msgid "china"
+msgstr "china"
+
+
+msgctxt "admin.Views.Shared._side_menu"
+msgid "Galleries"
+msgstr "Products"
+
+
+msgid "Galleries"
+msgstr "Products"
+
+msgid "h_gallery"
+msgstr "Products"
+
+#:galleries index.cshtml
+msgid "new_gallery"
+msgstr "New product"
+
+
+
+#:FormGalleryItem.cshtml
+msgid "create_gallery_item"
+msgstr "Create product Item"
+
+msgid "edit_gallery_item"
+msgstr "Update product Item"
+
+msgid "back_to_gallery"
+msgstr "Back to product"
+
+ 
+
+#:FormGallery.cshtml 
+msgid "create_gallery"
+msgstr "Create product"
+
+msgid "update_gallery"
+msgstr "Update product"
+ 
+ 
+
+
+#: galleries Details.cshtml
+msgid "galleries_details"
+msgstr "product Details "
+
+msgid "gallery_pictures"
+msgstr "product pictures"
+
+#:_galleryitems.cshtml
+msgid "gallery_items"
+msgstr "product Items"
+
 
 
 #: --- settings --- 
@@ -1846,13 +1974,14 @@ msgstr "40.991939"
 msgid "longitude"
 msgstr "28.713351"
 
+msgid "hongkong_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid "turkey_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
+msgid "china_link"
+msgstr "https://goo.gl/maps/duqp4PBQpq22"
+
 msgid ""
 msgstr ""
-msgid "section_Papers"
-msgstr "Papers"
-
-msgid "section_oils"
-msgstr "Oils"
-
-msgid "section_Cartons"
-msgstr "Cartons"

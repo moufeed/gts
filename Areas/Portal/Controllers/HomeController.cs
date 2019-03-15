@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Gts.Custom.Moduls;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using System;
@@ -13,6 +15,7 @@ using TamTechSDK.Common.Services.ContentService.Pages;
 using TamTechSDK.Common.Services.ContentService.Posts;
 using TamTechSDK.Common.Services.ContentService.Posts.Models;
 using TamTechSDK.Common.Services.ContentService.Request;
+using TamTechSDK.Common.Services.ContentService.Request.Models;
 using TamTechSDK.Common.Services.ContentService.Services;
 using TamTechSDK.Common.Services.ContentService.Sliders;
 using TamTechSDK.Common.Services.ContentService.Testimonials;
@@ -21,8 +24,8 @@ using TamTechSDK.Common.Services.Upload;
 using TamTechSDK.Web;
 using TamTechSDK.Web.Controllers.Portal;
 using TamTechSDK.Web.Services.Configurations.AppSetting;
+using TamTechSDK.Web.Services.Configurations.Cultures;
 using TamTechSDK.Web.Services.Telemetry;
-
 namespace Gts.Areas.Portal.Controllers
 {
 
@@ -35,7 +38,7 @@ namespace Gts.Areas.Portal.Controllers
         private readonly IPostsService _postservice;
         private readonly IServicesService _servicesservice;
         private readonly ITestimonialsServices _TestimonialsServices;
-
+        private readonly IStringLocalizer<PublicBaseController> _localizer;
         public HomeController(ITelemetryClientService telemetryClientService,
                                IPageService pageService,
                                IMenusServices menusServices,
@@ -64,9 +67,11 @@ namespace Gts.Areas.Portal.Controllers
             _sliderService = sliderService;
             _postservice = postservice;
             _servicesservice = servicesservice;
+            _localizer = localizer;
 
         }
 
+        
         public override async Task<IActionResult> Index()
         {
             try
@@ -118,5 +123,12 @@ namespace Gts.Areas.Portal.Controllers
              
             return base.View();
         }
+
+        public string GetCurrentDataLang()
+        {
+            return DataCultureHelper.GetCurrent (HttpContext.Request.Query);
+        }
+
+       
     }
 }

@@ -87,9 +87,9 @@
                             <label class="form-control clearfix uploadfile">
                                
                                  @if (!string.IsNullOrEmpty(Model.MainImage)){
- <input type="file" name="NewMainImage" id="NewMainImage" class="upload-input" data-text="@Localizer["choose_file"]" accept="image/*" data-rule-filesize="500"/>
+ <input type="file" name="NewMainImage" id="NewMainImage" class="upload-input" data-text="@Localizer["choose_file"]" accept="image/*" data-rule-filesize="800"/>
                                  }else{
- <input type="file" name="NewMainImage" id="NewMainImage" class="upload-input" data-text="@Localizer["choose_file"]" accept="image/*" required data-rule-filesize="500"/>
+ <input type="file" name="NewMainImage" id="NewMainImage" class="upload-input" data-text="@Localizer["choose_file"]" accept="image/*" required data-rule-filesize="800"/>
                                  }
                                 <span class="url">@Localizer["choose_file"]</span>
                                 <span class="file-btn"><i class="fa fa-search"></i> @Localizer["Browse"]</span>

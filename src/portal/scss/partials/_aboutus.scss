@@ -1,0 +1,143 @@
+
+.dot-title{
+     
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: rem(15px);
+
+    span{
+        display: inline-block;
+        position: relative;
+        padding: 10px 0;
+        &:before,
+        &:after{
+            content: '';
+            @include absolute (bottom ,0);
+        }
+        &:before{
+            left: 0;
+            @include size(110%,1px);
+            background: $gray;
+        }
+        &:after{
+            #{$left} :15px;
+            background: $red;
+            @include square(16px);
+            border-radius: 50%;
+            bottom: -8px;
+             
+        }
+    }
+}
+
+.alogo{
+    width: 100%;
+    max-width: 270px;
+}
+.about-section{
+    
+    padding: rem(75px) 0;
+    padding-bottom: rem(100px);
+    @include media-breakpoint-up(lg){
+        padding-bottom: rem(150px);
+    }
+    p{
+        font-size: 16px;
+        word-spacing: 4px;
+        letter-spacing: 1px;
+    }
+}
+
+.vision-section{
+    position: relative;
+    z-index: 1;
+    background: $gray;
+    padding: rem(100px) 0;
+    &:before,
+    &:after {
+        content: '';
+        @include media-breakpoint-down(md){
+            content: none;
+        }
+        @include absolute(top $left , 0 -25%);
+        z-index: -1;
+        width: 150%;
+        height: 75%;
+        background: inherit;
+        -webkit-transform: rotate(if-ltr(-2deg ,2deg));
+        transform: rotate(if-ltr(-2deg ,2deg));
+        -webkit-transform-origin: 0 0;
+        transform-origin: if-ltr(0 , 100%) 0;
+    }
+    &:before {
+        height: 50%;
+        background: lighten($gray ,3%);
+        -webkit-transform: rotate(if-ltr(-3deg ,3deg));
+        transform: rotate(if-ltr(-3deg ,3deg));
+         
+        transform-origin: if-ltr(3% , 97%) 0;
+    } 
+}
+
+ 
+
+.about-item,.chairman-section{
+    img{
+        width: 125px;
+        margin-bottom: rem(25px);
+    }
+    h5{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    p{
+        width: 80%;
+        margin: auto;
+        font-size: 16px;
+        color: #555;
+        line-height: 26px;
+        @include media-breakpoint-down(sm){
+            width: 100%;
+        }
+    }
+}
+
+.chairman-section{
+    padding: rem(75px) 0;
+    h5{
+        margin-bottom: 25px;
+    }
+    footer{
+        margin-top: 25px; 
+        strong,small{
+            display: block;
+        }
+        strong{
+            font-size: 16px;
+        }
+        small{
+            color: $red;
+        }
+    }
+}
+
+/*
+ 
+   
+ 
+
+
+<section class="chairman_message">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <><span>@Localizer["chairman_message"]</span></>
+                <p>@Localizer["chairman_message_txt"]</p>
+                <footer>
+                    <strong>@Localizer["chairman_name"]</strong>
+                    <small>@Localizer["chairman"]</small>
+                </footer>
+            </div>
+        </div>
+    </div>
+</section>*/

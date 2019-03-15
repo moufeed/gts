@@ -30,7 +30,7 @@
                                 <th width="50" class="text-center">#</th>
                                 <th>@Localizer["t_name"]</th>
                                 <th>@Localizer["t_email"]</th>
-                                <th>@Localizer["t_city"]</th>
+                                @*<th>@Localizer["t_city"]</th>*@
                                 <th width="150">@Localizer["t_create_date"]</th>
                                 <th width="150">@Localizer["t_status"]</th>
                                 <th width="100" class="text-center">@Localizer["t_detials"]</th>
@@ -47,7 +47,7 @@
                                     <td class="text-center">@index</td>
                                     <td class="p-y-3">@item.FullName  </td>
                                     <td>@item.Email</td>
-                                    <td>@item.CityName</td>
+                                    @*<td>@item.CityName</td>*@
                                     <td>@item.CreatedDate.ToString("yyyy/MM/dd")</td>
                                     <td>
                                         <small class="label label-@item.StatusName.ToLower()">

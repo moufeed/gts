@@ -1,10 +1,11 @@
 body {
-	font-family: if-ltr('Open Sans','Droid Arabic Kufi'), sans-serif;
+	font-family: if-ltr('Open Sans','Droid Arabic Kufi'), $font-family-base;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 14px;
 	direction: $dir;
 	text-align: $left;
+	overflow-x: hidden;  
 }
 .img {
 	max-width: 100%;
@@ -37,7 +38,7 @@ button{
 }
 a:focus,
 a:hover,
-.portfolio-cat a:hover,
+.portfolio-cat a:hover, 
 .footer -menu li a:hover {
 	color: #2B96CC;
 	text-decoration: none;
@@ -60,7 +61,7 @@ h3,
 h4,
 h5,
 h6 {
- 
+	font-family: if-ltr("Poppins" ,'Droid Arabic Kufi') ,$font-family-base;
 	font-weight: normal;
 	color: #000;
 	margin-top: 0px;
@@ -352,4 +353,59 @@ label {
 	padding-#{$left}:15px;
 	padding-#{$right}: calc(1.5em + .75rem);
 	background-position: top calc(.375em + .1875rem) $right calc(.375em + .1875rem);
+}
+
+
+.border-title{
+	
+	border-bottom: 1px solid #eeeeee;
+	span{
+		display: inline-block;
+		padding:15px 0;
+		position: relative;
+		&:after{
+			content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2.5px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: $red;
+            z-index: 100;
+            transition: 0.3s all ease-in-out;
+		}
+	}
+}
+
+.dot-title{
+     
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: rem(15px);
+
+    span{
+        display: inline-block;
+        position: relative;
+        padding: 10px 0;
+        &:before,
+        &:after{
+            content: '';
+            @include absolute (bottom ,0);
+        }
+        &:before{
+            left: 0;
+            @include size(110%,1px);
+            background: $gray;
+        }
+        &:after{
+            #{$left} :15px;
+            background: $red;
+            @include square(16px);
+            border-radius: 50%;
+            bottom: -8px;
+             
+        }
+    }
 }

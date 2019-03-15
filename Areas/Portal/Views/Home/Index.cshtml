@@ -5,20 +5,21 @@
     var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 }
 
- 
+
 
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_Slider.cshtml" />
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_about.cshtml" />
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_services.cshtml" />
-<partial name="~/Areas/Portal/Views/Home/partials/Index/_counters.cshtml" />
-<partial name="~/Areas/Portal/Views/Home/partials/Index/_products.cshtml" />
-<partial name="~/Areas/Portal/Views/Home/partials/Index/_testimonials.cshtml" />
 <partial name="~/Areas/Portal/Views/Home/partials/Index/_quotation.cshtml" />
-<partial name="~/Areas/Portal/Views/Home/partials/Index/_clients.cshtml" />
+@*<partial name="~/Areas/Portal/Views/Home/partials/Index/_counters.cshtml" />*@
+<partial name="~/Areas/Portal/Views/Home/partials/Index/_products.cshtml" />
+@*<partial name="~/Areas/Portal/Views/Home/partials/Index/_testimonials.cshtml" />*@
+
+@*<partial name="~/Areas/Portal/Views/Home/partials/Index/_clients.cshtml" />*@
 
 @section SEO {
-     <meta name="description" content="@Localizer["seo_description"]">
-     
+    <meta name="description" content="@Localizer["seo_description"]">
+
     <script type="application/ld+json">
         {
         "@@context": "http://schema.org",
@@ -38,8 +39,8 @@
 }
 @section footer{
     <script src="~/Portal/js/slider.min.js"></script>
-    <script src="~/Portal/js/counters.min.js"></script>
-    <script src="~/Portal/js/carousel.min.js"></script>
+    @*<script src="~/Portal/js/carousel.min.js"></script>
+        <script src="~/Portal/js/counters.min.js"></script>*@
 }
- 
+
 

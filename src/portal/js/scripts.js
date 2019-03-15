@@ -5,19 +5,23 @@
   $("#mobile-menu").meanmenu({
     meanMenuContainer: ".mobile-menu",
     meanScreenWidth: "991",
-    //meanRevealPosition: "left"
+    meanRevealPosition: window.language  == "ar" ? "left" :"right"
   });
 
 
      // sticky
   var wind = $(window);
   var sticky = $('#sticky-header');
+  var height = sticky.height();
+
   wind.on('scroll', function () {
     var scroll = wind.scrollTop();
     if (scroll < 400) {
       sticky.removeClass('sticky');
+      $('body').css('padding-top',0);
     } else {
       sticky.addClass('sticky');
+      $('body').css('padding-top',height);
     }
   });
 

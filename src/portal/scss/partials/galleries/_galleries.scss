@@ -1,0 +1,128 @@
+
+//.section-galleries{}
+
+
+.overlay-area{
+   
+    position: relative;
+    @include size(100% , 250px);
+    background: #f6f6f6;
+    overflow: hidden;
+    img{
+         height: 100%;
+         width: auto;
+         transition: all .3s;
+    }
+    .info{
+        @include absolute(top $left , 0 0);
+        @include square(100%); 
+        padding: 15px;
+        display: block;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba($red,.7);
+        transition: all .3s;
+        opacity: 0;
+        p{
+            color: #fff; 
+            @include max-ellipse(16px ,1.4,4);
+            margin-bottom: 0;
+        }
+        .link{
+            @include square(50px);
+            margin-top: 15px;
+            display: inline-block;
+            text-align: center;
+            color: #fff;
+            line-height: 50px;
+            font-size: 26px;
+            font-weight: bold;
+            border-radius: 50%;
+           
+            &:hover{
+                background: #fff;
+                color: #000;
+                box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.2);
+            }
+        }
+    }
+}
+.title-area{
+    box-shadow: 0px 6px 12px 2px rgba(#000,0.07);
+    padding: 15px;
+    h5{
+        font-weight: bold;
+        
+        @include ellipse(14px ,1.4,1);
+        a{
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+    span{
+        display: inline-block;
+        border-#{$left} :1px solid $gray;
+        padding-#{$left}: 15px; 
+    }
+}
+
+
+.gallery_item{
+    position: relative;
+    margin: 25px 0;
+    color: $textcolor;
+
+    &:hover{
+        img{
+            transform: scale(1.3);
+        }
+        .info{
+            opacity: 1;
+        }
+    }
+}
+
+
+// products filter
+
+.products-menu{
+    button {
+        padding:15px 10px;
+        border: 0;
+        background: none; 
+        color: $textcolor;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        border-bottom: 1px solid #eeeeee;
+        margin: 0 -1px;
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: -2.5px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: transparent;
+            z-index: 100;
+            transition: 0.3s all ease-in-out;
+        }
+        &:hover{
+            color: $red;
+        }
+        &.active{
+            color: $red;
+            &:after{
+                background-color: $red;
+            }
+        }
+    }
+}
