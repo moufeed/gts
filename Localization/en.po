@@ -1840,19 +1840,19 @@ msgstr "why us"
 
 
 msgid "about_txt"
-msgstr "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim a rem dolores natus saepe repellendus voluptatum accusantium eum nobis cum autem molestiae eligendi labore, et iusto atque sunt esse ad!"
+msgstr "With a solid network with suppliers and clients, we are dedicated for bringing Turkish goods to the world. Providing a range of services that help in market expansion and take care of logistical needs"
 
 msgid "our_vision"
 msgstr "Our Vision"
 
 msgid "our_vision_txt"
-msgstr "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsum fugit placeat aut quidem excepturi!"
+msgstr "Become the go-to company for exports and logistics in Turkey"
 
 msgid "our_mission"
 msgstr "Our mission"
 
 msgid "our_mission_txt"
-msgstr "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam sed eaque inventore blanditiis doloremque nostrum illo, reiciendis architecto error laboriosam, soluta natus qui aperiam!"
+msgstr "Provide our clients the best experience with competitive prices"
 
 
 
@@ -1860,7 +1860,7 @@ msgid "chairman_message"
 msgstr "Chairman’s Message"
 
 msgid "chairman_message_txt"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate velit ligula, id pellentesque libero tristique quis. In vitae augue in diam suscipit ullamcorper. In nisl lectus, varius eu nibh ac, tincidunt volutpat odio. Nunc quis augue ut orci semper ornare. Sed ut tincidunt nulla. In mi ipsum, varius vitae interdum quis, lacinia a magna. Mauris fermentum sollicitudin arcu vel iaculis. Nam in gravida justo. Sed at interdum mauris. Etiam venenatis ac ex nec gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec lacinia, metus in sagittis pellentesque, massa mi bibendum mi, non tincidunt justo dolor non lectus. Vivamus luctus enim sit amet diam aliquam, eget laoreet nisi ullamcorper. Ut accumsan augue at eleifend dictum. Maecenas gravida turpis eget lorem suscipit, a finibus tortor blandit. Sed et molestie massa."
+msgstr "For GTS, choosing Istanbul as a headquarters is not a coincidence. With a strategic location and a growing economy, Turkey's products are destined for increasing demand. This is why we pursue to bridge the gap between Turkey and the rest of the world when it comes to certain industries"
 
 msgid "chairman"
 msgstr "Chairman"
