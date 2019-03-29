@@ -65,7 +65,7 @@
                 position: absolute;
                 circle{
                     fill: transparent;
-                    stroke-dasharray: 170 100;
+                    stroke-dasharray: 170 100; 
                     stroke-dashoffset: 250;
                     stroke-width: 2px;
                     stroke: $gray; 
@@ -73,7 +73,7 @@
             }
         }
         .link-title{
-            margin-top: 15px;
+            margin: 15px 0;
             display: inline-block;
             text-transform: capitalize;
             color: #000;

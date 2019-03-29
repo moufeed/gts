@@ -131,13 +131,13 @@ msgstr "why us"
 
 
 msgid "about_txt"
-msgstr "With a solid network with suppliers and clients, we are dedicated for bringing Turkish goods to the world. Providing a range of services that help in market expansion and take care of logistical needs"
+msgstr "With a solid network of suppliers and clients, we are dedicated for bringing high quality products from around the world with the lowest prices. Providing a range of services that help in market expansion and take care of logistical needs"
 
 msgid "our_vision"
 msgstr "Our Vision"
 
 msgid "our_vision_txt"
-msgstr "Become the go-to company for exports and logistics in Turkey"
+msgstr "Become the go-to company for exports and logistics "
 
 msgid "our_mission"
 msgstr "Our mission"
@@ -151,10 +151,16 @@ msgid "chairman_message"
 msgstr "Chairman’s Message"
 
 msgid "chairman_message_txt"
-msgstr "For GTS, choosing Istanbul as a headquarters is not a coincidence. With a strategic location and a growing economy, Turkey's products are destined for increasing demand. This is why we pursue to bridge the gap between Turkey and the rest of the world when it comes to certain industries"
+msgstr "In GTS we seek excellence in products and services while maintaining price competitiveness. With strategic locations in growing economies, we bring products that are destined for increasing demand. Thus, briding the gap between different regions in the world when it comes to trade"
 
 msgid "chairman"
 msgstr "Chairman"
 
 msgid "chairman_name"
 msgstr "Tarek Hamami"
+
+msgid "call_us"
+msgstr "Call us"
+
+msgid "email_us"
+msgstr "Email us"

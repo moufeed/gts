@@ -4,40 +4,40 @@ msgid "br_address"
 msgstr "افجلر /اسطنبول"
  
 msgid "full_address"
-msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+msgstr "YEŞİLKENT Mah. 1880. Sok. C BLOK Apt. No: 60 / 2 / 136 ESENYURT / İSTANBUL"
 
 msgid "br_email_adress"
-msgstr "info@gtservices.com.tr"
+msgstr "info@gtservices.co.tr"
  
 msgid "br_phone_number"
-msgstr "(021)314-326-2990"
+msgstr "+90 212 803 36 12"
 
 msgid "seo_description"
-msgstr "لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه"
+msgstr  "شركة GTS تقدم خدمات الإستيراد والتصدير لمنتجات عالية الجودة بأقل الأسعار من مختلف بقاع العالم. مع خدمات متنوعة تساعد في توسّع الأسواق وتلبي الاحتياجات اللوجستية"
 
 msgid "streetAddress"
-msgstr "E5 yan yol Civan Cokak"
+msgstr "1880. Sok"
 
 msgid "addressLocality"
-msgstr "Avcılar Üniversite Mh"
+msgstr "ESENYURT YEŞİLKENT Mah"
 
 msgid "addressRegion"
 msgstr "İstanbul"
 
 msgid "latitude"
-msgstr "40.991939"
+msgstr "41.021995"
 
 msgid "longitude"
-msgstr "28.713351"
+msgstr "28.660859"
 
 msgid "hongkong_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/vQNGQm5AVwC2"
 
 msgid "turkey_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/PByqZCXPsMr"
 
 msgid "china_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/9k3F5KYZuUC2"
 
-msgid ""
-msgstr ""
+msgid "whyUs_summary"
+msgstr "6056f0ec-6cb5-4597-8941-683f647f42e8"

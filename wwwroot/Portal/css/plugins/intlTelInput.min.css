@@ -1,5 +1,5 @@
 /*!
-* tamtech_cms - v 0.2.0 
+* tamtech - v 0.2.0 
 *  
 * Author :
 */

@@ -1,6 +1,6 @@
 {
   "version": "0.2.0",
-  "name": "tamtech_cms",
+  "name": "tamtech",
   "private": true,
   "devDependencies": {
     "@babel/cli": "^7.2.3",

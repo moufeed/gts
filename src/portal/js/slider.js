@@ -1,7 +1,7 @@
 function mainSlider() {
     var BasicSlider = $(".slider-active");
     var is_rtl =  BasicSlider.data("rtl");
-console.log(is_rtl)
+ 
     BasicSlider.on("init", function(e, slick) {
       var $firstAnimatingElements = $(".single-slider:first-child").find(
         "[data-animation]"
@@ -16,8 +16,9 @@ console.log(is_rtl)
     });
     BasicSlider.slick({
       autoplay: true,
-      autoplaySpeed: 10000, 
+      autoplaySpeed: 4000, 
       fade: true,
+      pauseOnHover : false,
       prevArrow:
         '<button type="button" class="slick-prev"><i class="icofont-long-arrow-left"></i>Prev</button>',
       nextArrow:
@@ -58,6 +59,7 @@ console.log(is_rtl)
     autoplay: false,
     autoplaySpeed: 5000,
     speed: 400,
+   
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -69,7 +71,7 @@ console.log(is_rtl)
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
+        settings: { 
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,

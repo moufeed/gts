@@ -6,40 +6,40 @@ msgid "br_address"
 msgstr "AVCILAR /ISTANBUL"
  
 msgid "full_address"
-msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+msgstr "YEŞİLKENT Mah. 1880. Sok. C BLOK Apt. No: 60 / 2 / 136 ESENYURT / İSTANBUL"
 
 msgid "br_email_adress"
-msgstr "info@gtservices.com.tr"
+msgstr "info@gtservices.co.tr"
  
 msgid "br_phone_number"
-msgstr "(021)314-326-2990"
+msgstr "+90 212 803 36 12"
 
 msgid "seo_description"
-msgstr "sint asperiores optio iste, recusandae tempore dolore? Deserunt quam impedit ex."
+msgstr "GTS import and export company provides high quality products from around the world with the lowest prices, and range of services that help in logistical needs and market expansion"
 
 msgid "streetAddress"
-msgstr "E5 yan yol Civan Cokak"
+msgstr "1880. Sok"
 
 msgid "addressLocality"
-msgstr "Avcılar Üniversite Mh"
+msgstr "ESENYURT YEŞİLKENT Mah"
 
 msgid "addressRegion"
 msgstr "İstanbul"
 
 msgid "latitude"
-msgstr "40.991939"
+msgstr "41.021995"
 
 msgid "longitude"
-msgstr "28.713351"
+msgstr "28.660859"
 
 msgid "hongkong_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/vQNGQm5AVwC2"
 
 msgid "turkey_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/PByqZCXPsMr"
 
 msgid "china_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/9k3F5KYZuUC2"
 
-msgid ""
-msgstr ""
+msgid "whyUs_summary"
+msgstr "6056f0ec-6cb5-4597-8941-683f647f42e8"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: tamtech_cms 0.2.0"
+"Project-Id-Version: tamtech 0.2.0"
 "Last-Translator: tamtech solution <support@tamtech.solution>"
 "MIME-Version: 1.0"
 "Content-Type: text/plain; charset=UTF-8"
@@ -1840,13 +1840,13 @@ msgstr "why us"
 
 
 msgid "about_txt"
-msgstr "With a solid network with suppliers and clients, we are dedicated for bringing Turkish goods to the world. Providing a range of services that help in market expansion and take care of logistical needs"
+msgstr "With a solid network of suppliers and clients, we are dedicated for bringing high quality products from around the world with the lowest prices. Providing a range of services that help in market expansion and take care of logistical needs"
 
 msgid "our_vision"
 msgstr "Our Vision"
 
 msgid "our_vision_txt"
-msgstr "Become the go-to company for exports and logistics in Turkey"
+msgstr "Become the go-to company for exports and logistics "
 
 msgid "our_mission"
 msgstr "Our mission"
@@ -1860,7 +1860,7 @@ msgid "chairman_message"
 msgstr "Chairman’s Message"
 
 msgid "chairman_message_txt"
-msgstr "For GTS, choosing Istanbul as a headquarters is not a coincidence. With a strategic location and a growing economy, Turkey's products are destined for increasing demand. This is why we pursue to bridge the gap between Turkey and the rest of the world when it comes to certain industries"
+msgstr "In GTS we seek excellence in products and services while maintaining price competitiveness. With strategic locations in growing economies, we bring products that are destined for increasing demand. Thus, briding the gap between different regions in the world when it comes to trade"
 
 msgid "chairman"
 msgstr "Chairman"
@@ -1868,6 +1868,11 @@ msgstr "Chairman"
 msgid "chairman_name"
 msgstr "Tarek Hamami"
 
+msgid "call_us"
+msgstr "Call us"
+
+msgid "email_us"
+msgstr "Email us"
 msgid "section_Papers"
 msgstr "Papers"
 
@@ -1948,40 +1953,40 @@ msgid "br_address"
 msgstr "AVCILAR /ISTANBUL"
  
 msgid "full_address"
-msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+msgstr "YEŞİLKENT Mah. 1880. Sok. C BLOK Apt. No: 60 / 2 / 136 ESENYURT / İSTANBUL"
 
 msgid "br_email_adress"
-msgstr "info@gtservices.com.tr"
+msgstr "info@gtservices.co.tr"
  
 msgid "br_phone_number"
-msgstr "(021)314-326-2990"
+msgstr "+90 212 803 36 12"
 
 msgid "seo_description"
-msgstr "sint asperiores optio iste, recusandae tempore dolore? Deserunt quam impedit ex."
+msgstr "GTS import and export company provides high quality products from around the world with the lowest prices, and range of services that help in logistical needs and market expansion"
 
 msgid "streetAddress"
-msgstr "E5 yan yol Civan Cokak"
+msgstr "1880. Sok"
 
 msgid "addressLocality"
-msgstr "Avcılar Üniversite Mh"
+msgstr "ESENYURT YEŞİLKENT Mah"
 
 msgid "addressRegion"
 msgstr "İstanbul"
 
 msgid "latitude"
-msgstr "40.991939"
+msgstr "41.021995"
 
 msgid "longitude"
-msgstr "28.713351"
+msgstr "28.660859"
 
 msgid "hongkong_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/vQNGQm5AVwC2"
 
 msgid "turkey_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/PByqZCXPsMr"
 
 msgid "china_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/9k3F5KYZuUC2"
 
-msgid ""
-msgstr ""
+msgid "whyUs_summary"
+msgstr "6056f0ec-6cb5-4597-8941-683f647f42e8"

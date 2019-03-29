@@ -12,11 +12,11 @@
 
 @import
 "plugins/meanmenu",
-"plugins/slick" ,
-"plugins/animate/_base.css",
+"plugins/slick" , 
+"plugins/animate/base",
 "plugins/animate/fading_entrances/fadeInDown",
-"plugins/animate/fading_entrances/fadeInLeft",
-"plugins/animate/fading_entrances/fadeInRight",
+"plugins/animate/fading_entrances/fadeInLeft", 
+"plugins/animate/fading_entrances/fadeInRight", 
 "plugins/magnific"
 ;
 
@@ -43,6 +43,7 @@
 'partials/home/counter-area' ,
 'partials/home/service-area' ,
 'partials/home/testimonial' ,
+'partials/home/whyus' ,
 'partials/home/products'
 ;
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: tamtech_cms 0.2.0"
+"Project-Id-Version: tamtech 0.2.0"
 "Last-Translator: tamtech solution <support@tamtech.solution>"
 "MIME-Version: 1.0"
 "Content-Type: text/plain; charset=UTF-8"
@@ -1838,13 +1838,13 @@ msgid "our_services"
 msgstr "لماذا نحن "
 
 msgid "about_txt"
-msgstr "بعلاقتنا المتينة مع شبكة من المزودين والعملاء، نتفانى لجلب المنتجات التركية إلى العالم. مع خدمات متنوعة تساعد في توسّع الأسواق وتلبّي الاحتياجات اللوجستية"
+msgstr "بعلاقتنا المتينة مع شبكة من المزودين والعملاء، نتفانى باستيراد وتصدير منتجات عالية الجودة بأقل الأسعار من مختلف بقاع العالم. إضافةً إلى خدمات متنوعة تساعد في توسّع الأسواق وتلبّي الاحتياجات اللوجستية"
 
 msgid "our_vision"
 msgstr "رؤيتنا"
 
 msgid "our_vision_txt"
-msgstr "أن نصبح الخيار الأول للصادرات واللوجستيات في تركيا"
+msgstr "أن نصبح الخيار الأول للصادرات واللوجستيات "
 
 msgid "our_mission"
 msgstr "مهمتنا"
@@ -1857,7 +1857,7 @@ msgid "chairman_message"
 msgstr "كلمة رئيس مجلس الأدارة"
 
 msgid "chairman_message_txt"
-msgstr "اختيار مدينة اسطنبول كمقر للشركة لم يكن صدفة. الموقع الاستراتيجي و النمو المنتظم للاقتصاد هي بعض الأسباب التي تحتم زيادة الطلب على المنتجات التركية. ولذلك نحن نسعى إلى التقريب بين تركيا وباقي العالم عندما يتعلّق الأمر بصناعات معيّنة"
+msgstr "في شركة GTS نسعى للامتياز بالمنتجات والخدمات و الحفاظ على تنافسية الأسعار. من مواقع استراتيجية في دول ذات اقتصاد بنمو منتظم، نجلب المنتجات التي يُحتم عليها بزيادة الطلب. وبذلك نقرب بين مختلف مناطق العالم فيما يتعلق بالتجارة"
 
 msgid "chairman"
 msgstr "رئيس مجلس الإدارة"
@@ -1866,8 +1866,11 @@ msgid "chairman_name"
 msgstr "طارق حمامي"
 
 
-msgid ""
-msgstr ""
+msgid "call_us"
+msgstr "اتصل بنا"
+
+msgid "email_us"
+msgstr "راسلنا"
 
 msgid "section_Papers"
 msgstr "ورقيات"
@@ -1948,40 +1951,40 @@ msgid "br_address"
 msgstr "افجلر /اسطنبول"
  
 msgid "full_address"
-msgstr "UNIVERISTE MAH. CIVAN SK. NO :1 D:306 AVCILAR /ISTANBUL/TURKEY"
+msgstr "YEŞİLKENT Mah. 1880. Sok. C BLOK Apt. No: 60 / 2 / 136 ESENYURT / İSTANBUL"
 
 msgid "br_email_adress"
-msgstr "info@gtservices.com.tr"
+msgstr "info@gtservices.co.tr"
  
 msgid "br_phone_number"
-msgstr "(021)314-326-2990"
+msgstr "+90 212 803 36 12"
 
 msgid "seo_description"
-msgstr "لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه"
+msgstr  "شركة GTS تقدم خدمات الإستيراد والتصدير لمنتجات عالية الجودة بأقل الأسعار من مختلف بقاع العالم. مع خدمات متنوعة تساعد في توسّع الأسواق وتلبي الاحتياجات اللوجستية"
 
 msgid "streetAddress"
-msgstr "E5 yan yol Civan Cokak"
+msgstr "1880. Sok"
 
 msgid "addressLocality"
-msgstr "Avcılar Üniversite Mh"
+msgstr "ESENYURT YEŞİLKENT Mah"
 
 msgid "addressRegion"
 msgstr "İstanbul"
 
 msgid "latitude"
-msgstr "40.991939"
+msgstr "41.021995"
 
 msgid "longitude"
-msgstr "28.713351"
+msgstr "28.660859"
 
 msgid "hongkong_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/vQNGQm5AVwC2"
 
 msgid "turkey_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/PByqZCXPsMr"
 
 msgid "china_link"
-msgstr "https://goo.gl/maps/duqp4PBQpq22"
+msgstr "https://goo.gl/maps/9k3F5KYZuUC2"
 
-msgid ""
-msgstr ""
+msgid "whyUs_summary"
+msgstr "6056f0ec-6cb5-4597-8941-683f647f42e8"

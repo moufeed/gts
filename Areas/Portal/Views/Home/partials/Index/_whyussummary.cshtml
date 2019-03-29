@@ -1,0 +1,28 @@
+﻿@using TamTechSDK.Common.Services.ContentService.Pages.Models
+<if include-if="ViewBag.whyUsSummary != null">
+    @{
+        PageSummary pageSummary = (PageSummary)ViewBag.whyUsSummary;
+    }
+
+    <section class="  grey-bg pb-70 pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center  ">
+                   
+                    <div class="section-title service-title">
+                        <h2>@pageSummary.Title</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mb-40">
+                     <div class="why_text">
+                            @Html.Raw(pageSummary.Summary)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</if>

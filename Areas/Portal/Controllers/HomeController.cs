@@ -89,7 +89,7 @@ namespace Gts.Areas.Portal.Controllers
                 }
 
                 //ViewBag.Posts = new List<PostDto>();// await _postservice.GetPublicListAsync(4);
-                ViewBag.galleries = await _GalleriesService.GetPublicListAsync(6);
+                ViewBag.galleries = await _GalleriesService.GetPublicListAsync(8,null,true);
 
 
 
@@ -100,12 +100,19 @@ namespace Gts.Areas.Portal.Controllers
                     ViewBag.aboutSummary = aboutSummary.Data;
                 }
 
-                var services = await _servicesservice.GetPublicListAsync(6, true);
+                var whyUs = await _pageService.GetPublicPageSummaryByIdAsync(new Guid(_localizer["whyUs_summary"]));
 
-                if (services.Success)
+                if (whyUs.Success)
                 {
-                    ViewBag.services = services.Data;
+                    ViewBag.whyUsSummary = whyUs.Data;
                 }
+
+                //var services = await _servicesservice.GetPublicListAsync(6, true);
+
+                //if (services.Success)
+                //{
+                //    ViewBag.services = services.Data;
+                //}
 
                 var ClientsSlider = await _sliderService.GetPublicByKeyAsync(_appSettingsService.GetHomePageCarouselSliderKey());
 
