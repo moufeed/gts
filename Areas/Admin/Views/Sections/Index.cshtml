@@ -169,7 +169,7 @@
 
 
                                         <if include-if="item.Published">
-                                             <a href="@Url.AdminUrl("s","posts",new{ Area = "Portal" ,slug=$"{@item.SlugHierarchy.Trim('/')}"}).Replace("%2F", "/")"   
+                                             <a href="@Url.AdminUrl("s","Products",new{ Area = "Portal" ,slug=$"{@item.SlugHierarchy.Trim('/')}"}).Replace("%2F", "/")"   
                                                 data-placement="@(activeLang == "ar" ? "right" : "left")"
                                                 title="@Localizer["View_in_website"]"
                                                 data-toggle="tooltip"

@@ -75,6 +75,45 @@
                     directionality:"@(System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName == "ar" ? "rtl" : "ltr")",
                     content_css: "/portal/css/editor.css",
                     importcss_merge_classes: false,
+                    templates : [
+                          {
+                            title : "Fluting Paper [En]",
+                            url : "/Admin/Templates/fluting_paper_table_en.html",
+                            description : "Language English"
+                          },{
+                            title : "Fluting Paper [ar]",
+                            url : "/Admin/Templates/fluting_paper_ar.html",
+                            description : "مخصص للغة العربية "
+                          },{
+                            title : "sp Fluting Paper [en]",
+                            url : "/Admin/Templates/sp_fluting_paper_table_en.html",
+                             description : "Language English"
+                          },{
+                            title : "sp Fluting Paper [ar]",
+                            url : "/Admin/Templates/sp_fluting_paper_table_ar.html",
+                            description : "مخصص للغة العربية"
+                          },{
+                            title : "testliner paper [en]",
+                            url : "/Admin/Templates/testliner_paper_en.html",
+                             description : "Language English"
+                          },{
+                            title : "testliner paper [ar]",
+                            url : "/Admin/Templates/testliner_paper_ar.html",
+                            description : "مخصص للغة العربية"
+                          },{
+                            title : "kraftliner paper [en]",
+                            url : "/Admin/Templates/kraft_liner_paper_en.html",
+                            description : "Language English"
+                          },{
+                            title : "kraftliner paper [ar]",
+                            url : "/Admin/Templates/kraftliner_paper_ar.html",
+                            description : "مخصص للغة العربية"
+                          },{
+                            title : "Gray cartoon [en]",
+                            url : "/Admin/Templates/gray_cartoon_en.html",
+                            description : "Language English"
+                          }
+                        ],
                     setup: function(editor) {
                             editor.on('change', function(e) {
                                 editor.save();
@@ -112,4 +151,3 @@
 
     </script>
 }
-  

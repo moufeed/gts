@@ -1873,6 +1873,14 @@ msgstr "Call us"
 
 msgid "email_us"
 msgstr "Email us"
+
+
+msgid "no_data_available"
+msgstr "No Data Availabe"
+
+msgid "companies"
+msgstr "Companies"
+
 msgid "section_Papers"
 msgstr "Papers"
 
@@ -1897,54 +1905,123 @@ msgstr "china"
 
 msgctxt "admin.Views.Shared._side_menu"
 msgid "Galleries"
-msgstr "Products"
+msgstr "Products Galleries"
 
 
 msgid "Galleries"
-msgstr "Products"
+msgstr "Products Galleries"
 
 msgid "h_gallery"
-msgstr "Products"
+msgstr "Products Galleries"
 
 #:galleries index.cshtml
 msgid "new_gallery"
-msgstr "New product"
+msgstr "New product gallery"
 
 
 
 #:FormGalleryItem.cshtml
-msgid "create_gallery_item"
-msgstr "Create product Item"
-
-msgid "edit_gallery_item"
-msgstr "Update product Item"
+  
 
 msgid "back_to_gallery"
-msgstr "Back to product"
+msgstr "Back to product gallery"
 
- 
-
+  
 #:FormGallery.cshtml 
 msgid "create_gallery"
-msgstr "Create product"
+msgstr "Create product gallery"
 
 msgid "update_gallery"
-msgstr "Update product"
- 
- 
-
+msgstr "Update product gallery"
+  
 
 #: galleries Details.cshtml
 msgid "galleries_details"
-msgstr "product Details "
+msgstr "product gallery Details "
 
 msgid "gallery_pictures"
 msgstr "product pictures"
 
 #:_galleryitems.cshtml
 msgid "gallery_items"
-msgstr "product Items"
+msgstr "product gallery Items"
 
+
+
+#post  
+
+
+msgid "all_posts"
+msgstr "All products"
+
+msgid "all_sections"
+msgstr "All categories"
+
+msgid "posts_section"
+msgstr "products category"
+
+
+#: Posts index.cshtml
+msgid "Posts"
+msgstr "products"
+
+msgid "new_post"
+msgstr "New product"
+ 
+msgid "post_name"
+msgstr "product Title"
+
+msgid "section_name"
+msgstr "category Name"
+
+ 
+#: Posts Form.cshtml
+msgid "post_edit"
+msgstr "Edit product"
+
+msgid "post_create"
+msgstr "Create product"
+
+#: Posts Details.cshtml
+
+msgid "post_details"
+msgstr "product Details"
+
+
+#:Sections index.cshtml
+msgid "new_section"
+msgstr "New Section"
+
+msgid "sections"
+msgstr "categories"
+
+msgid "new_section"
+msgstr "New category"
+
+#:Sections Form.cshtml
+
+msgid "create_section"
+msgstr "Create category"
+
+msgid "edit_section"
+msgstr "Edit category"
+
+
+msgid "f_section_parent"
+msgstr "category parent :"
+
+#: Section Details.cshtml
+
+msgid "section_details"
+msgstr "category details"
+
+msgid "section_parent"
+msgstr "category Parent"
+
+
+
+msgid "posts_section"
+msgstr "products category"
 
 
 #: --- settings --- 

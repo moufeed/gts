@@ -163,3 +163,9 @@ msgstr "اتصل بنا"
 
 msgid "email_us"
 msgstr "راسلنا"
+
+msgid "no_data_available"
+msgstr "لا يوجد بيانات"
+
+msgid "companies"
+msgstr "الشركات"

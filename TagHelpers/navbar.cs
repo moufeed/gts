@@ -31,7 +31,7 @@ namespace Gts.TagHelpers
                       { MenuItemTypeEnum.page.ToString()  , $"/{culture}/portal/pages/v" },
                       { MenuItemTypeEnum.staticpage.ToString()  , $"/{culture}/portal" },
                       { MenuItemTypeEnum.service.ToString()  , $"/{culture}/portal/services/v" },
-                      { MenuItemTypeEnum.section.ToString()  , $"/{culture}/portal/posts/s" },
+                      { MenuItemTypeEnum.section.ToString()  , $"/{culture}/portal/products/s" },
                       { MenuItemTypeEnum.gallery.ToString()  , $"/{culture}/portal/galleries/v" },
                       { MenuItemTypeEnum.section_of_service.ToString()  , $"/{culture}/portal/services/s" },
                       { MenuItemTypeEnum.section_of_gallery.ToString()  , $"/{culture}/portal/galleries/s" },
@@ -157,7 +157,14 @@ namespace Gts.TagHelpers
         private string print_dropdown(MenuItemDto menu)
         {
             string li = "<li>";
-            li += $"<a href=\"#\">{menu.Title}</a>";
+            if (string.IsNullOrEmpty(menu.Url))
+            {
+                li += $"<a href=\"#\">{menu.Title}</a>";
+            }
+            else
+            {
+                li += $"<a href=\"/{CultureInfo.CurrentCulture.Name}/portal/{menu.Url}\">{menu.Title}</a>";
+            }
             li += Print_UL(menu.MenuItems,true);
             li += "</li>";
             return li;

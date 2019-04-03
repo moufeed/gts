@@ -1,0 +1,108 @@
+﻿@model SectionContainerDto
+@{
+
+    if (Model.SectionInfo != null)
+    {
+        ViewData["pageTitle"] = "";
+        ViewData["Title"] = Model.SectionInfo.Title;
+        ViewData["pageTitle"] = Model.SectionInfo.Title;
+    }
+    else
+    {
+        ViewData["pageTitle"] = "";
+        ViewData["Title"] = Localizer["sections"];
+        ViewData["pageTitle"] = Localizer["sections"];
+    }
+
+    Layout = "_Layout";
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/cubes.jpg");
+
+}
+@{
+    List<SlugModel> SectionsSlugs = Model.SectionsSlugs;
+}
+
+
+
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="@SectionsSlugs" />
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
+
+
+<if include-if="Model.Sections != null && Model.Sections.Count > 0">
+    <section class="sections-area mt-50">
+        <div class="container">
+            <div class="row py-5">
+                @foreach (SectionDto sec in Model.Sections)
+                {
+                    <div class="single-section text-center  col-md-6 col-sm-6  col-lg-3 mb-25">
+                        <a href="@Url.Action("s", "products", new { slug = sec.SlugHierarchy }).Replace("%2F", "/")" class="product-img">
+                            @if (string.IsNullOrEmpty(sec.MainImage))
+                            {
+                                <img src="~/Portal/img/empty.jpg" />
+                            }
+                            else
+                            {
+                                <img src="@sec.MainImage" />
+                            }
+                        </a>
+
+                        <div class="product-info">
+                            <h3>
+                                <a href="@Url.Action("s", "products", new { slug = sec.SlugHierarchy }).Replace("%2F", "/")">@sec.Title</a>
+                            </h3>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</if>
+
+<if include-if="(Model.Sections == null || (Model.Sections.Count == 0 && Model.Posts != null && Model.Posts.Count > 0))">
+
+    <section class="products-list mt-60 mb-60">
+        <div class="container">
+            
+            <if include-if="Model.SectionInfo != null && !string.IsNullOrEmpty(Model.SectionInfo.Summary)">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>@Model.SectionInfo.Summary</p>
+                    </div>
+                </div>     
+            </if>
+            
+            <div class="row">
+                @foreach (PostDto item in Model.Posts)
+                {
+                <div class="col-md-4 col-sm-6 col-lg-3">
+                    @{string slug = item.SectionSlug.Trim('/');}
+                    <a href="@Url.AdminUrl("p","Products",new{slug=$"{@slug}/{item.Slug}"}).Replace("%2F", "/")" class="product-list-item d-flex justify-content-bettween align-items-center">
+                        <div class="pr-img">
+                            @if (string.IsNullOrEmpty(item.MainImage))
+                            {
+                                <i class="fa fa-cube"></i>
+                            }
+                            else
+                            {
+                                <img src="@item.MainImage" />
+                            }
+                        </div>
+                        <div class="pr-info">
+                            <h5> @item.Title</h5>
+                        </div>
+                    </a>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+</if>
+ 
+
+ 
+<if include-if="Model.Sections != null && Model.Posts != null && Model.Sections.Count == 0  && Model.Posts.Count == 0">
+    <div class="no-data text-center mt-60 mb-60">
+        <i class="fa fa-info-circle"></i>
+        <p>@Localizer["no_data_available"]</p>
+    </div>
+</if>

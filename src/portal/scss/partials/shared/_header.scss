@@ -152,7 +152,7 @@
 }
 .main-menu ul li .sub-menu li a {
 	padding: 10px 15px;
-	text-align: left;
+	text-align: $left;
 	font-weight: 600;
 	position: relative;
 	font-size: 13px;
@@ -168,18 +168,18 @@
 }
 .main-menu ul li .sub-menu li a::before {
 	position: absolute;
-	left: 6px;
+	#{$left}: 6px;
 	color: $red;
 	content: "-";
 	transition: .3s;
 	opacity: 0;
 }
 .main-menu ul li .sub-menu li:hover a{
-	padding-left: 20px;
+	padding-#{$left}: 20px;
 }
 .main-menu ul li .sub-menu li:hover a:before{
 	opacity: 1;
-	left: 10px;
+	#{$left}: 10px;
 }
 .main-menu ul li:hover> a{
 	color: $red

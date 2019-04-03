@@ -30,7 +30,7 @@
                     {
                         SlugModel item = Model.FirstOrDefault(i => string.Equals(i.Lang, culture.Lang, StringComparison.OrdinalIgnoreCase));
 
-                        if (item.Slug != null)
+                        if (item != null && item.Slug != null )
                         {
                             <a class="dropdown-item"
                                href="@Url.Action(action,controller, new {Culture= item.Lang , slug =item.Slug}).Replace("%2F", "/")">@culture.Name</a>
@@ -47,7 +47,7 @@
                             <a class="dropdown-item"
                                asp-action="index"
                                asp-controller="home"
-                               asp-route-Culture="@item.Lang">@culture.Name</a>
+                               asp-route-Culture="@culture.Lang">@culture.Name</a>
                         }
                     }
                      

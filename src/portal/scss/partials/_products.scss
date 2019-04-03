@@ -1,0 +1,148 @@
+
+
+
+.single-product ,.single-section{
+    .product-img{
+       @include size(100% ,350px);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       overflow: hidden;
+       background: #f5f5f5;
+       box-shadow: 0 0 0 3px #fff, 0 0 0 7px #ececec;
+       img{
+           height: 100%;
+           width: auto;
+           transition: all .3s;
+       }
+    }
+    .product-info{
+        margin-top: 15px;
+        h3{
+            font-weight: bolder;
+            text-transform: capitalize;
+        }
+        a{
+            color:#000;
+        }
+    }
+    &:hover{
+        .product-img{
+            box-shadow: 0 0 0 3px #fff, 0 0 0 7px $red;
+        }
+            img{
+                filter: grayscale(.5)
+            }
+            a{
+                
+                color: $red;
+            }
+    }
+}
+
+.single-section{
+    .product-img{
+        height: 250px;
+    }
+    .product-info{
+        margin-top: 15px;
+        h3{
+            font-weight: normal;
+            font-size: 16px;
+        }
+         
+    }
+}
+
+
+.products-list{
+
+}
+
+.product-list-item{
+    margin: 15px 0;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ececec;
+    .pr-img{
+        @include square(75px);
+        overflow: hidden;
+        background: #f5f5f5;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition:  all .2s;
+        i{
+            font-size: 24px;
+            color: rgba(#000 ,.3);
+            transition:  all .3s;
+        }
+        img{
+            height: 100%;
+            width: auto;
+            transition:  all .3s;
+        }
+    }
+    .pr-info{
+        padding-#{$left}: 15px;
+        
+        a{
+            font-weight:600;
+            color: darken($textcolor,15%) ;
+        }
+    }
+    h5{
+        margin: 0;
+    }
+    &:hover{
+        box-shadow: 0 0 0 3px #fff, 0 0 0 5px $red;
+        .pr-img{
+            background: $red;
+            i{
+                color: darken($red ,15%);
+                transform: scale(1.5);
+            }
+            img{
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.no-data{
+    i{
+        font-size: rem(100px);
+        color: $textcolor;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: rem(18px);
+    }
+}
+
+/*<div class=" text-center mt-60 mb-60">
+        <i class="fa fa-info-circle fa-4x"></i>
+        <p>@Localizer["no_data_available"]</p>
+    </div>
+  
+                    <div class="col-md-3 col-sm-4">
+                        <div class=" d-flex justify-content-center aligh-items-center">
+                            <div class="">
+                                @if (string.IsNullOrEmpty(item.MainImage))
+                                {
+                                   <i class="fa fa-cube"></i>
+                                }
+                                else
+                                {
+                                    <img src="@item.MainImage" />
+                                }
+                            </div>
+                            <div class="">
+                                @{string slug = item.SectionSlug.Trim('/');}
+                                <h5> <a href="@Url.AdminUrl("p","Products",new{slug=$"{@slug}/{item.Slug}"}).Replace("%2F", "/")">@item.Title</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+*/

@@ -134,7 +134,7 @@
                             }
 
                             <label class="form-control clearfix uploadfile">
-                                <input type="file" name="NewMainImage" id="NewMainImage" class="upload-input" data-text="@Localizer["choose_file"]" accept="image/*" data-rule-filesize="500" />
+                                <input type="file" name="NewMainImage" id="NewMainImage" class="upload-input" data-text="@Localizer["choose_file"]" accept="image/*" data-rule-filesize="800" />
                                 <span class="url">@Localizer["choose_file"]</span>
                                 <span class="file-btn"><i class="fa fa-search"></i> @Localizer["Browse"]</span>
                             </label>
@@ -143,7 +143,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group clearfix">
+                    @*<div class="form-group clearfix">
                         <label asp-for="DisplayOrder" class="control-label col-md-2 col-sm-3 col-xs-12 ">@Localizer["f_display_order"]</label>
                         <div class="col-md-10 col-lg-9 col-sm-9 col-xs-12">
                             @if (activeLang != CultureConstants.DefaultCulture.Lang && ViewBag.IsEditMode)
@@ -156,7 +156,7 @@
                             }
                             <span asp-validation-for="DisplayOrder" class="text-danger invalid_field"></span>
                         </div>
-                    </div>
+                    </div>*@
 
                     <div class="form-group clearfix">
                         <label asp-for="SectionId" class="control-label col-md-2 col-sm-3 col-xs-12 ">@Localizer["f_section_parent"] <i class="fa fa-asterisk c-red fz-10 "></i></label>
@@ -176,13 +176,13 @@
 
 
                     </div>
-                    <div class="form-group clearfix">
+                    @*<div class="form-group clearfix">
                         <label asp-for="PostDate" class="control-label col-md-2 col-sm-3 col-xs-12 ">@Localizer["f_post_date"] </label>
                         <div class="col-md-10 col-lg-9 col-sm-9 col-xs-12">
                             <input type="date"  asp-for="PostDate"  class="form-control"   />
                             <span asp-validation-for="PostDate" class="text-danger invalid_field"></span>
                         </div>
-                    </div>
+                    </div>*@
 
                     <div class="form-group clearfix">
                         <label asp-for="Summary" class="control-label col-md-2 col-sm-3 col-xs-12 ">@Localizer["f_summary"] <i class="fa fa-asterisk c-red fz-10 "></i></label>

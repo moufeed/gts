@@ -22,7 +22,7 @@ namespace Gts.Settings.Configurations.AppSettings.Constants
 
         public const bool GalleriesModule = true;
 
-        public const bool PostsModule = false;
+        public const bool PostsModule = true;
 
         public const bool RequestsModule = true;
 

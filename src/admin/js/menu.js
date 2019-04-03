@@ -201,6 +201,9 @@ const SaveItem = ($this)=> {
         dataRequest["UrlTarget"] =  $target.find('select').val() ;
         dataRequest["url"] =  $tr.find('.url-control').val() ;
     }
+    if(type == "dropdown"){
+        dataRequest["url"] =  $tr.find('.url-control').val() ;
+    }
      
     
     $.ajax({
@@ -261,16 +264,17 @@ const toggleEdit_menuitem = ($this)=>{
         $target.find('.badge').addClass('hidden');
         $target.next().removeAttr('disabled');
     }
-
+    if(type == "dropdown"){
+        $target.next().removeAttr('disabled');
+    }
     tmpVal = $input.val();
     $input.removeAttr("disabled");
     $order.removeAttr("disabled");
     $this.removeClass('btn-edit').addClass('btn-save editable').attr('data-original-title',window.localization.save);
-    $this.find(".fa").removeClass().addClass('fa fa-floppy-o');
+    $this.find(".fa").removeClass().addClass('fa fa-floppy-o'); 
     $tr.find(".btn-remove").addClass("hidden");
     $tr.find(".btn-cancel").removeClass("hidden");
-    
-}
+} 
 
 $(document).on('click',".edit-menuitem",function(event){
     var $this = $(this);
@@ -291,11 +295,14 @@ $(document).on('click',".cancel-menuitem",function(event){
         $edit = $($tr.find(".edit-menuitem"));
         $input.val($object.title);
         $order.val($object.displayOrder);
-        if($object.itemType == "url"){
+        if($object.itemType == "url" ){
             $tr.find(".url-control").val($object.url);
             $target.find('select').addClass('hidden');
             $target.find('.badge').removeClass('hidden');
             $target.next().attr('disabled','disabled');
+        }
+        if( $object.itemType == "dropdown" ){ 
+            $tr.find(".url-control").val($object.url).attr('disabled','disabled');
         }
     toggle($input,$order,$edit);
     

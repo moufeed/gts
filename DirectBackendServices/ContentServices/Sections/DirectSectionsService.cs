@@ -26,9 +26,14 @@ namespace Gts.DirectBackendServices.ContentServices.Sections
         }
         #endregion
 
-      
+
         #region public services
-     
+        public async Task<List<SectionDto>> GetPublicMainSectionsAsync()
+        {
+            var result = await _SectionService.GetPublicMainSectionsAsync();
+            List<SectionDto> sectionDto = result?.Select(m => m.MapToFrontendDto()).ToList();
+            return sectionDto;
+        }
 
         public async Task<IRequestProviderResult<List<SectionDto>>> GetPublicListAsync()
         {
@@ -46,7 +51,7 @@ namespace Gts.DirectBackendServices.ContentServices.Sections
 
         public async Task<SectionContainerDto> GetPublicSectionWithLatestSubSectionsBySlugAsync(string slug)
         {
-            var result = await _SectionService.GetPublicSectionWithLatestSubSectionsBySlugAsync(slug);
+            var result = await _SectionService.GetPublicSectionWithLatestSubSectionsBySlugAsync(slug,2000);
             return result?.MapToContainerDto();
         }
 
@@ -131,7 +136,9 @@ namespace Gts.DirectBackendServices.ContentServices.Sections
             var result = await _SectionService.SoftDeleteAsync(id);
             return MapRequestProviderResult(result);
         }
- 
+
+       
+
 
 
         #endregion

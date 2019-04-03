@@ -164,3 +164,10 @@ msgstr "Call us"
 
 msgid "email_us"
 msgstr "Email us"
+
+
+msgid "no_data_available"
+msgstr "No Data Availabe"
+
+msgid "companies"
+msgstr "Companies"

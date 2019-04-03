@@ -24,21 +24,19 @@ msgstr "الصين"
 
 msgctxt "admin.Views.Shared._side_menu"
 msgid "Galleries"
-msgstr "المنتجات"
+msgstr "صور المنتجات"
 
 
 msgid "Galleries"
-msgstr "المنتجات"
+msgstr "صور المنتجات"
 
 msgid "h_gallery"
-msgstr "المنتجات"
+msgstr "صور المنتجات"
 
 #:galleries index.cshtml
 msgid "new_gallery"
 msgstr "منتج جديد"
-
-
-
+ 
 #:FormGalleryItem.cshtml
 msgid "create_gallery_item"
 msgstr "إضافة صورة منتج"
@@ -71,3 +69,40 @@ msgstr "صور المنتج"
 #:_galleryitems.cshtml
 msgid "gallery_items"
 msgstr "المنتجات"
+
+
+
+#post  
+
+
+msgid "all_posts"
+msgstr "كل المنتجات"
+ 
+
+#: Posts index.cshtml
+msgid "Posts"
+msgstr "المنتجات"
+
+msgid "new_post"
+msgstr "منتج جديد"
+ 
+msgid "post_name"
+msgstr "عنوان المنتج"
+
+ 
+
+ 
+#: Posts Form.cshtml
+msgid "post_edit"
+msgstr "تعديل المنتج"
+
+msgid "post_create"
+msgstr "منتج جديد"
+
+#: Posts Details.cshtml
+
+msgid "post_details"
+msgstr "تفاصيل المنتج "
+
+msgid "posts_section"
+msgstr "تصنيف منتجات"

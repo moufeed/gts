@@ -1,0 +1,43 @@
+﻿
+@model PostDto
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "_Layout";
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/news.jpeg");
+    ViewData["pageTitle"] = Model.Title;
+
+    ViewBag.ItemId = Model.Id;
+    ViewBag.Action = "Edit";
+
+     ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/cubes.jpg");
+}
+@using System.Text;
+
+
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="Model.Slugs" />
+
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
+
+@section SEO{
+    <meta name="description" content="@Html.Raw(Model.MetaDescription)" />
+
+    <partial name="~/Areas/Portal/Views/Shared/partials/_SEO.cshtml" model="Model.SEOMarkup" />
+}
+ 
+  
+<section class="pt-60 pb-60">
+    <div class="container">
+        <if include-if="!string.IsNullOrEmpty(Model.MainImage) ">
+            <div class="row">
+
+            </div>
+        </if>
+        <div class="row">
+            <div class="col-12">
+                @Html.Raw(Model.Content)
+            </div>
+        </div>
+    </div>
+</section>
+
+ 

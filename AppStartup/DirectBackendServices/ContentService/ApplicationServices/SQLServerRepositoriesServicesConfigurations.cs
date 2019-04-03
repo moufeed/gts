@@ -32,7 +32,7 @@ namespace Gts.AppStartup.DirectBackendServices.ContentService.ApplicationService
             services.AddTransient<IGalleryRepository, EFCoreGalleryRepository>();
             services.AddTransient<ITestimonialRepository, EFCoreTestimonialRepository>();
 
-            services.AddTransient<ISectionRepository, EFCoreSectionRepository>();
+           services.AddTransient<IPostSectionRepository, EFCorePostSectionRepository>();
             services.AddTransient<IPostRepository, EFCorePostRepository>();
 
             services.AddTransient<IRequestRepository, EFCoreRequestRepository>();

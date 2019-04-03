@@ -1,40 +1,52 @@
-﻿ 
-@model List<ProductListVM>
+﻿@model List<SectionDto>
 @{
     ViewData["Title"] = Localizer["Products"];
     Layout = "_Layout";
-    ViewData["ImageURl"] = @Url.Content("~/portal/img/products.jpg");
-    ViewData["pageTitle"] = Localizer["Our_products"];
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/companies.jpg");
+    ViewData["pageTitle"] = Localizer["companies"];
 }
 
-@await Html.PartialAsync("~/Areas/Portal/Views/Shared/partials/_PageHeader.cshtml")
+    @{ 
+           List<SlugModel> SectionsSlugs = new List<SlugModel>();
+    }
+    <partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="SectionsSlugs" />
+    <partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
 
-<section class="section-products">
-    <div class="container">
-        @await Html.PartialAsync("~/Areas/Portal/Views/Products/partials/_gallery.cshtml", Model)
 
+    <if include-if="Model != null && Model.Count > 0">
 
+        <section class="products-area  pt-100 pb-70">
+            <div class="container">
 
-        <div class="clerfix pagination-row mt-4 no-gutters">
+                <div class="row">
 
-            @if (ViewBag.pagination.PreviousPage)
-            {
-                <button class="btn btn-outline-secondary previous pull-left flip-dir" data-page="@ViewBag.FilterModel.PageNumber" onclick="window.history.back()">
-                    <i class="fa fa-angle-left"></i>
-                    @Localizer["Previous"]
-                </button>
-            }
-            @if (ViewBag.pagination.NextPage)
-            {
-                <a href="@Url.Action("Index","Products" ,new { pagenumber=ViewBag.pagination.PageNumber})" class="btn btn-outline-secondary next pull-right flip-dir">
+                    @foreach (SectionDto sec in Model)
+                    {
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="single-product text-center ">
+                                
+                                    <a href="@Url.Action("s", "products", new { slug = sec.SlugHierarchy }).Replace("%2F", "/")" class="product-img">
+                                        @if (string.IsNullOrEmpty(sec.MainImage))
+                                        {
+                                            <img src="~/Portal/img/empty.jpg" />
+                                        }
+                                        else
+                                        {
+                                            <img src="@sec.MainImage" />
+                                        }
+                                    </a>
+                                
+                                <div class="product-info">
+                                    <h3>
+                                        <a href="@Url.Action("s", "products", new { slug = sec.SlugHierarchy }).Replace("%2F", "/")">@sec.Title</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    }
 
-                    @Localizer["Next"]
-                    <i class="fa fa-angle-right"></i>
-
-                </a>
-   
-            }
-        </div>
-
-    </div>
-</section>
+                </div>
+            </div>
+        </section>
+    </if>
+    
