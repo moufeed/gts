@@ -41,5 +41,9 @@ msgstr "https://goo.gl/maps/PByqZCXPsMr"
 msgid "china_link"
 msgstr "https://goo.gl/maps/9k3F5KYZuUC2"
 
+msgid "uae_link"
+msgstr "https://goo.gl/maps/LFMfEARXGp72"
+
+
 msgid "whyUs_summary"
 msgstr "6056f0ec-6cb5-4597-8941-683f647f42e8"

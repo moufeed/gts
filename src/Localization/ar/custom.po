@@ -19,6 +19,9 @@ msgstr "هونغ كونغ"
 msgid "china"
 msgstr "الصين"
 
+msgid "UAE"
+msgstr "الامارات العربية"
+
 
 
 

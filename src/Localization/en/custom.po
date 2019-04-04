@@ -19,6 +19,9 @@ msgstr "hongkong"
 msgid "china"
 msgstr "china"
 
+msgid "UAE"
+msgstr "UAE"
+
 
 msgctxt "admin.Views.Shared._side_menu"
 msgid "Galleries"
