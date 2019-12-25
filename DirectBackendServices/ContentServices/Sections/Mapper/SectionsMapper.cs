@@ -27,7 +27,7 @@ namespace Gts.DirectBackendServices.ContentServices.Sections.Mapper
                 Summary = item.Summary,
                 Title = item.Title,
                 ParentId = item.ParentId,
-                MetaDescription = item.MetaDescription,
+                MetaDescription = item.MetaDescription
             };
         }
 

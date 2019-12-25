@@ -1840,7 +1840,7 @@ msgstr "why us"
 
 
 msgid "about_txt"
-msgstr "With a solid network of suppliers and clients, we are dedicated for bringing high quality products from around the world with the lowest prices. Providing a range of services that help in market expansion and take care of logistical needs"
+msgstr "For more than 60 years of accumulated business experience in the field of procurement, supply and distribution channel managements, GTS has been providing expertise to its valued customers. Our offices extend from Turkey Center of Civilizations and International Trade to the Far East of China which characterized as charming and amazing country. GTS services add value to the supply chain as well as distribution channels, offering the right products from its sources, for the right cost, utilizing the right shipping resources to deliver customer product specifications on agreed time and quality. GTS helps you overcome language barriers in Turkey and China Services are GTS guaranteed"
 
 msgid "our_vision"
 msgstr "Our Vision"
@@ -2036,7 +2036,7 @@ msgid "full_address"
 msgstr "YEŞİLKENT Mah. 1880. Sok. C BLOK Apt. No: 60 / 2 / 136 ESENYURT / İSTANBUL"
 
 msgid "br_email_adress"
-msgstr "info@gtservices.co.tr"
+msgstr "info@gtservices.com.tr"
  
 msgid "br_phone_number"
 msgstr "+90 212 803 36 12"
@@ -2074,3 +2074,6 @@ msgstr "https://goo.gl/maps/LFMfEARXGp72"
 
 msgid "whyUs_summary"
 msgstr "6056f0ec-6cb5-4597-8941-683f647f42e8"
+
+msgid "page_group"
+msgstr "page_group_en"

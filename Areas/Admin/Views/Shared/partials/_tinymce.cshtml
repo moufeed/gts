@@ -64,7 +64,7 @@
                     relative_urls : false,
                     //remove_script_host : false,
                     //convert_urls: true,
-                    extended_valid_elements: 'img[class=myclass|!src|border:0|alt|title|width|height|style]',
+                    extended_valid_elements: 'img[class=myclass|!src|border:0|alt|title|width|height|style],div[source|thumb|class|id|height|style|data*|*]',
                     invalid_elements: "script,applet",
                     schema: "html5",
                     verify_html: true,
@@ -112,6 +112,11 @@
                             title : "Gray cartoon [en]",
                             url : "/Admin/Templates/gray_cartoon_en.html",
                             description : "Language English"
+                          },
+                            {
+                            title : "page group item",
+                            url : "/Admin/Templates/pagegroup-item.html",
+                            description : "home page group item"
                           }
                         ],
                     setup: function(editor) {

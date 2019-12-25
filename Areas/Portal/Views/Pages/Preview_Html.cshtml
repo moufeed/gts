@@ -8,6 +8,13 @@
 
     ViewBag.ItemId = Model.Id;
 
+ if( new Guid("d2d0e1c1-be8c-4ef2-98dc-da8408c724a1")  == Model.Id ||
+     new Guid("2185ba08-f8da-4abc-8bbc-c8121c8e6029")  == Model.Id ||
+     new Guid("dcf5e6c3-3587-4ade-8b0f-eaa2133b90b9")  == Model.Id ||
+     new Guid("2d2444c1-9882-4bc7-aa84-f13c472b0ddc")  == Model.Id ||
+     new Guid("9964369d-6946-45bd-8dbd-887a665aec8a")  == Model.Id  ){
+         ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/Oil-bg.jpg");
+    }
 
 }
 <partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="Model.Slugs" />

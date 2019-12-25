@@ -96,6 +96,13 @@ module.exports = {
                     `${portal_src}/js/magnific.js`
                 ],
             },
+            {
+                outputFileName: "products.js",
+                es6: true,
+                inputFiles: [
+                    `${portal_src}/js/products.js`
+                ],
+            },
         ]
     },
 }

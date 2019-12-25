@@ -1,9 +1,14 @@
 ﻿
 @model SectionContainerDto
 
-
-<nav class="my-4">
-    <ul class="pagination">
+ 
+@{
+    var json = Newtonsoft.Json.JsonConvert.SerializeObject(Model);
+}
+   
+ 
+<nav class="my-4 pagination">
+    <ul class="pagination-list">
 
         @if (Model.SectionInfo != null)
         {
@@ -11,33 +16,33 @@
             {
                 @if (Model.Pagination.PreviousPage)
                 {
-                    <li class="page-item ">
+                    <li>
                         @{ int PreviousPage = Int32.Parse(Model.Pagination.PageNumber) - 1; }
 
                         <a class="page-link" href="@Url.AdminUrl("s", "products", new { PageNumber = PreviousPage.ToString(),
-                                                  slug = Model.SectionInfo.Slug.Trim('/') }).Replace("%2F", "/")" tabindex="-1">@Localizer["Previous"]</a>
-                    </li>
-                }
+                                                  slug = Model.SectionInfo.SlugHierarchy.Trim('/') }).Replace("%2F", "/")" tabindex="-1">@Localizer["Previous"]</a>
+                                            </li>
+                                        }
 
                 @for (int i = 1; i <= Model.Pagination.TotalPages; i++)
                 {
                     int num = Int32.Parse(Model.Pagination.PageNumber);
 
                     <li class="page-item @( num == i ? "active" : "" ) ">
-                        <a class="page-link" href="@Url.AdminUrl("s", "products", new { PageNumber = i.ToString() })">@i</a>
+                        <a class="page-link" href="@Url.AdminUrl("s", "products", new { PageNumber = i.ToString() ,slug = Model.SectionInfo.SlugHierarchy.Trim('/') }).Replace("%2F", "/")">@i</a>
                     </li>
                 }
 
                 @if (Model.Pagination.NextPage)
                 {
-                    <li class="page-item ">
+                    <li>
                         @{ int NextPage = Int32.Parse(Model.Pagination.PageNumber) + 1; }
 
                         <a class="page-link" href="@Url.AdminUrl("s", "products", new { PageNumber = NextPage.ToString(),
-                                                  slug = Model.SectionInfo.Slug.Trim('/') }).Replace("%2F", "/")" tabindex="-1">@Localizer["Next"]</a>
+                                                  slug = Model.SectionInfo.SlugHierarchy.Trim('/') }).Replace("%2F", "/")" tabindex="-1">@Localizer["Next"]</a>
 
-                    </li>
-                }
+                                            </li>
+                                        }
 
             }
         }
@@ -47,10 +52,10 @@
             {
                 @if (Model.Pagination.PreviousPage)
                 {
-                    <li class="page-item ">
+                    <li>
                         @{ int PreviousPage = Int32.Parse(Model.Pagination.PageNumber) - 1; }
 
-                        <a class="page-link" href="@Url.AdminUrl("index", "products", new { PageNumber = PreviousPage.ToString()})" >@Localizer["Previous"]</a>
+                        <a class="page-link" href="@Url.AdminUrl("index", "products", new { PageNumber = PreviousPage.ToString()}).Replace("%2F", "/")">@Localizer["Previous"]</a>
                     </li>
                 }
 
@@ -59,16 +64,16 @@
                     int num = Int32.Parse(Model.Pagination.PageNumber);
 
                     <li class="page-item @( num == i ? "active" : "" ) ">
-                        <a class="page-link" href="@Url.AdminUrl("index","products" ,new {  PageNumber = i.ToString() })">@i</a>
+                        <a class="page-link" href="@Url.AdminUrl("index","products" ,new {  PageNumber = i.ToString() }).Replace("%2F", "/")">@i</a>
                     </li>
                 }
 
                 @if (Model.Pagination.NextPage)
                 {
-                    <li class="page-item ">
+                    <li>
                         @{ int NextPage = Int32.Parse(Model.Pagination.PageNumber) + 1; }
 
-                        <a class="page-link" href="@Url.AdminUrl("index", "products", new { PageNumber = NextPage.ToString() })"  >@Localizer["Next"]</a>
+                        <a class="page-link" href="@Url.AdminUrl("index", "products", new { PageNumber = NextPage.ToString() }).Replace("%2F", "/")">@Localizer["Next"]</a>
 
                     </li>
                 }

@@ -171,31 +171,23 @@
                         </div>
                     </div>
 
-
-
-
-                    <h4>
-                        @Localizer["SEO"]
-                    </h4>
-                    <hr />
-
-
                     <div class="form-group clearfix">
-
-                        <label asp-for="MetaDescription" class="control-label col-md-2 col-sm-3 col-xs-12 ">@Localizer["f_meta_description"]</label>
-
+                        <label asp-for="MetaDescription" class="control-label col-md-2 col-sm-3 col-xs-12 ">@Localizer["f_content"]</i></label>
                         <div class="col-md-10 col-lg-9 col-sm-9 col-xs-12">
-                            <textarea asp-for="MetaDescription" class="form-control MetaDescription"
-                                      data-characters='{"warning_count" : 158  , "maximum_count" : 300 }' rows="3"></textarea>
-
+                            <textarea asp-for="MetaDescription" class="form-control" rows="5"></textarea>
                             <span asp-validation-for="MetaDescription" class="text-danger invalid_field"></span>
-
                         </div>
                     </div>
 
 
+
                     @if (ViewBag.IsEditMode)
                     {
+                        <h4>
+                            @Localizer["SEO"]
+                        </h4>
+                        <hr />
+
                         <input type="hidden" name="DatePublished" value="@(String.Format("{0:yyyy-MM-dd}", Model.PublishedDate))" data-seo-published />
                         <input type="hidden" name="DateModified" value="@(String.Format("{0:yyyy-MM-dd}", Model.ModifiedDate))" data-seo-modified />
                         @await Html.PartialAsync("~/Areas/admin/Views/Shared/Seo/_SeoFields.cshtml", Model.SEOMarkup);
@@ -232,7 +224,10 @@
     <script src="~/Admin/js/validator.min.js"></script>
 
 
+    @{ ViewBag.TinyMce_Contetnt_Id = "#MetaDescription"; }
 
+    <partial name="partials/_tinymce.cshtml" />
+    
 
     @if (ViewBag.IsEditMode)
     {
@@ -263,15 +258,15 @@
         </script>
     }
     <script>
-   $('.select_picker').select2();
+        $('.select_picker').select2();
     </script>
 
     @if (!ViewBag.IsEditMode || string.IsNullOrEmpty(Model.Slug))
     {
         <script>
-           $("#Title").on("keyup", function() {
-               $("#Slug").val($(this).val().replace(/\s/g, "_")).valid();
-           })
+            $("#Title").on("keyup", function () {
+                $("#Slug").val($(this).val().replace(/\s/g, "_")).valid();
+            })
         </script>
     }
 }

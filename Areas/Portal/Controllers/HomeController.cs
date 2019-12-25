@@ -120,8 +120,7 @@ namespace Gts.Areas.Portal.Controllers
                 {
                     ViewBag.ClientsSlider = ClientsSlider.Data;
                 }
-
-
+                ViewBag.groupPage = await _pageService.GetPublicBySlugAsync(_localizer["page_group"]);
             }
             catch (Exception ex)
             {

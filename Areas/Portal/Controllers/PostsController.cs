@@ -55,6 +55,8 @@ namespace Gts.Areas.Portal.Controllers
                 // When there is no sectionInfo there can be no posts
                 PostsList pagedPosts = sectionContainer?.SectionInfo != null ? await _postservice.GetPublicListBySectionSlugAsync(Pagination, slug) : new PostsList();
 
+                ViewBag.productContent = pagedPosts.Data.FirstOrDefault();
+
                 SectionContainerDto model = new SectionContainerDto
                 {
                     Sections = sectionContainer.Sections,
@@ -71,6 +73,28 @@ namespace Gts.Areas.Portal.Controllers
                 TrackException(ex);
             }
             return StatusCode(500);
+        }
+
+         
+        public async Task<JsonResult> Product(string slug)
+        {
+            try
+            {
+                string _slug = slug.Trim('/');
+                string[] arrSlugs = _slug.Split('/');
+                List<string> _slugs = arrSlugs.ToList();
+                _slug = _slugs[_slugs.Count - 1];
+                _slugs.Remove(_slug);
+
+                var result = await _postservice.GetPublicBySlugAndSectionSlugsAsync(_slugs, _slug);
+
+                return Json(result);
+            }
+            catch (Exception ex)
+            {
+                TrackException(ex);
+            }
+            return Json(false);
         }
     }
 }

@@ -9,7 +9,7 @@ msgid "full_address"
 msgstr "YEŞİLKENT Mah. 1880. Sok. C BLOK Apt. No: 60 / 2 / 136 ESENYURT / İSTANBUL"
 
 msgid "br_email_adress"
-msgstr "info@gtservices.co.tr"
+msgstr "info@gtservices.com.tr"
  
 msgid "br_phone_number"
 msgstr "+90 212 803 36 12"
@@ -47,3 +47,6 @@ msgstr "https://goo.gl/maps/LFMfEARXGp72"
 
 msgid "whyUs_summary"
 msgstr "6056f0ec-6cb5-4597-8941-683f647f42e8"
+
+msgid "page_group"
+msgstr "page_group_en"

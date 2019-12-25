@@ -24,6 +24,8 @@
     @RenderSection("SEO", required: false)
     @RenderSection("meta", required: false)
     @RenderSection("style", required: false)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
     @if (string.Equals(controller, "home", StringComparison.OrdinalIgnoreCase) && string.Equals(action, "index", StringComparison.OrdinalIgnoreCase))
@@ -43,9 +45,11 @@
     <script>
         window.language = "@lang";
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
     <script src="~/Portal/js/script.min.js" asp-append-version="true"></script>
     @RenderSection("footer", required: false)
 

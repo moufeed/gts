@@ -17,15 +17,44 @@
     Layout = "_Layout";
     ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/cubes.jpg");
 
+    if( new Guid("786efa65-2762-47ef-aafc-18d52a7cb69e")  == Model.SectionInfo.Id){
+         ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/banner.gif");
+    }
+    if( new Guid("28f35453-7c1a-4c67-925a-17ec82552996")  == Model.SectionInfo.Id){
+         ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/GTSGIfPerfume.gif");
+    }
+    if( new Guid("35da17ba-5068-467b-9a15-ae4f55f4dfd7")  == Model.SectionInfo.Id){
+         ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/Oil-bg.jpg");
+    }
+
+
+    if(
+        new Guid("cc3996fe-321d-4726-9113-fa997af43895")  == Model.SectionInfo.Id ||
+        new Guid("c7a980ec-d81d-41f2-92c1-16c18bb81c27")  == Model.SectionInfo.Id ||
+        new Guid("3219aa00-9349-4eef-9b3d-00705bc494b4")  == Model.SectionInfo.Id ||
+        new Guid("bb037b06-8c45-48d1-9711-5c4e5561ad6c")  == Model.SectionInfo.Id ||
+        new Guid("7848358e-5399-4c39-9f6a-8e8d0db6674d")  == Model.SectionInfo.Id ||
+        new Guid("d212b3c7-c3c7-44e5-96d5-b82f10c1a360")  == Model.SectionInfo.Id
+        ){
+         ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/Carton.jpg");
+    }
+
 }
 @{
     List<SlugModel> SectionsSlugs = Model.SectionsSlugs;
+
+
+    Model.Sections = Model.Sections.Where(s => s.SlugHierarchy.Remove(0, Model.SectionInfo.SlugHierarchy.Length).Split('/').Length == 2).ToList();
 }
 
 
 
 <partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="@SectionsSlugs" />
+
 <partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
+
+
+
 
 
 <if include-if="Model.Sections != null && Model.Sections.Count > 0">
@@ -60,49 +89,140 @@
 
 <if include-if="(Model.Sections == null || (Model.Sections.Count == 0 && Model.Posts != null && Model.Posts.Count > 0))">
 
+
+
+
     <section class="products-list mt-60 mb-60">
         <div class="container">
-            
+
             <if include-if="Model.SectionInfo != null && !string.IsNullOrEmpty(Model.SectionInfo.Summary)">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p>@Model.SectionInfo.Summary</p>
+                        <h5 class="font-weight-bold">@Model.SectionInfo.Summary</h5>
+                        <br>
                     </div>
-                </div>     
-            </if>
-            
-            <div class="row">
-                @foreach (PostDto item in Model.Posts)
-                {
-                <div class="col-md-4 col-sm-6 col-lg-3">
-                    @{string slug = item.SectionSlug.Trim('/');}
-                    <a href="@Url.AdminUrl("p","Products",new{slug=$"{@slug}/{item.Slug}"}).Replace("%2F", "/")" class="product-list-item d-flex justify-content-bettween align-items-center">
-                        <div class="pr-img">
-                            @if (string.IsNullOrEmpty(item.MainImage))
-                            {
-                                <i class="fa fa-cube"></i>
-                            }
-                            else
-                            {
-                                <img src="@item.MainImage" />
-                            }
-                        </div>
-                        <div class="pr-info">
-                            <h5> @item.Title</h5>
-                        </div>
-                    </a>
                 </div>
-                }
+            </if>
+
+            <div class="row">
+                <div class="col-12">
+                    <partial name="_pagination.cshtml" model="Model" />
+                </div>
             </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-3 products-items">
+
+                    <div class="row">
+                        @foreach (PostDto item in Model.Posts)
+                        {
+                            <div class="col-md-4 col-sm-6 col-lg-12">
+                                @{string slug = item.SectionSlug.Trim('/');}
+                                <a href="#"
+                                   data-hash="@item.Slug"
+                                   id="@item.Slug"
+                                   data-href="@Url.AdminUrl("Product","Products",new{slug=$"{@slug}/{item.Slug}"}).Replace("%2F", "/")"
+                                   class="product-list-item d-flex justify-content-bettween align-items-center @(ViewBag.productContent != null && ViewBag.productContent.Id == item.Id ? "active" : "" )">
+                                    <div class="pr-img">
+                                        @if (string.IsNullOrEmpty(item.MainImage))
+                                        {
+                                            <i class="fa fa-cube"></i>
+                                        }
+                                        else
+                                        {
+                                            <img src="@item.MainImage" />
+                                        }
+                                    </div>
+                                    <div class="pr-info">
+                                        <h5> @item.Title</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-12 col-lg-9">
+                    <div class="product-content">
+                        <div id="loader" style="display:none">
+                            <svg width="38" height="38" viewBox="0 0 38 38" stroke="#000">
+                                <g fill="none" fill-rule="evenodd">
+                                    <g transform="translate(1 1)" stroke-width="2">
+                                        <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                                            <animateTransform attributeName="transform"
+                                                              type="rotate"
+                                                              from="0 18 18"
+                                                              to="360 18 18"
+                                                              dur="1s"
+                                                              repeatCount="indefinite" />
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div id="product-content">
+                            @if (ViewBag.productContent != null)
+                            {
+                                @Html.Raw(ViewBag.productContent.Content)
+                            }
+
+                        </div>
+                    </div>
+
+
+                </div>
+                @*<div class="d-none d-lg-inline col-lg-3">
+                        @if (string.IsNullOrEmpty(Model.SectionInfo.MainImage))
+                        {
+                            <img src="~/Portal/img/empty.jpg" class="img-fluid thumbnail" id="mainimage" />
+                        }
+                        else
+                        {
+                            <img src="@Model.SectionInfo.MainImage" class="img-fluid thumbnail"  id="mainimage " />
+                        }
+                    </div>*@
+            </div>
+
+
+
         </div>
     </section>
-</if>
- 
 
- 
-<if include-if="Model.Sections != null && Model.Posts != null && Model.Sections.Count == 0  && Model.Posts.Count == 0">
+
+</if>
+
+
+
+<if include-if="Model.Sections != null && Model.Posts != null && Model.Sections.Count == 0  && Model.Posts.Count == 0 && String.IsNullOrEmpty(Model.SectionInfo.MetaDescription) ">
     <div class="no-data text-center mt-60 mb-60">
         <i class="fa fa-info-circle"></i>
         <p>@Localizer["no_data_available"]</p>
     </div>
 </if>
+
+
+<if include-if='!string.IsNullOrEmpty(Model.SectionInfo.MetaDescription)'>
+
+    <section class="section-content my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    @Html.Raw(Model.SectionInfo.MetaDescription)
+                </div>
+            </div>
+        </div>
+    </section>
+</if>
+
+
+
+@{
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+}
+
+
+@section footer{
+    <script src="~/Portal/js/products.min.js" asp-append-version="true"></script>
+
+}
