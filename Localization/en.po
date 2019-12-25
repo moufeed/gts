@@ -1707,12 +1707,12 @@ msgstr "Testimonial details"
 
 msgid ""
 msgstr ""
- 
+
 msgid "site_title"
-msgstr "Gts"
+msgstr "GTS"
 
 msgid "about_gts"
-msgstr "about gts"
+msgstr "about GTS"
 
 msgid "request_quotation"
 msgstr "request quotation"
@@ -1725,25 +1725,25 @@ msgstr "Why us"
 
 msgid "h_our_services_txt"
 msgstr "A wide range of services that enable you to bring Turkish goods to your market"
-  
+
 msgid "more"
 msgstr "more"
-  
+
 msgid "clients"
 msgstr "clients"
-  
+
 msgid "transaction"
 msgstr "transaction"
-  
+
 msgid "cooperating_companies"
 msgstr "cooperating companies"
-  
+
 msgid "products"
 msgstr "products"
-  
+
 msgid "selected_products"
 msgstr "Selected products"
-  
+
 msgid "selected_products_txt"
 msgstr "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"
 
@@ -1762,13 +1762,13 @@ msgstr "design & developed by"
 
 msgid "visit_us"
 msgstr "Visit us"
- 
+
 msgid "to_contact_us"
 msgstr "Contact us"
- 
+
 msgid "message_us"
 msgstr "Write to us"
- 
+
 msgid "contact_us"
 msgstr "find us"
 
@@ -1840,7 +1840,7 @@ msgstr "why us"
 
 
 msgid "about_txt"
-msgstr "For more than 60 years of accumulated business experience in the field of procurement, supply and distribution channel managements, GTS has been providing expertise to its valued customers. Our offices extend from Turkey Center of Civilizations and International Trade to the Far East of China which characterized as charming and amazing country. GTS services add value to the supply chain as well as distribution channels, offering the right products from its sources, for the right cost, utilizing the right shipping resources to deliver customer product specifications on agreed time and quality. GTS helps you overcome language barriers in Turkey and China Services are GTS guaranteed"
+msgstr "For more than 60 years of accumulated business experience in the field of procurement, supply and distribution channel managements, <b class='gts'>GTS</b> has been providing expertise to its valued customers. Our offices extend from Turkey Center of Civilizations and International Trade to the Far East of China which characterized as charming and amazing country.  <b class='gts'>GTS</b> services add value to the supply chain as well as distribution channels, offering the right products from its sources, for the right cost, utilizing the right shipping resources to deliver customer product specifications on agreed time and quality.  <b class='gts'>GTS</b> helps you overcome language barriers in Turkey and China Services are  <b class='gts'>GTS</b> guaranteed"
 
 msgid "our_vision"
 msgstr "Our Vision"
@@ -1860,7 +1860,7 @@ msgid "chairman_message"
 msgstr "Chairman’s Message"
 
 msgid "chairman_message_txt"
-msgstr "In GTS we seek excellence in products and services while maintaining price competitiveness. With strategic locations in growing economies, we bring products that are destined for increasing demand. Thus, briding the gap between different regions in the world when it comes to trade"
+msgstr "In <b class='gts'>GTS</b> we seek excellence in products and services while maintaining price competitiveness. With strategic locations in growing economies, we bring products that are destined for increasing demand. Thus, briding the gap between different regions in the world when it comes to trade"
 
 msgid "chairman"
 msgstr "Chairman"

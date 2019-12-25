@@ -3,53 +3,69 @@
     var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 }
 
-<header>
-    <div class="header-top blue-bg">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-8 col-lg-8 col-md-9 text-center  @(lang =="ar" ? "text-md-right" :"text-md-left")   ">
-                    <div class="header-top-cta">
-                        <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["turkey"]</a>
-                        <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["hongkong"]</a>
-                        <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["china"]</a>
-                        <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["UAE"]</a>
+    <header>
+        <div class="header-top blue-bg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-8 col-lg-8 col-md-9 text-center  @(lang =="ar" ? "text-md-right" :"text-md-left")   ">
+                        <div class="header-top-cta">
+                            <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["turkey"]</a>
+                            <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["hongkong"]</a>
+                            <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["china"]</a>
+                            <a asp-action="contactus" asp-controller="home" class="link-item">@Localizer["UAE"]</a>
 
-                        <span><i class="fa fa-envelope-open"></i>@Localizer["br_email_adress"]</span>
-                        <span><i class="fa fa-phone"></i> <span dir="ltr">@Localizer["br_phone_number"]</span></span>
+                            <span><i class="fa fa-envelope-open"></i>@Localizer["br_email_adress"]</span>
+                            <span><i class="fa fa-phone"></i> <span dir="ltr">@Localizer["br_phone_number"]</span></span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-3 text-center  @(lang =="ar" ? "text-md-left" :"text-md-right")  ">
-                    <div class="top-social-links">
+                    <div class="col-xl-4 col-lg-4 col-md-3 text-center  @(lang =="ar" ? "text-md-left" :"text-md-right")  ">
+                        <div class="top-social-links">
 
-                        <partial name="~/Areas/Portal/Views/Shared/utilities/_languages.cshtml"  model="Model" />
+                            <partial name="~/Areas/Portal/Views/Shared/utilities/_languages.cshtml" model="Model" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="sticky-header" class="menu-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
-                    <div class="logo text-center">
-                        <a asp-action="index" asp-controller="home"><img src="~/Portal/img/logo.png" width="90" class="img-fluid" alt="logo"></a>
+
+
+
+        <div  id="sticky-header" class="menu-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                        <div class="logo text-center">
+                            <a asp-action="index" asp-controller="home"><img src="~/Portal/img/logo.png" width="90" class="img-fluid" alt="logo"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xl-8 col-lg-8 col-md-5 d-none d-lg-block @(lang =="ar" ? "text-right" :"text-left")  ">
-                    <div class="main-menu">
-                        <navbar></navbar>
+                    <div class="col-12 col-xl-10 col-lg-10 col-md-8 @(lang =="ar" ? "text-right" :"text-left")  ">
+                        <div class="row justify-content-end align-items-center pt-3 social-row">
+                            <div class="col-auto ">
+                              <nav class="social-links">
+                                    <a href="https://www.facebook.com/gtstradingservices" target="_blank" ><i class="fa fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/TradingGts" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UC7K_04yVeEQUe2b0GICuMvg" target="_blank"><i class="fa fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/gts_istanbul" target="_blank"><i class="fa fa-instagram"></i></a>
+                              </nav>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-consulting" asp-action="Request" asp-controller="home">@Localizer["request_quotation"]</a>
+                            </div>
+                        </div>
+
+                        <div class="main-menu d-none d-lg-block ">
+                            <navbar></navbar>
+                        </div>
+
                     </div>
 
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-7 text-center">
-                    <a class="btn btn-consulting" asp-action="Request" asp-controller="home">@Localizer["request_quotation"]</a>
-                </div>
-                <div class="col-12">
-                    <div class="mobile-menu"></div>
+
+                    <div class="col-12">
+                        <div class="mobile-menu"></div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
-    </div>
-</header>
+
+
+    </header>

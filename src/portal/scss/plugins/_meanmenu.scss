@@ -27,8 +27,8 @@ a.meanmenu-reveal {
 	width: 22px;
 	height: 22px;
 	padding: 10px 12px;
-	position: absolute;
-	top: -10px;
+//	position: absolute;
+//	top: -10px;
 	right: 0;
 	cursor: pointer;
 	color: #444;
@@ -39,7 +39,7 @@ a.meanmenu-reveal {
 	display: block;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 700;
-	margin-top: -44px;
+	// margin-top: -44px;
 	border: 1px solid #444;
 }
 
@@ -125,7 +125,7 @@ a.meanmenu-reveal {
 	padding: 12px 10px;
 	text-align: center;
 	position: absolute;
-	right: 0;
+	#{$right}: 0;
 	top: 0;
 	z-index: 2;
 	font-weight: 700;
@@ -185,8 +185,8 @@ a.meanmenu-reveal {
 	}
 }
 @include media-breakpoint-only(md){
-	.mean-container a.meanmenu-reveal{ 
+	.mean-container a.meanmenu-reveal{
 		top: -20px;
 	}
-	
+
 }

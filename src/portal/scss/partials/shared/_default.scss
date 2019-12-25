@@ -5,7 +5,7 @@ body {
 	font-size: 14px;
 	direction: $dir;
 	text-align: $left;
-	overflow-x: hidden;  
+	overflow-x: hidden;
 }
 .img {
 	max-width: 100%;
@@ -21,7 +21,7 @@ body {
 	overflow: hidden
 }
 a,
-.button { 
+.button {
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
 	-ms-transition: all 0.3s ease-out 0s;
@@ -38,7 +38,7 @@ button{
 }
 a:focus,
 a:hover,
-.portfolio-cat a:hover, 
+.portfolio-cat a:hover,
 .footer -menu li a:hover {
 	color: #2B96CC;
 	text-decoration: none;
@@ -220,11 +220,11 @@ label {
 	background: #ff5e14;
 }
 .primary-bg {
-	background: #222; 
+	background: #222;
 }
 .green-bg{
-	background: #28b05f; 
-} 
+	background: #28b05f;
+}
 .yellow-bg{
 	background: #faa41c;
 }
@@ -254,7 +254,7 @@ label {
 		display: inline-block;
 		font-weight: 600;
 		line-height: 1;
-	
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -322,7 +322,7 @@ label {
 
 
 .owl-carousel .owl-item img {
-	display: block; 
+	display: block;
 	width: inherit;
 	max-width: 100%;
 	margin: auto;
@@ -330,7 +330,7 @@ label {
 
 
 @include media-breakpoint-down(md){
-	
+
 	.section-title {
 		&.service-title{
 			p {
@@ -341,12 +341,12 @@ label {
 }
 
 
-.form-control.is-invalid, 
+.form-control.is-invalid,
 .was-validated .form-control:invalid{
-	background-position : center $right calc(.375em + .1875rem); 
+	background-position : center $right calc(.375em + .1875rem);
 	padding-#{$left}:15px;
 	padding-#{$right}: calc(1.5em + .75rem);
-} 
+}
 
 .was-validated textarea.form-control:invalid,
  textarea.form-control.is-invalid{
@@ -357,7 +357,7 @@ label {
 
 
 .border-title{
-	
+
 	border-bottom: 1px solid #eeeeee;
 	span{
 		display: inline-block;
@@ -380,7 +380,7 @@ label {
 }
 
 .dot-title{
-     
+
     text-transform: capitalize;
     font-weight: bold;
     margin-bottom: rem(15px);
@@ -405,7 +405,7 @@ label {
             @include square(16px);
             border-radius: 50%;
             bottom: -8px;
-             
+
         }
     }
 }
@@ -419,14 +419,14 @@ label {
 	text-align: center;
 	line-height: 45px;
 	box-shadow: 0 10px 15px rgba(25,25,25,0.1);
-	transition: all .3s; 
+	transition: all .3s;
 	&:hover{
 		background: #fff;
 		color: $red;
 	}
 }
 
- 
+
 
 .page-item.active .page-link {
     z-index: 1;
@@ -437,4 +437,10 @@ label {
 }
 .page-link{
 	margin-left : 0;
+}
+
+.gts{
+	color: #cf2c30;
+  font-weight: bolder;
+  display: inline-block;
 }

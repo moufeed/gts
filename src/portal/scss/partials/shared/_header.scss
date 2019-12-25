@@ -13,7 +13,7 @@
 	padding-#{$right}: 10px;
 	color: $red;
 }
- 
+
 .top-social-links {
 	span {
 		font-size: 13px;
@@ -33,9 +33,9 @@
 		}
 	}
 }
- 
- 
- 
+
+
+
 
 
 .lanugages-list{
@@ -111,7 +111,7 @@
 }
 .main-menu.second-menu ul li a {
 	color: #ffffff;
-	padding: 22px 0; 
+	padding: 22px 0;
 }
 .main-menu.second-menu ul li:hover a {
 	color: #ffffff;
@@ -235,10 +235,14 @@
 	-webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
 	animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
 	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-}
-.sticky .logo-area {
+	 .logo-area {
 	display: none;
 }
+.social-row{
+	display:none;
+}
+}
+
 .transparent-bg.sticky {
 	background: #111;
 }
@@ -283,7 +287,7 @@
     &:hover,&:focus,&:active{
 		color: #fff;
         background: darken($red ,15%);
-      
+
     }
 }
 
@@ -310,14 +314,14 @@
 	}
 	.header-top-cta{
 		display: none;
-	} 
+	}
 
 	.top-social-links{
 		text-align: $left;
 	}
 
 	.btn-consulting{
-	 
+
 		padding: 14px 12px;
 	}
 }
@@ -326,5 +330,32 @@
 	.btn-consulting{
 		margin-top: 8px;
 	}
-	
+
+}
+
+
+.social-links{
+	margin: 0 10px;
+	a{
+		display: inline-block;
+		padding: 6px 3px;
+		width: 35px;
+		text-align: center;
+		color: $black;
+		&:hover{
+			color: $white;
+			background: $red;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm){
+	.social-row{
+		margin-right: 0;
+		margin-left: 0;
+		.col-auto{
+			padding-left:0 ;
+			padding-right:0 ;
+		}
+	}
 }
