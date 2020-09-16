@@ -65,7 +65,12 @@
 
                         <label asp-for="Section" class="control-label col-md-2 col-sm-3 col-xs-12 ">@Localizer["f_section"]</label>
                         <div class="col-md-10 col-lg-9 col-sm-9 col-xs-12">
-                            <input type="text" asp-for="Section" class="form-control" />
+
+                            <select class="form-control" asp-for="Section">
+                                <option value="null">@Localizer["normal_page"]</option>
+                                <option value="news">@Localizer["news_page"]</option>
+                            </select>
+                             
                             <span asp-validation-for="Section" class="text-danger invalid_field"></span>
                         </div>
                     </div>

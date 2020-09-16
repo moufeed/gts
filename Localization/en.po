@@ -2027,6 +2027,16 @@ msgid "posts_section"
 msgstr "products category"
 
 
+msgid "news"
+msgstr "News"
+
+msgid "normal_page"
+msgstr "Page"
+
+msgid "news_page"
+msgstr "News page"
+
+
 #: --- settings --- 
 
 msgid "br_address"

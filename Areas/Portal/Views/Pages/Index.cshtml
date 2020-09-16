@@ -1,1 +1,76 @@
-﻿ 
+﻿@model List<PageDto>
+
+@{
+    ViewData["Title"] = Localizer["News"];
+    Layout = "_Layout";
+    ViewData["ImageURl"] = @Url.Content("~/portal/img/banners/about.jpg");
+    ViewData["pageTitle"] = Localizer["News"];
+}
+
+@{
+    List<SlugModel> mod = new List<SlugModel>();
+}
+
+<partial name="~/Areas/Portal/Views/Shared/partials/_Header.cshtml" model="mod" />
+<partial name="~/Areas/Portal/Views/Shared/utilities/_pages_header.cshtml" />
+
+ 
+
+
+@if (Model != null && Model.Count > 0)
+{
+    <section class="basic-blog-area gray-bg pt-100 pb-100">
+        <div class="container">
+            <div class="">
+                <div class="row justify-content-center  blog-post-items">
+                    @foreach (var p in Model)
+                    {
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="blog-wrapper mb-40" style="box-shadow:0 5px 30px rgba(0,0,0,0.1)">
+                            <div class="blog-thumb">
+                                <a asp-action="v" asp-controller="pages" asp-route-slug="@p.Slug">
+                                    @if (string.IsNullOrEmpty(p.MainImage))
+                                    {
+                                        <img src="~/Portal/img/empty-1.jpg" class="img-fluid" alt="@p.Title">
+                                    }
+                                    else
+                                    {
+
+                                        <img src="@p.MainImage" class="img-fluid" alt="@p.Title">
+                                    }
+                                </a>
+                            </div>
+                            <div class="meta-info px-3 pt-2">
+                                <ul>
+                                    <li class="posts-time">@p.CreatedDate.ToString("MM/dd/yyyy")</li>
+                                </ul>
+                            </div>
+                            <div class="blog-content px-3 pt-2">
+                                <h2 class="blog-title">
+                                    <a asp-action="v" asp-controller="pages" asp-route-slug="@p.Slug">
+                                        @p.Title
+                                    </a>
+                                </h2>
+                                <p>
+                                    @Html.Raw(p.Summary)
+                                </p>
+                            </div>
+                            <div class="link-box  px-3 pt-2 pb-4">
+                                <a href="blog-details.html">@Localizer["read_more"]</a>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
+else
+{
+    <div class="no-data text-center mt-60 mb-60">
+        <i class="fa fa-info-circle"></i>
+        <p>@Localizer["no_data_available"]</p>
+    </div>
+}

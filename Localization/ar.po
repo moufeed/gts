@@ -1988,6 +1988,15 @@ msgstr "تفاصيل المنتج "
 
 msgid "posts_section"
 msgstr "تصنيف منتجات"
+
+msgid "news"
+msgstr "الاخبار"
+
+msgid "normal_page"
+msgstr "صفحة عامة"
+
+msgid "news_page"
+msgstr "صفحة اخبار"
 #: --- settings --- 
 
 msgid "br_address"
